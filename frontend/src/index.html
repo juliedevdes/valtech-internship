@@ -4,12 +4,73 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styles/styles.css" />
+    <link rel="stylesheet" href="./styles/main.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&family=Lobster&display=swap"
+      rel="stylesheet"
+    />
     <title>CraftStudio</title>
   </head>
   <body>
-    <h1>Hello! Online shop under construction now</h1>
-    <img src="./img/squirrel.png" alt="squirrel" />
+    <div class="container">
+      <header>
+        <section class="contacts-section">
+          <ul class="list socials-list">
+            <li class="socials-item">
+              <svg width="20" class="icon">
+                <use href="./img/sprite-socials.svg#facebook"></use>
+              </svg>
+            </li>
+            <li class="socials-item">
+              <svg width="20" class="icon">
+                <use href="./img/sprite-socials.svg#twitter"></use>
+              </svg>
+            </li>
+            <li class="socials-item">
+              <svg width="20" class="icon">
+                <use href="./img/sprite-socials.svg#instagram"></use>
+              </svg>
+            </li>
+            <li class="socials-item">
+              <svg width="20" class="icon">
+                <use href="./img/sprite-socials.svg#youtube"></use>
+              </svg>
+            </li>
+          </ul>
+          <ul class="list contact-list">
+            <li class="contact-item">+696558</li>
+            <li class="contact-item">email@fked</li>
+          </ul>
+        </section>
+        <img src="./img/OrgaFresh.png" alt="logo" />
+        <input type="text" class="search" />
+        <button class="btn auth-btn">login</button>
+        <button class="wish-list_btn">wish</button>
+        <button class="cart">cart</button>
+      </header>
+
+      <nav class="navigation">
+        <ul class="list navigation-list">
+          <li class="navigation-item">all categories</li>
+          <li class="navigation-item">home</li>
+          <li class="navigation-item">shop</li>
+          <li class="navigation-item">about</li>
+          <li class="navigation-item">blog</li>
+          <li class="navigation-item">contacts</li>
+        </ul>
+      </nav>
+
+      <!-- <section class="hero-section">
+        <h1 class="hero-title">Vegetable Fresh salad</h1>
+      </section>
+
+      <footer>footer</footer> -->
+    </div>
+
     <script src="./index.js"></script>
   </body>
 </html>

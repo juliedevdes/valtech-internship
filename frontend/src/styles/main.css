@@ -1,0 +1,112 @@
+.hero-title {
+  font-family: Lobster, cursive;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 25px;
+}
+
+.socials-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.socials-item {
+  height: 20px;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+}
+
+body {
+  font-family: "Jost", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.list {
+  list-style: none;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+@media screen and (min-width: 480px) {
+  .container {
+    max-width: 480px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    padding-left: 34px;
+    padding-right: 34px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+    padding-left: 115px;
+    padding-right: 115px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .header .container {
+    width: 100%;
+    margin: 0 auto;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+:root {
+  --main-font: "DM Sans", sans-serif;
+  --secondary-font: "Titan One", cursive;
+  --color-green: #88b13e;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+/*# sourceMappingURL=main.css.map */

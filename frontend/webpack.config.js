@@ -22,6 +22,10 @@ module.exports = {
         use: ["file-loader"],
       },
       { test: /\.(js)$/, use: "babel-loader" },
+      {
+        test: /\.s[ac]ss$/,
+        use: ["css-loader", "sass-loader"],
+      },
     ],
   },
 
