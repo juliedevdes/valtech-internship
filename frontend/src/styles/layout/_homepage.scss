@@ -6,6 +6,56 @@
   line-height: 25px;
 }
 
+.pinned {
+  min-width: 500px;
+}
+.hero-section {
+  display: flex;
+}
+.carousel-item1 {
+  padding-left: 30px;
+  padding-top: 120px;
+  padding-bottom: 120px;
+  color: #fff;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url("../../img/homepage/carousel/salad1.jpg");
+}
+
+.carousel-item2 {
+  padding-left: 30px;
+  padding-top: 120px;
+  padding-bottom: 120px;
+  color: #fff;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url("../../img/homepage/carousel/salad2.jpg");
+}
+.carousel-item3 {
+  padding-left: 30px;
+  padding-top: 120px;
+  padding-bottom: 120px;
+  color: #fff;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url("../../img/homepage/carousel/salad3.jpg");
+}
+
 .contacts-section {
   padding-top: 10px;
   padding-bottom: 10px;
@@ -109,4 +159,18 @@
 .burger-icon {
   fill: #ffffff;
   margin-right: 10px;
+}
+
+.wrapper {
+  width: 100%;
+}
+.carousel {
+  margin: 0 auto;
+}
+
+.hero-card {
+  padding: 100px 50px;
+  text-align: center;
+  background-color: red;
+  margin-bottom: 10px;
 }
