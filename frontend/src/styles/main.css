@@ -1,28 +1,170 @@
 .hero-title {
-  font-family: Lobster, cursive;
+  font-family: var(--secondary-font);
   font-style: normal;
   font-weight: bold;
   font-size: 36px;
   line-height: 25px;
 }
 
+.contacts-section {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: var(--color-pink);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.contact-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.contact-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: baseline;
+      -ms-flex-pack: baseline;
+          justify-content: baseline;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contacts-text {
+  padding: 5px;
+}
+
+.contact-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.socials-item:not(:last-child) {
+  margin-right: 10px;
+}
+
 .socials-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .socials-item {
   height: 20px;
 }
 
-.icon {
-  width: 20px;
-  height: 20px;
+.contact-item .icon {
+  margin-right: 5px;
+}
+
+.search-section {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.search {
+  padding: 10px;
+  padding-left: 20px;
+  border: 1px solid #dddddd;
+  width: 500px;
+}
+
+.search::-webkit-input-placeholder {
+  line-height: 22px;
+  color: #888888;
+  padding: 10px 15px;
+}
+
+.search:-ms-input-placeholder {
+  line-height: 22px;
+  color: #888888;
+  padding: 10px 15px;
+}
+
+.search::-ms-input-placeholder {
+  line-height: 22px;
+  color: #888888;
+  padding: 10px 15px;
+}
+
+.search::placeholder {
+  line-height: 22px;
+  color: #888888;
+  padding: 10px 15px;
+}
+
+.icon-search {
+  position: absolute;
+  right: 530px;
+  top: 30px;
+}
+
+.btn {
+  border: none;
+  background-color: unset;
+  font-family: inherit;
+}
+
+.user-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.auth-icon {
+  margin-left: 5px;
+}
+
+.navigation {
+  background-color: var(--color-green);
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.navigation-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.navigation-item {
+  font-weight: bold;
+  color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.burger-icon {
+  fill: #ffffff;
+  margin-right: 10px;
 }
 
 body {
-  font-family: "Jost", sans-serif;
+  font-family: var(--main-font);
+  color: #3b352d;
 }
 
 h1,
@@ -54,48 +196,15 @@ img {
 }
 
 .container {
-  width: 100%;
-  margin: 0 auto;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-@media screen and (min-width: 480px) {
-  .container {
-    max-width: 480px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .container {
-    max-width: 768px;
-    padding-left: 34px;
-    padding-right: 34px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .container {
-    max-width: 1200px;
-    padding-left: 115px;
-    padding-right: 115px;
-  }
-}
-
-@media screen and (max-width: 1199px) {
-  .header .container {
-    width: 100%;
-    margin: 0 auto;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
+  padding-left: 255px;
+  padding-right: 255px;
 }
 
 :root {
-  --main-font: "DM Sans", sans-serif;
-  --secondary-font: "Titan One", cursive;
+  --main-font: "Jost", sans-serif;
+  --secondary-font: "Lobster", cursive;
   --color-green: #88b13e;
+  --color-pink: #fceee7;
 }
 
 .visually-hidden {

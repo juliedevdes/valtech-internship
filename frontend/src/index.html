@@ -16,60 +16,94 @@
     <title>CraftStudio</title>
   </head>
   <body>
-    <div class="container">
-      <header>
-        <section class="contacts-section">
-          <ul class="list socials-list">
-            <li class="socials-item">
-              <svg width="20" class="icon">
-                <use href="./img/sprite-socials.svg#facebook"></use>
-              </svg>
-            </li>
-            <li class="socials-item">
-              <svg width="20" class="icon">
-                <use href="./img/sprite-socials.svg#twitter"></use>
-              </svg>
-            </li>
-            <li class="socials-item">
-              <svg width="20" class="icon">
-                <use href="./img/sprite-socials.svg#instagram"></use>
-              </svg>
-            </li>
-            <li class="socials-item">
-              <svg width="20" class="icon">
-                <use href="./img/sprite-socials.svg#youtube"></use>
-              </svg>
-            </li>
-          </ul>
-          <ul class="list contact-list">
-            <li class="contact-item">+696558</li>
-            <li class="contact-item">email@fked</li>
-          </ul>
-        </section>
-        <img src="./img/OrgaFresh.png" alt="logo" />
-        <input type="text" class="search" />
-        <button class="btn auth-btn">login</button>
-        <button class="wish-list_btn">wish</button>
-        <button class="cart">cart</button>
-      </header>
-
-      <nav class="navigation">
-        <ul class="list navigation-list">
-          <li class="navigation-item">all categories</li>
-          <li class="navigation-item">home</li>
-          <li class="navigation-item">shop</li>
-          <li class="navigation-item">about</li>
-          <li class="navigation-item">blog</li>
-          <li class="navigation-item">contacts</li>
+    <header class="header">
+      <section class="container contacts-section">
+        <ul class="list socials-list">
+          <li class="socials-item">
+            <svg width="20" height="20" class="icon">
+              <use href="./img/sprites/sprite-socials.svg#facebook"></use>
+            </svg>
+          </li>
+          <li class="socials-item">
+            <svg width="20" height="20" class="icon">
+              <use href="./img/sprites/sprite-socials.svg#twitter"></use>
+            </svg>
+          </li>
+          <li class="socials-item">
+            <svg width="20" height="20" class="icon">
+              <use href="./img/sprites/sprite-socials.svg#instagram"></use>
+            </svg>
+          </li>
+          <li class="socials-item">
+            <svg width="20" height="20" class="icon">
+              <use href="./img/sprites/sprite-socials.svg#youtube"></use>
+            </svg>
+          </li>
         </ul>
-      </nav>
+        <ul class="list contact-list">
+          <li class="contact-item">
+            <svg width="22" height="22" class="icon">
+              <use href="./img/sprites/sprite-contacts.svg#phone"></use>
+            </svg>
+            <span class="contacts-text">(+800) 345 678</span>
+          </li>
+          <li class="contact-item">
+            <svg width="22" height="22" class="icon">
+              <use href="./img/sprites/sprite-contacts.svg#mail"></use>
+            </svg>
+            <span class="contacts-text"> Organicfood@gmail.com </span>
+          </li>
+        </ul>
+      </section>
 
-      <!-- <section class="hero-section">
+      <section class="container search-section">
+        <img src="./img/OrgaFresh.png" alt="logo" />
+        <input type="text" class="search" placeholder="Enter your keyword..." />
+        <svg width="22" height="22" class="icon-search">
+          <use href="./img/sprites/sprite-user-menu.svg#search"></use>
+        </svg>
+        <div class="user-menu">
+          <button class="btn">
+            Login/Register
+            <svg width="22" height="22" class="icon auth-icon">
+              <use href="./img/sprites/sprite-user-menu.svg#user"></use>
+            </svg>
+          </button>
+          <button class="btn">
+            <svg width="22" height="22" class="icon">
+              <use href="./img/sprites/sprite-user-menu.svg#heart"></use>
+            </svg>
+          </button>
+          <button class="btn">
+            <svg width="22" height="22" class="icon">
+              <use href="./img/sprites/sprite-user-menu.svg#bag"></use>
+            </svg>
+          </button>
+        </div>
+      </section>
+    </header>
+
+    <nav class="container navigation">
+      <ul class="list navigation-list">
+        <li class="navigation-item">
+          <svg width="22" height="22" class="burger-icon">
+            <use href="./img/sprites/sprite-user-menu.svg#burger"></use>
+          </svg>
+          All categories
+        </li>
+        <li class="navigation-item">Home</li>
+        <li class="navigation-item">Shop</li>
+        <li class="navigation-item">About</li>
+        <li class="navigation-item">Blog</li>
+        <li class="navigation-item">Contacts</li>
+      </ul>
+    </nav>
+
+    <!-- <section class="hero-section">
         <h1 class="hero-title">Vegetable Fresh salad</h1>
       </section>
 
       <footer>footer</footer> -->
-    </div>
 
     <script src="./index.js"></script>
   </body>

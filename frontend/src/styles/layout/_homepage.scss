@@ -1,19 +1,112 @@
 .hero-title {
-  font-family: Lobster, cursive;
+  font-family: var(--secondary-font);
   font-style: normal;
   font-weight: bold;
   font-size: 36px;
   line-height: 25px;
 }
 
+.contacts-section {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: var(--color-pink);
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact-list {
+  display: flex;
+}
+
+.contact-item {
+  display: flex;
+  justify-content: baseline;
+  align-items: center;
+}
+
+.contacts-text {
+  padding: 5px;
+}
+.contact-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.socials-item:not(:last-child) {
+  margin-right: 10px;
+}
+
 .socials-list {
   display: flex;
+  align-items: center;
 }
 .socials-item {
   height: 20px;
 }
 
-.icon {
-  width: 20px;
-  height: 20px;
+.contact-item .icon {
+  margin-right: 5px;
+}
+
+.search-section {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.search {
+  padding: 10px;
+  padding-left: 20px;
+  border: 1px solid #dddddd;
+  width: 500px;
+}
+.search::placeholder {
+  line-height: 22px;
+  color: #888888;
+  padding: 10px 15px;
+}
+
+.icon-search {
+  position: absolute;
+  right: 530px;
+  top: 30px;
+}
+
+.btn {
+  border: none;
+  background-color: unset;
+  font-family: inherit;
+}
+
+.user-menu {
+  display: flex;
+  align-content: center;
+}
+
+.auth-icon {
+  margin-left: 5px;
+}
+
+.navigation {
+  background-color: var(--color-green);
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.navigation-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navigation-item {
+  font-weight: bold;
+  color: #ffffff;
+  display: flex;
+  align-content: center;
+}
+
+.burger-icon {
+  fill: #ffffff;
+  margin-right: 10px;
 }
