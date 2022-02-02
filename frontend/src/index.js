@@ -1,4 +1,5 @@
-/* eslint-disable no-undef */
+import "./styles/main.scss";
+
 console.log("hello it's me, index.js");
 $(document).ready(function () {
   $(".owl-carousel").owlCarousel({
