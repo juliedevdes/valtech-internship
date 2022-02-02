@@ -24,8 +24,7 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../../img/homepage/carousel/salad1.jpg");
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../img/homepage/carousel/salad1.jpg");
+  background-image: url("../img/homepage/carousel/salad1.jpg");
 }
 
 .carousel-item2 {
@@ -36,8 +35,7 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../../img/homepage/carousel/salad2.jpg");
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../img/homepage/carousel/salad2.jpg");
+  background-image: url("../img/homepage/carousel/salad3.jpg");
 }
 
 .carousel-item3 {
@@ -48,8 +46,7 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../../img/homepage/carousel/salad3.jpg");
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../img/homepage/carousel/salad3.jpg");
+  background-image: url("../img/homepage/carousel/salad2.jpg");
 }
 
 .contacts-section {
@@ -221,6 +218,15 @@
   text-align: center;
   background-color: red;
   margin-bottom: 10px;
+}
+
+.advantages-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 body {

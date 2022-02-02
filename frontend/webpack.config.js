@@ -18,11 +18,13 @@ module.exports = {
   module: {
     rules: [
       { test: /\.css$/i, use: ["style-loader", "css-loader"] },
+
       {
-        test: /\.(png|jpg|svg|gif)$/,
-        use: ["file-loader"],
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: "asset/resource",
       },
       { test: /\.(js)$/, use: "babel-loader" },
+
       {
         test: /\.s[ac]ss$/,
         use: [
