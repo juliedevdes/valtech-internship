@@ -1,10 +1,7 @@
-import "./js/jquery.min.js";
-import "./js/owl.carousel.min.js";
-
-import "./img/sprites/sprite-contacts.svg";
 import "./styles/main.scss";
 
-console.log("hello it's me, index.js");
+import "./styles/owlcarousel/owl.carousel.min.css";
+import "./styles/owlcarousel/owl.theme.default.min.css";
 
 $(document).ready(function () {
   $(".owl-carousel").owlCarousel({

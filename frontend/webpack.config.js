@@ -53,6 +53,10 @@ module.exports = {
           from: path.resolve(__dirname, "./src/img"),
           to: path.resolve(__dirname, "./dist/img"),
         },
+        {
+          from: path.resolve(__dirname, "./src/js"),
+          to: path.resolve(__dirname, "./dist/js"),
+        },
       ],
     }),
     new MiniCssExtractPlugin({
