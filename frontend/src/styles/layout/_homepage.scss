@@ -1,96 +1,161 @@
-.hero-title {
-  font-family: var(--secondary-font);
-  font-style: normal;
-  font-weight: bold;
-  font-size: 36px;
-  line-height: 25px;
+.hero {
+  background: #f5f5f5;
+  margin-top: 30px;
+  padding-bottom: 30px;
+  display: flex;
+  &-title {
+    font-family: var(--secondary-font);
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 25px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  &-sub {
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 45px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
 }
 
 .pinned {
   min-width: 500px;
-}
-.hero-section {
-  display: flex;
-}
-.carousel-item1 {
-  padding-left: 30px;
-  padding-top: 120px;
-  padding-bottom: 120px;
-  color: #fff;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-image: url("../img/homepage/carousel/salad1.jpg");
+  &-title {
+    font-family: var(--secondary-font);
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  &-btn {
+    border: none;
+    background: none;
+    text-decoration: underline;
+    text-decoration-color: #f6ae13;
+    text-decoration-thickness: 500;
+    color: #ffffff;
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 22px;
+  }
+  &-sub {
+    font-size: 15px;
+    line-height: 22px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 40px;
+  }
+  &-item {
+    max-width: 270px;
+    min-height: 184px;
+    padding: 20px;
+    color: #fff;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    &1 {
+      background-image: linear-gradient(
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url("../img/homepage/ice-cream.jpg");
+      margin-bottom: 10px;
+    }
+    &2 {
+      min-height: 183px;
+      background-image: linear-gradient(
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url("../img/homepage/citrus.jpg");
+    }
+  }
 }
 
-.carousel-item2 {
-  padding-left: 30px;
-  padding-top: 120px;
-  padding-bottom: 120px;
-  color: #fff;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-image: url("../img/homepage/carousel/salad3.jpg");
-}
-.carousel-item3 {
-  padding-left: 30px;
-  padding-top: 120px;
-  padding-bottom: 120px;
-  color: #fff;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-image: url("../img/homepage/carousel/salad2.jpg");
+.carousel {
+  max-width: 680px;
+  &-item {
+    width: 690px;
+    padding-left: 30px;
+    padding-top: 120px;
+    padding-bottom: 120px;
+    color: #fff;
+    background-size: cover;
+    background-repeat: no-repeat;
+    &1 {
+      background-image: linear-gradient(
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url("../img/homepage/carousel/salad1.jpg");
+    }
+    &2 {
+      background-image: linear-gradient(
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url("../img/homepage/carousel/salad3.jpg");
+    }
+    &3 {
+      background-image: linear-gradient(
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url("../img/homepage/carousel/salad2.jpg");
+    }
+    &_btn {
+      background: #f6ae13;
+      text-transform: uppercase;
+      border: none;
+      font-family: inherit;
+      padding: 10px 20px;
+      color: #ffffff;
+      font-weight: bold;
+      letter-spacing: 0.1em;
+      margin-top: 25px;
+    }
+  }
 }
 
-.contacts-section {
+.contacts {
   padding-top: 10px;
   padding-bottom: 10px;
   background-color: var(--color-pink);
   display: flex;
   justify-content: space-between;
+  &-list {
+    display: flex;
+  }
+  &-item {
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+  &-text {
+    padding: 5px;
+    margin-right: 20px;
+  }
 }
 
-.contact-list {
-  display: flex;
-}
-
-.contact-item {
-  display: flex;
-  justify-content: baseline;
-  align-items: center;
-}
-
-.contacts-text {
-  padding: 5px;
-}
-.contact-item:not(:last-child) {
-  margin-right: 10px;
-}
-
-.socials-item:not(:last-child) {
-  margin-right: 10px;
-}
-
-.socials-list {
-  display: flex;
-  align-items: center;
-}
-.socials-item {
-  height: 20px;
-}
-
-.contact-item .icon {
-  margin-right: 5px;
-}
-
-.search-section {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  padding-top: 20px;
-  padding-bottom: 20px;
+.socials {
+  &-item:not(:last-child) {
+    margin-right: 10px;
+  }
+  &-list {
+    display: flex;
+    align-items: center;
+  }
+  &-item {
+    height: 20px;
+    & .icon {
+      margin-right: 5px;
+    }
+  }
 }
 
 .search {
@@ -98,11 +163,18 @@
   padding-left: 20px;
   border: 1px solid #dddddd;
   width: 500px;
-}
-.search::placeholder {
-  line-height: 22px;
-  color: #888888;
-  padding: 10px 15px;
+  &::placeholder {
+    line-height: 22px;
+    color: #888888;
+    padding: 10px 15px;
+  }
+  &-section {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
 }
 
 .icon-search {
@@ -130,18 +202,16 @@
   background-color: var(--color-green);
   padding-top: 15px;
   padding-bottom: 15px;
-}
-
-.navigation-list {
-  display: flex;
-  justify-content: space-between;
-}
-
-.navigation-item {
-  font-weight: bold;
-  color: #ffffff;
-  display: flex;
-  align-content: center;
+  &-list {
+    display: flex;
+    justify-content: space-between;
+  }
+  &-item {
+    font-weight: bold;
+    color: #ffffff;
+    display: flex;
+    align-content: center;
+  }
 }
 
 .burger-icon {
@@ -149,21 +219,30 @@
   margin-right: 10px;
 }
 
-.wrapper {
-  width: 100%;
-}
 .carousel {
   margin: 0 auto;
 }
 
-.hero-card {
-  padding: 100px 50px;
-  text-align: center;
-  background-color: red;
-  margin-bottom: 10px;
-}
-
-.advantages-list {
-  display: flex;
-  justify-content: space-between;
+.advantages {
+  background: #f5f5f5;
+  &-list {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #ececec;
+  }
+  &-item {
+    padding: 30px;
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+  }
+  &-text {
+    font-weight: bold;
+    margin-left: 20px;
+  }
+  &-sub {
+    font-size: 12px;
+    line-height: 24px;
+  }
 }

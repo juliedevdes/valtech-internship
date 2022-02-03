@@ -5,10 +5,9 @@ import "./styles/owlcarousel/owl.theme.default.min.css";
 
 $(document).ready(function () {
   $(".owl-carousel").owlCarousel({
-    items: 1,
-    margin: 30,
-    nav: true,
-    loop: true,
     center: true,
+    items: 1,
+    loop: true,
+    dots: false,
   });
 });
