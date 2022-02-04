@@ -488,6 +488,233 @@
           justify-content: space-between;
 }
 
+.best-seller_title {
+  font-family: var(--secondary-font);
+  padding-top: 30px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 42px;
+  line-height: 50px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.best-seller_card-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.best-seller_header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.best-seller_btn {
+  background: none;
+  border: none;
+  font-family: inherit;
+}
+
+.best-seller_btn-list {
+  padding-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.best-seller_btn-list-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.best-seller_img {
+  height: 180px;
+  width: 180px;
+  background-color: lemonchiffon;
+}
+
+.best-seller_card-title {
+  padding-top: 15px;
+  padding-bottom: 10px;
+  text-align: center;
+  font-size: 12px;
+}
+
+.best-seller_card-price {
+  font-size: 15px;
+  padding-bottom: 15px;
+  text-align: center;
+}
+
+.footer {
+  background-color: #f5f5f5;
+  padding-bottom: 50px;
+}
+
+.footer--up {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  border-bottom: 0.2px #11111156 solid;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer--up_form-btn {
+  font-family: inherit;
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  background: #88b13e;
+  border: none;
+  padding: 10px 20px;
+}
+
+.footer--up_form-input {
+  border: 1px solid #ffffff;
+  fill: #fff;
+  padding: 10px 20px;
+  margin-right: 20px;
+}
+
+.footer--up_title {
+  font-family: var(--secondary-font);
+}
+
+.footer--up_subs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer--up_subs-icon {
+  padding: 20px;
+  margin-right: 20px;
+  background-color: #fff;
+  border-radius: 50%;
+  overflow: unset;
+}
+
+.footer--up_call-us {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer--up_call-us-icon {
+  padding: 20px;
+  margin-right: 20px;
+  background-color: #fff;
+  border-radius: 50%;
+  overflow: unset;
+}
+
+.footer--down {
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer--down_title {
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+.footer--down_item {
+  font-size: 15px;
+  line-height: 32px;
+  color: #888888;
+}
+
+.footer--down_list-container:not(:last-child) {
+  margin-right: 70px;
+}
+
+.footer--down_logo {
+  margin-right: 50px;
+}
+
+.footer--down_logo img {
+  margin-bottom: 20px;
+}
+
+.rights {
+  color: #fff;
+  background-color: #2c332c;
+}
+
+.rights-text {
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+.news_title {
+  font-family: var(--secondary-font);
+  padding-top: 30px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 42px;
+  line-height: 50px;
+  margin-bottom: 30px;
+}
+
+.news_cards-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.news_card-item {
+  padding: 10px;
+}
+
+.news_card-date {
+  font-size: 11px;
+  color: #888888;
+  margin-bottom: 20px;
+}
+
+.news_card-title {
+  font-family: var(--secondary-font);
+  font-size: 18px;
+  line-height: 25px;
+}
+
+.news_card-sub-title {
+  margin-top: 10px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 30px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #88b13e;
+}
+
+.news_card-img {
+  background-color: wheat;
+  width: 230px;
+  height: 130px;
+}
+
 body {
   font-family: var(--main-font);
   color: #3b352d;

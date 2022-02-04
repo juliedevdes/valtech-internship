@@ -385,3 +385,183 @@
     justify-content: space-between;
   }
 }
+
+.best-seller {
+  &_title {
+    font-family: var(--secondary-font);
+    padding-top: 30px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 42px;
+    line-height: 50px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  &_card-list {
+    display: flex;
+    justify-content: space-between;
+  }
+  &_header {
+    display: flex;
+    justify-content: space-between;
+  }
+  &_btn {
+    background: none;
+    border: none;
+    font-family: inherit;
+  }
+  &_btn-list {
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    &-item:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+  &_img {
+    height: 180px;
+    width: 180px;
+    background-color: lemonchiffon;
+  }
+  &_card-title {
+    padding-top: 15px;
+    padding-bottom: 10px;
+    text-align: center;
+    font-size: 12px;
+  }
+  &_card-price {
+    font-size: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+  }
+}
+
+.footer {
+  background-color: #f5f5f5;
+  padding-bottom: 50px;
+  &--up {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border-bottom: 0.2px #11111156 solid;
+    &_form-btn {
+      font-family: inherit;
+      color: #fff;
+      font-weight: bold;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      background: #88b13e;
+      border: none;
+      padding: 10px 20px;
+    }
+    &_form-input {
+      border: 1px solid #ffffff;
+      fill: #fff;
+      padding: 10px 20px;
+      margin-right: 20px;
+    }
+    &_title {
+      font-family: var(--secondary-font);
+    }
+    display: flex;
+    justify-content: space-between;
+    &_subs {
+      display: flex;
+      &-icon {
+        padding: 20px;
+        margin-right: 20px;
+        background-color: #fff;
+        border-radius: 50%;
+        overflow: unset;
+      }
+    }
+    &_call-us {
+      display: flex;
+      &-icon {
+        padding: 20px;
+        margin-right: 20px;
+        background-color: #fff;
+        border-radius: 50%;
+        overflow: unset;
+      }
+    }
+  }
+  &--down {
+    margin-top: 30px;
+    &_title {
+      font-weight: 600;
+      font-size: 18px;
+      margin-bottom: 25px;
+    }
+    &_item {
+      font-size: 15px;
+      line-height: 32px;
+      color: #888888;
+    }
+    &_list-container {
+      &:not(:last-child) {
+        margin-right: 70px;
+      }
+    }
+    display: flex;
+    &_logo {
+      margin-right: 50px;
+      & img {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+.rights {
+  color: #fff;
+  background-color: #2c332c;
+  &-text {
+    padding-bottom: 20px;
+    padding-top: 20px;
+  }
+}
+
+.news {
+  &_title {
+    font-family: var(--secondary-font);
+    padding-top: 30px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 42px;
+    line-height: 50px;
+    margin-bottom: 30px;
+  }
+  &_cards-list {
+    display: flex;
+    justify-content: space-between;
+  }
+  &_card {
+    &-item {
+      padding: 10px;
+    }
+    &-date {
+      font-size: 11px;
+      color: #888888;
+      margin-bottom: 20px;
+    }
+    &-title {
+      font-family: var(--secondary-font);
+      font-size: 18px;
+      line-height: 25px;
+    }
+    &-sub-title {
+      margin-top: 10px;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 30px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #88b13e;
+    }
+    &-img {
+      background-color: wheat;
+      width: 230px;
+      height: 130px;
+    }
+  }
+}
