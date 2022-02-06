@@ -76,6 +76,24 @@
   background-color: var(--color-green);
   padding-top: 15px;
   padding-bottom: 15px;
+  &_menu-icon {
+    margin-right: 10px;
+  }
+  &_link {
+    display: flex;
+    color: #2c332c;
+    transition: all 250ms linear;
+    &:hover {
+      color: #88b13e;
+    }
+  }
+
+  &_menu-icon {
+    transition: fill 250ms linear;
+  }
+  &_link:hover &_menu-icon {
+    fill: #88b13e;
+  }
   &_burger-icon {
     fill: #ffffff;
     margin-right: 10px;
@@ -88,8 +106,49 @@
     padding: 5px;
     font-size: small;
     font-weight: bold;
-    color: #ffffff;
     display: flex;
+    color: #fff;
+    transition: all 250ms linear;
+    &:hover {
+      background-color: #ffffff;
+      color: #2c332c;
+    }
+  }
+
+  &_menu-item {
+    width: 250px;
+    transition: all 250ms linear;
+  }
+  &_menu-item span {
+    margin-right: 10px;
+    margin-top: 3px;
+  }
+
+  &_menu-item:hover,
+  &_menu-item:focus {
+    background-color: #ffffff;
+    fill: #2c332c;
+    color: #2c332c;
+    position: relative;
+  }
+  &_menu-item:hover &_burger-icon {
+    fill: #2c332c;
+  }
+
+  &_menu-item:hover &_menu {
+    padding: 10px;
+    display: block;
+    position: absolute;
+    top: 30px;
+    background-color: #fff;
+    z-index: 2;
+    &-item {
+      padding: 10px 30px;
+      padding-right: 80px;
+    }
+  }
+  &_menu {
+    display: none;
   }
 }
 
