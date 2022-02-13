@@ -92,6 +92,14 @@
   border: none;
   background-color: unset;
   font-family: inherit;
+  -webkit-transition: all 250ms linear;
+  transition: all 250ms linear;
+  fill: #111111;
+}
+
+.search_btn:hover, .search_btn:focus {
+  fill: #f6ae13;
+  color: #f6ae13;
 }
 
 .search_user-menu {
@@ -109,8 +117,6 @@
 
 .navigation {
   background-color: var(--color-green);
-  padding-top: 15px;
-  padding-bottom: 15px;
 }
 
 .navigation_menu-icon {
@@ -154,13 +160,13 @@
 }
 
 .navigation-item {
-  padding: 5px;
   font-size: small;
   font-weight: bold;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   color: #fff;
+  padding: 5px;
   -webkit-transition: all 250ms linear;
   transition: all 250ms linear;
 }
@@ -196,7 +202,7 @@
   padding: 10px;
   display: block;
   position: absolute;
-  top: 30px;
+  top: 40px;
   background-color: #fff;
   z-index: 2;
 }
@@ -207,6 +213,10 @@
 }
 
 .navigation_menu {
+  display: none;
+}
+
+.navigation_menu-span {
   display: none;
 }
 
@@ -328,6 +338,46 @@
   background-color: #ffffff;
 }
 
+.new-dishes_cart-list {
+  opacity: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  top: 80%;
+  left: 5%;
+  -webkit-transition: all 250ms linear;
+  transition: all 250ms linear;
+}
+
+.new-dishes_cart-btn {
+  background-color: var(--color-green);
+  font-size: 13px;
+  color: #ffffff;
+  font-weight: bold;
+  fill: #fff;
+  border: none;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-transition: all 250ms linear;
+  transition: all 250ms linear;
+}
+
+.new-dishes_cart-btn-add {
+  margin-left: 5px;
+}
+
+.new-dishes_cart-item:not(:last-child) {
+  margin-right: 5px;
+}
+
 .new-dishes_title {
   text-align: center;
   font-family: var(--secondary-font);
@@ -387,9 +437,25 @@
 }
 
 .new-dishes_card-picture {
+  position: relative;
   width: 100%;
   height: 400px;
   background-color: lightcoral;
+}
+
+.new-dishes_cart {
+  color: unset;
+  -webkit-transition: all 250ms linear;
+  transition: all 250ms linear;
+}
+
+.new-dishes_cart:hover {
+  color: #88b13e;
+}
+
+.new-dishes_cart:hover .new-dishes_cart-list,
+.new-dishes_cart:focus .new-dishes_cart-list {
+  opacity: unset;
 }
 
 .deals {
@@ -713,6 +779,12 @@
   background: #88b13e;
   border: none;
   padding: 10px 20px;
+  -webkit-transition: all 250ms linear;
+  transition: all 250ms linear;
+}
+
+.footer--up_form-btn:hover {
+  background: #f6ae13;
 }
 
 .footer--up_form-input {
@@ -825,8 +897,14 @@
     margin-top: unset;
   }
   .navigation-item {
-    padding: unset;
+    padding: 15px 20px;
     font-size: unset;
+  }
+  .navigation_menu-item:hover .navigation_menu {
+    top: 60px;
+  }
+  .navigation_menu-span {
+    display: unset;
   }
   .carousel {
     max-width: 600px;
