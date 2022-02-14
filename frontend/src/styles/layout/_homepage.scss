@@ -140,7 +140,8 @@
     fill: #2c332c;
   }
 
-  &_menu-item:hover &_menu {
+  &_menu-item:hover &_menu,
+  &_menu-item:focus &_menu {
     padding: 10px;
     display: block;
     position: absolute;
@@ -148,8 +149,7 @@
     background-color: #fff;
     z-index: 2;
     &-item {
-      padding: 10px 30px;
-      padding-right: 80px;
+      padding: 10px 25px;
     }
   }
   &_menu {
@@ -284,6 +284,9 @@
     display: flex;
     align-content: center;
     transition: all 250ms linear;
+    &:hover {
+      cursor: pointer;
+    }
     &-add {
       margin-left: 5px;
     }
@@ -555,8 +558,7 @@
   }
   &_text {
     display: block;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding: 20px;
     margin: 0 auto;
     max-width: 450px;
   }
@@ -617,6 +619,7 @@
   background-color: #f5f5f5;
   padding-bottom: 50px;
   &--up {
+    padding: 10px;
     padding-top: 50px;
     padding-bottom: 50px;
     border-bottom: 0.2px #11111156 solid;
@@ -628,6 +631,7 @@
       text-transform: uppercase;
       background: #88b13e;
       border: none;
+      margin-top: 20px;
       padding: 10px 20px;
       transition: all 250ms linear;
       &:hover {
@@ -645,6 +649,7 @@
       font-family: var(--secondary-font);
     }
     &_subs {
+      margin-right: 10px;
       display: flex;
       &-icon {
         padding: 20px;
@@ -655,10 +660,13 @@
       }
     }
     &_call-us {
+      margin-right: 10px;
       display: flex;
       &-icon {
         padding: 20px;
         margin-right: 20px;
+        margin-bottom: 20px;
+
         background-color: #fff;
         border-radius: 50%;
         overflow: unset;
@@ -667,6 +675,7 @@
   }
   &--down {
     margin-top: 30px;
+    padding: 10px;
     &_title {
       font-weight: 600;
       font-size: 18px;
@@ -727,8 +736,13 @@
       padding: 15px 20px;
       font-size: unset;
     }
+    &_link {
+      padding-bottom: 20px;
+    }
     &_menu-item:hover &_menu {
+      width: 100%;
       top: 60px;
+      left: 0px;
     }
     &_menu-span {
       display: unset;
@@ -857,9 +871,14 @@
   }
 
   .new-dishes {
+    &_cart-list {
+      left: 20%;
+    }
     &_card-list {
       display: flex;
-      justify-content: space-between;
+    }
+    &_card-item {
+      min-width: 200px;
     }
     &_card-picture {
       height: 200px;
@@ -936,6 +955,24 @@
       &_logo {
         margin-bottom: unset;
       }
+    }
+  }
+}
+
+@media screen and (min-width: 1700px) {
+  .new-dishes {
+    &_card-item {
+      min-width: 250px;
+    }
+  }
+  .categories {
+    &_img {
+      min-width: 300px;
+    }
+  }
+  .best-seller {
+    &_img {
+      min-width: 250px;
     }
   }
 }
