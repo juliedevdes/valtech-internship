@@ -1,7 +1,18 @@
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
 .contacts {
   padding-top: 10px;
   padding-bottom: 10px;
-  background-color: var(--color-pink);
+  background-color: #fceee7;
 }
 
 .contacts-item {
@@ -116,7 +127,7 @@
 }
 
 .navigation {
-  background-color: var(--color-green);
+  background-color: #88b13e;
 }
 
 .navigation_menu-icon {
@@ -233,7 +244,7 @@
 }
 
 .hero-title {
-  font-family: var(--secondary-font);
+  font-family: "Lobster", cursive;
   font-style: normal;
   font-weight: bold;
   font-size: 36px;
@@ -355,7 +366,7 @@
 }
 
 .new-dishes_cart-btn {
-  background-color: var(--color-green);
+  background-color: #88b13e;
   font-size: 13px;
   color: #ffffff;
   font-weight: bold;
@@ -385,7 +396,7 @@
 
 .new-dishes_title {
   text-align: center;
-  font-family: var(--secondary-font);
+  font-family: "Lobster", cursive;
   font-style: normal;
   font-weight: normal;
   font-size: 42px;
@@ -468,7 +479,7 @@
 }
 
 .deals-title {
-  font-family: var(--secondary-font);
+  font-family: "Lobster", cursive;
   margin-bottom: 10px;
 }
 
@@ -593,7 +604,7 @@
   background: #ffffff;
   border: none;
   padding: 10px 30px;
-  font-family: var(--secondary-font);
+  font-family: "Lobster", cursive;
   font-weight: normal;
   font-size: 21px;
   line-height: 25px;
@@ -602,7 +613,7 @@
 }
 
 .categories_btn--items {
-  font-family: var(--main-font);
+  font-family: "Jost", sans-serif;
   font-size: 15px;
   line-height: 22px;
   text-align: center;
@@ -610,7 +621,7 @@
 }
 
 .categories_title {
-  font-family: var(--secondary-font);
+  font-family: "Lobster", cursive;
   padding-top: 30px;
   font-style: normal;
   font-weight: normal;
@@ -633,7 +644,7 @@
 }
 
 .best-seller_title {
-  font-family: var(--secondary-font);
+  font-family: "Lobster", cursive;
   padding-top: 30px;
   font-style: normal;
   font-weight: normal;
@@ -693,7 +704,7 @@
 }
 
 .reviews_title {
-  font-family: var(--secondary-font);
+  font-family: "Lobster", cursive;
   padding-top: 30px;
   font-style: normal;
   font-weight: normal;
@@ -712,13 +723,13 @@
 
 .reviews_author {
   text-align: center;
-  font-family: var(--secondary-font);
+  font-family: "Lobster", cursive;
   font-size: 22px;
   padding-bottom: 20px;
 }
 
 .news_title {
-  font-family: var(--secondary-font);
+  font-family: "Lobster", cursive;
   padding-top: 30px;
   font-style: normal;
   font-weight: normal;
@@ -742,7 +753,7 @@
 }
 
 .news_card-title {
-  font-family: var(--secondary-font);
+  font-family: "Lobster", cursive;
   font-size: 18px;
   line-height: 25px;
 }
@@ -802,7 +813,7 @@
 }
 
 .footer--up_title {
-  font-family: var(--secondary-font);
+  font-family: "Lobster", cursive;
 }
 
 .footer--up_subs {
@@ -988,7 +999,7 @@
     display: unset;
   }
   .pinned-title {
-    font-family: var(--secondary-font);
+    font-family: "Lobster", cursive;
     margin-top: 10px;
     margin-bottom: 10px;
   }
@@ -1149,7 +1160,7 @@
 }
 
 body {
-  font-family: var(--main-font);
+  font-family: "Jost", sans-serif;
   color: #3b352d;
 }
 
@@ -1200,23 +1211,5 @@ img {
     padding-left: 10%;
     padding-right: 10%;
   }
-}
-
-:root {
-  --main-font: "Jost", sans-serif;
-  --secondary-font: "Lobster", cursive;
-  --color-green: #88b13e;
-  --color-pink: #fceee7;
-}
-
-.visually-hidden {
-  position: absolute !important;
-  clip: rect(1px 1px 1px 1px);
-  clip: rect(1px, 1px, 1px, 1px);
-  padding: 0 !important;
-  border: 0 !important;
-  height: 1px !important;
-  width: 1px !important;
-  overflow: hidden;
 }
 /*# sourceMappingURL=main.css.map */
