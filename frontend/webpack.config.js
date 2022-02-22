@@ -2,6 +2,7 @@ const path = require("path");
 const HtlmlPl = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   devServer: {
@@ -17,13 +18,15 @@ module.exports = {
   module: {
     rules: [
       { test: /\.css$/i, use: ["style-loader", "css-loader"] },
+
       {
-        test: /\.(png|jpg|svg|gif)$/,
-        use: ["file-loader"],
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: "asset/resource",
       },
       { test: /\.(js)$/, use: "babel-loader" },
+
       {
-        test: /\.s[ac]ss/,
+        test: /\.s[ac]ss$/,
         use: [
           {
             loader: MiniCssExtractPlugin.loader,
@@ -44,9 +47,21 @@ module.exports = {
     new HtlmlPl({
       template: "./src/index.html",
     }),
-    new CleanWebpackPlugin(),
-    new MiniCssExtractPlugin({
-      filename: "style.css",
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: path.resolve(__dirname, "./src/img"),
+          to: path.resolve(__dirname, "./dist/img"),
+        },
+        {
+          from: path.resolve(__dirname, "./src/js"),
+          to: path.resolve(__dirname, "./dist/js"),
+        },
+      ],
     }),
+    new MiniCssExtractPlugin({
+      filename: "styles.css",
+    }),
+    new CleanWebpackPlugin(),
   ],
 };
