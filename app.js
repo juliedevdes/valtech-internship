@@ -16,10 +16,8 @@ app.set("view engine", "hbs");
 app.set("views", path.join(__dirname, "views"));
 
 /* client routes/pages */
-app.get("/", (req, res, next) => {
-  console.log("Server is running");
-  res.render("homepage");
-});
+const homeRouter = require("./routes/homepage");
+app.use("/", homeRouter);
 
 const shopRouter = require("./routes/shop");
 app.use("/shop", shopRouter);
@@ -31,8 +29,8 @@ app.use("/api/products", productsRouter);
 const categoriesRouter = require("./backend/services/categories");
 app.use("/api/categories", categoriesRouter);
 
-const ordersRouter = require("./backend/services/orders");
-app.use("/api/orders", ordersRouter);
+// const ordersRouter = require("./backend/services/orders");
+// app.use("/api/orders", ordersRouter);
 
 /* error handling */
 app.use((req, res) => {
@@ -64,5 +62,3 @@ mongoose
     console.log("Database connection error");
     process.exit(1);
   });
-
-//module.exports = { app };

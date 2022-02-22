@@ -17,12 +17,18 @@
   </head>
 {{>header}}
 {{>navigation}}
-<h1 style="padding: 30" >Shop-page content</h1>
-<ul>
+<section class="products container">
+<ul class="list products_list">
 {{#each products}}
-  <li>{{productName}}  {{price}}</li>
+  <li class="products_item">
+    <img src={{img}} alt="product image" width="250" >
+    <h3 class="products_title">{{productName}}</h3>
+    <p class="products_price">${{price}}</p>
+    <p class="products_category">{{category}}</p>
+     </li>
 {{/each}}
 </ul>
+</section>
 {{>footer}}
 {{>rights}}
 </html>

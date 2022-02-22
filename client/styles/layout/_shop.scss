@@ -1,0 +1,14 @@
+.products {
+  &_list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    // margin-top: 30px;
+    // margin-left: 20px;
+    // grid-template-columns: 1fr 50px 1fr 1fr;
+  }
+  &_item {
+    //flex-basis: calc(100% / 3 - 30px);
+    margin-top: 20px;
+  }
+}

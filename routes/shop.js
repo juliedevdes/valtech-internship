@@ -6,7 +6,7 @@ router.get("/", (req, res, next) => {
   axios
     .get("http://localhost:3000/api/products")
     .then((response) => {
-      res.render("shop", { products: response.data });
+      res.render("shop", { products: response.data.docs });
     })
     .catch((error) => {
       next(error);
