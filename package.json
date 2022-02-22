@@ -1,12 +1,17 @@
 {
-  "name": "frontend",
+  "name": "valtech-internship",
   "version": "1.0.0",
-  "description": "visual part of a project",
+  "description": "intership project",
   "main": "index.js",
   "scripts": {
+    "start": "npx nodemon app.js",
     "watch": "npx webpack serve --mode development",
     "dev": "npx webpack --mode development",
     "build": "npx webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juliedevdes/valtech-internship.git"
   },
   "author": "Julia Okhrimenko",
   "license": "ISC",
@@ -20,12 +25,23 @@
     "mini-css-extract-plugin": "^2.5.3",
     "node-sass": "^7.0.1",
     "sass-loader": "^12.4.0",
+    "schema-utils": "^4.0.0",
     "style-loader": "^3.3.1",
     "webpack": "^5.67.0",
     "webpack-cli": "^4.9.2",
     "webpack-dev-server": "^4.7.3"
   },
+  "bugs": {
+    "url": "https://github.com/juliedevdes/valtech-internship/issues"
+  },
+  "homepage": "https://github.com/juliedevdes/valtech-internship#readme",
   "dependencies": {
-    "mini-css-extract-plugin": "^2.5.3"
+    "axios": "^0.26.0",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "hbs": "^4.2.0",
+    "http-errors": "^2.0.0",
+    "joi": "^17.6.0",
+    "mongoose": "^6.2.2"
   }
 }

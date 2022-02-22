@@ -1,0 +1,902 @@
+[
+  {
+    "productName": "Green Happy Meal",
+    "price": 218,
+    "category": "combo",
+    "bestSeller": true,
+    "isOnSale": false,
+    "salePercentage": 25,
+    "img": "https://picsum.photos/500"
+  },
+  {
+    "productName": "Patty Soft",
+    "price": 167,
+    "category": "burger",
+    "bestSeller": false,
+    "isOnSale": false,
+    "salePercentage": 32,
+    "img": "https://picsum.photos/500"
+  },
+  {
+    "productName": "Four Cheese",
+    "price": 144,
+    "category": "pizza",
+    "bestSeller": false,
+    "isOnSale": true,
+    "salePercentage": 26,
+    "img": "https://picsum.photos/500"
+  },
+  {
+    "productName": "Driver Meal",
+    "price": 106,
+    "category": "combo",
+    "bestSeller": false,
+    "isOnSale": false,
+    "salePercentage": 23,
+    "img": "https://picsum.photos/500"
+  },
+  {
+    "productName": "Tender Sousagge",
+    "price": 165,
+    "category": "spaghetti",
+    "bestSeller": true,
+    "isOnSale": false,
+    "salePercentage": 27,
+    "img": "https://picsum.photos/500"
+  },
+  {
+    "productName": "Carrot Sticks",
+    "price": 157,
+    "category": "fries",
+    "bestSeller": true,
+    "isOnSale": false,
+    "salePercentage": 25,
+    "img": "https://picsum.photos/500"
+  },
+  {
+    "productName": "Pepperoni",
+    "price": 60,
+    "category": "pizza",
+    "bestSeller": true,
+    "isOnSale": false,
+    "salePercentage": 33,
+    "img": "https://picsum.photos/500"
+  },
+  {
+    "productName": "Fighter Meal",
+    "price": 160,
+    "category": "combo",
+    "bestSeller": true,
+    "isOnSale": true,
+    "salePercentage": 21,
+    "img": "https://picsum.photos/500"
+  },
+  {
+    "productName": "Father Meal",
+    "price": 51,
+    "category": "combo",
+    "bestSeller": false,
+    "isOnSale": false,
+    "salePercentage": 39,
+    "img": "https://picsum.photos/500"
+  },
+  {
+    "productName": "Happy Bunny",
+    "price": 28,
+    "category": "salad",
+    "bestSeller": true,
+    "isOnSale": false,
+    "salePercentage": 38,
+    "img": "https://picsum.photos/500"
+  },
+  {
+    "productName": "Spanish Grill",
+    "price": 231,
+    "category": "burger",
+    "bestSeller": true,
+    "isOnSale": true,
+    "salePercentage": 35,
+    "img": "https://picsum.photos/500"
+  },
+  {
+    "productName": "Fresh Salad Sandwich",
+    "price": 195,
+    "category": "sandwich",
+    "bestSeller": true,
+    "isOnSale": true,
+    "salePercentage": 37,
+    "img": "https://picsum.photos/500"
+  },
+  {
+    "productName": "Californian Cheese pizza",
+    "price": 61,
+    "category": "pizza",
+    "bestSeller": false,
+    "isOnSale": true,
+    "salePercentage": 22,
+    "img": "https://picsum.photos/500"
+  },
+  {
+    "productName": "Vegetable Assorti",
+    "price": 103,
+    "category": "fries",
+    "bestSeller": false,
+    "isOnSale": false,
+    "salePercentage": 22,
+    "img": "https://picsum.photos/500"
+  },
+  {
+    "productName": "Provance Burger",
+    "price": 69,
+    "category": "burger",
+    "bestSeller": false,
+    "isOnSale": false,
+    "salePercentage": 29,
+    "img": "https://picsum.photos/500"
+  },
+  {
+    "productName": "Wild West Pizza",
+    "price": 84,
+    "category": "pizza",
+    "bestSeller": true,
+    "isOnSale": true,
+    "salePercentage": 37,
+    "img": "https://picsum.photos/500"
+  },
+  {
+    "productName": "Your Ex's meat Burger",
+    "price": 131,
+    "category": "burger",
+    "bestSeller": true,
+    "isOnSale": false,
+    "salePercentage": 26,
+    "img": "https://picsum.photos/500"
+  },
+  {
+    "productName": "Padre Burger",
+    "price": 157,
+    "category": "burger",
+    "bestSeller": true,
+    "isOnSale": false,
+    "salePercentage": 38,
+    "img": "https://picsum.photos/500"
+  },
+  {
+    "productName": "Venom Sandwich",
+    "price": 97,
+    "category": "sandwich",
+    "bestSeller": false,
+    "isOnSale": true,
+    "salePercentage": 21,
+    "img": "https://picsum.photos/500"
+  },
+  {
+    "productName": "Official Sandwich",
+    "price": 177,
+    "category": "salad",
+    "bestSeller": true,
+    "isOnSale": true,
+    "salePercentage": 20,
+    "img": "https://picsum.photos/500"
+  },
+  {
+    "productName": "Non-Burger",
+    "price": 44,
+    "category": "burger",
+    "bestSeller": false,
+    "isOnSale": true,
+    "salePercentage": 38,
+    "img": "https://picsum.photos/500"
+  },
+  {
+    "productName": "Consensus Buns Burger",
+    "price": 78,
+    "category": "burger",
+    "bestSeller": true,
+    "isOnSale": false,
+    "salePercentage": 25,
+    "img": "https://picsum.photos/500"
+  },
+  {
+    "productName": "Denver Sandwich",
+    "price": 108,
+    "category": "sandwich",
+    "bestSeller": true,
+    "isOnSale": true,
+    "salePercentage": 32,
+    "img": "https://picsum.photos/500"
+  },
+  {
+    "productName": "Oil-y Fries",
+    "price": 93,
+    "category": "fries",
+    "bestSeller": false,
+    "isOnSale": true,
+    "salePercentage": 30,
+    "img": "https://picsum.photos/500"
+  },
+  {
+    "productName": "Veniam Sandwich",
+    "price": 93,
+    "category": "sandwich",
+    "bestSeller": true,
+    "isOnSale": false,
+    "salePercentage": 26,
+    "img": "https://picsum.photos/500"
+  },
+  {
+    "productName": "Mini meal",
+    "price": 196,
+    "category": "combo",
+    "bestSeller": false,
+    "isOnSale": true,
+    "salePercentage": 30,
+    "img": "https://picsum.photos/500"
+  },
+  {
+    "productName": "Dodo salad",
+    "price": 85,
+    "category": "salad",
+    "bestSeller": true,
+    "isOnSale": true,
+    "salePercentage": 27,
+    "img": "https://picsum.photos/500"
+  },
+  {
+    "productName": "Indi combo-meal",
+    "price": 35,
+    "category": "combo",
+    "bestSeller": true,
+    "isOnSale": true,
+    "salePercentage": 34,
+    "img": "https://picsum.photos/500"
+  },
+  {
+    "productName": "Magma Egg Salad",
+    "price": 85,
+    "category": "salad",
+    "bestSeller": true,
+    "isOnSale": false,
+    "salePercentage": 40,
+    "img": "https://picsum.photos/500"
+  },
+  {
+    "productName": "Essential Meal",
+    "price": 188,
+    "category": "combo",
+    "bestSeller": true,
+    "isOnSale": true,
+    "salePercentage": 36,
+    "img": "https://picsum.photos/500"
+  },
+  {
+    "productName": "Commodo fries",
+    "price": 111,
+    "category": "fries",
+    "bestSeller": false,
+    "isOnSale": true,
+    "salePercentage": 28,
+    "img": "https://picsum.photos/500"
+  },
+  {
+    "productName": "Dream Salad",
+    "price": 218,
+    "category": "salad",
+    "bestSeller": true,
+    "isOnSale": true,
+    "salePercentage": 22,
+    "img": "https://picsum.photos/500"
+  },
+  {
+    "productName": "Mmmm-getti",
+    "price": 106,
+    "category": "spaghetti",
+    "bestSeller": false,
+    "isOnSale": false,
+    "salePercentage": 21,
+    "img": "https://picsum.photos/500"
+  },
+  {
+    "productName": "Denim Burger",
+    "price": 172,
+    "category": "burger",
+    "bestSeller": true,
+    "isOnSale": true,
+    "salePercentage": 34,
+    "img": "https://picsum.photos/500"
+  },
+  {
+    "productName": "Italian shame",
+    "price": 31,
+    "category": "spaghetti",
+    "bestSeller": true,
+    "isOnSale": true,
+    "salePercentage": 27,
+    "img": "https://picsum.photos/500"
+  },
+  {
+    "productName": "Aliquip",
+    "price": 206,
+    "category": "fries",
+    "bestSeller": false,
+    "isOnSale": true,
+    "salePercentage": 29,
+    "img": "https://picsum.photos/500"
+  },
+  {
+    "productName": "Cupidatat",
+    "price": 147,
+    "category": "salad",
+    "bestSeller": true,
+    "isOnSale": true,
+    "salePercentage": 29,
+    "img": "https://picsum.photos/500"
+  },
+  {
+    "productName": "Velity salad",
+    "price": 26,
+    "category": "salad",
+    "bestSeller": true,
+    "isOnSale": true,
+    "salePercentage": 34,
+    "img": "https://picsum.photos/500"
+  },
+  {
+    "productName": "Elit sandvit",
+    "price": 230,
+    "category": "sandwich",
+    "bestSeller": true,
+    "isOnSale": false,
+    "salePercentage": 34,
+    "img": "https://picsum.photos/500"
+  },
+  {
+    "productName": "Add salad",
+    "price": 72,
+    "category": "salad",
+    "bestSeller": false,
+    "isOnSale": true,
+    "salePercentage": 25,
+    "img": "https://picsum.photos/500"
+  },
+  {
+    "productName": "Sit & eat",
+    "price": 71,
+    "category": "pizza",
+    "bestSeller": true,
+    "isOnSale": true,
+    "salePercentage": 22,
+    "img": "https://picsum.photos/500"
+  },
+  {
+    "productName": "Niam salad",
+    "price": 214,
+    "category": "salad",
+    "bestSeller": true,
+    "isOnSale": false,
+    "salePercentage": 33,
+    "img": "https://picsum.photos/500"
+  },
+  {
+    "productName": "Quis combo",
+    "price": 114,
+    "category": "combo",
+    "bestSeller": true,
+    "isOnSale": true,
+    "salePercentage": 29,
+    "img": "https://picsum.photos/500"
+  },
+  {
+    "productName": "Incididunt",
+    "price": 76,
+    "category": "fries",
+    "bestSeller": true,
+    "isOnSale": true,
+    "salePercentage": 40,
+    "img": "https://picsum.photos/500"
+  },
+  {
+    "productName": "Moon Salad",
+    "price": 195,
+    "category": "salad",
+    "bestSeller": true,
+    "isOnSale": false,
+    "salePercentage": 26,
+    "img": "https://picsum.photos/500"
+  },
+  {
+    "productName": "Fred meal",
+    "price": 41,
+    "category": "combo",
+    "bestSeller": true,
+    "isOnSale": true,
+    "salePercentage": 21,
+    "img": "https://picsum.photos/500"
+  },
+  {
+    "productName": "Grace cabbage",
+    "price": 84,
+    "category": "salad",
+    "bestSeller": true,
+    "isOnSale": true,
+    "salePercentage": 36,
+    "img": "https://picsum.photos/500"
+  },
+  {
+    "productName": "Patriarchy pizza",
+    "price": 73,
+    "category": "pizza",
+    "bestSeller": false,
+    "isOnSale": true,
+    "salePercentage": 34,
+    "img": "https://picsum.photos/500"
+  },
+  {
+    "productName": "No way Meal",
+    "price": 181,
+    "category": "combo",
+    "bestSeller": false,
+    "isOnSale": false,
+    "salePercentage": 22,
+    "img": "https://picsum.photos/500"
+  },
+  {
+    "productName": "Men's spaghetti",
+    "price": 117,
+    "category": "spaghetti",
+    "bestSeller": false,
+    "isOnSale": false,
+    "salePercentage": 26,
+    "img": "https://picsum.photos/500"
+  },
+  {
+    "productName": "Drumer Meal",
+    "price": 93,
+    "category": "combo",
+    "bestSeller": true,
+    "isOnSale": false,
+    "salePercentage": 40,
+    "img": "https://picsum.photos/500"
+  },
+  {
+    "productName": "Carbonata",
+    "price": 214,
+    "category": "spaghetti",
+    "bestSeller": false,
+    "isOnSale": true,
+    "salePercentage": 39,
+    "img": "https://picsum.photos/500"
+  },
+  {
+    "productName": "Greek salad",
+    "price": 55,
+    "category": "salad",
+    "bestSeller": false,
+    "isOnSale": false,
+    "salePercentage": 40,
+    "img": "https://picsum.photos/500"
+  },
+  {
+    "productName": "Indy-getti",
+    "price": 69,
+    "category": "spaghetti",
+    "bestSeller": true,
+    "isOnSale": false,
+    "salePercentage": 23,
+    "img": "https://picsum.photos/500"
+  },
+  {
+    "productName": "Reprehenderit pizza",
+    "price": 107,
+    "category": "pizza",
+    "bestSeller": false,
+    "isOnSale": false,
+    "salePercentage": 24,
+    "img": "https://picsum.photos/500"
+  },
+  {
+    "productName": "Etter Meal",
+    "price": 157,
+    "category": "combo",
+    "bestSeller": false,
+    "isOnSale": false,
+    "salePercentage": 37,
+    "img": "https://picsum.photos/500"
+  },
+  {
+    "productName": "Sinty - dam",
+    "price": 137,
+    "category": "fries",
+    "bestSeller": false,
+    "isOnSale": true,
+    "salePercentage": 39,
+    "img": "https://picsum.photos/500"
+  },
+  {
+    "productName": "Fugiat sandwich",
+    "price": 195,
+    "category": "sandwich",
+    "bestSeller": true,
+    "isOnSale": false,
+    "salePercentage": 33,
+    "img": "https://picsum.photos/500"
+  },
+  {
+    "productName": "Aliqua fries",
+    "price": 34,
+    "category": "fries",
+    "bestSeller": false,
+    "isOnSale": true,
+    "salePercentage": 39,
+    "img": "https://picsum.photos/500"
+  },
+  {
+    "productName": "Nulla schmulla",
+    "price": 234,
+    "category": "fries",
+    "bestSeller": false,
+    "isOnSale": false,
+    "salePercentage": 20,
+    "img": "https://picsum.photos/500"
+  },
+  {
+    "productName": "Ipsum pizza",
+    "price": 23,
+    "category": "pizza",
+    "bestSeller": false,
+    "isOnSale": true,
+    "salePercentage": 21,
+    "img": "https://picsum.photos/500"
+  },
+  {
+    "productName": "Qui sandwie",
+    "price": 64,
+    "category": "sandwich",
+    "bestSeller": false,
+    "isOnSale": true,
+    "salePercentage": 28,
+    "img": "https://picsum.photos/500"
+  },
+  {
+    "productName": "Mollit fries",
+    "price": 82,
+    "category": "fries",
+    "bestSeller": true,
+    "isOnSale": true,
+    "salePercentage": 38,
+    "img": "https://picsum.photos/500"
+  },
+  {
+    "productName": "Mollit meal",
+    "price": 220,
+    "category": "combo",
+    "bestSeller": false,
+    "isOnSale": false,
+    "salePercentage": 39,
+    "img": "https://picsum.photos/500"
+  },
+  {
+    "productName": "Laborum meal",
+    "price": 196,
+    "category": "combo",
+    "bestSeller": true,
+    "isOnSale": false,
+    "salePercentage": 39,
+    "img": "https://picsum.photos/500"
+  },
+  {
+    "productName": "Cillum pizza",
+    "price": 186,
+    "category": "pizza",
+    "bestSeller": false,
+    "isOnSale": true,
+    "salePercentage": 29,
+    "img": "https://picsum.photos/500"
+  },
+  {
+    "productName": "Dolore pizzalore",
+    "price": 164,
+    "category": "pizza",
+    "bestSeller": true,
+    "isOnSale": true,
+    "salePercentage": 31,
+    "img": "https://picsum.photos/500"
+  },
+  {
+    "productName": "Summo sandwich",
+    "price": 183,
+    "category": "sandwich",
+    "bestSeller": true,
+    "isOnSale": true,
+    "salePercentage": 26,
+    "img": "https://picsum.photos/500"
+  },
+  {
+    "productName": "Qui-getti",
+    "price": 41,
+    "category": "spaghetti",
+    "bestSeller": true,
+    "isOnSale": false,
+    "salePercentage": 36,
+    "img": "https://picsum.photos/500"
+  },
+  {
+    "productName": "Tembo-rger",
+    "price": 210,
+    "category": "burger",
+    "bestSeller": false,
+    "isOnSale": false,
+    "salePercentage": 32,
+    "img": "https://picsum.photos/500"
+  },
+  {
+    "productName": "Igerget",
+    "price": 199,
+    "category": "spaghetti",
+    "bestSeller": true,
+    "isOnSale": true,
+    "salePercentage": 27,
+    "img": "https://picsum.photos/500"
+  },
+  {
+    "productName": "Culpa meal",
+    "price": 146,
+    "category": "combo",
+    "bestSeller": false,
+    "isOnSale": true,
+    "salePercentage": 36,
+    "img": "https://picsum.photos/500"
+  },
+  {
+    "productName": "Batat salad",
+    "price": 35,
+    "category": "salad",
+    "bestSeller": true,
+    "isOnSale": true,
+    "salePercentage": 23,
+    "img": "https://picsum.photos/500"
+  },
+  {
+    "productName": "Euro salad",
+    "price": 22,
+    "category": "salad",
+    "bestSeller": true,
+    "isOnSale": false,
+    "salePercentage": 31,
+    "img": "https://picsum.photos/500"
+  },
+  {
+    "productName": "Mest",
+    "price": 41,
+    "category": "sandwich",
+    "bestSeller": true,
+    "isOnSale": true,
+    "salePercentage": 35,
+    "img": "https://picsum.photos/500"
+  },
+  {
+    "productName": "Nostrud",
+    "price": 87,
+    "category": "fries",
+    "bestSeller": false,
+    "isOnSale": true,
+    "salePercentage": 20,
+    "img": "https://picsum.photos/500"
+  },
+  {
+    "productName": "Galilit",
+    "price": 73,
+    "category": "sandwich",
+    "bestSeller": false,
+    "isOnSale": false,
+    "salePercentage": 21,
+    "img": "https://picsum.photos/500"
+  },
+  {
+    "productName": "Tilopet ",
+    "price": 50,
+    "category": "burger",
+    "bestSeller": true,
+    "isOnSale": true,
+    "salePercentage": 40,
+    "img": "https://picsum.photos/500"
+  },
+  {
+    "productName": "Herament meal",
+    "price": 87,
+    "category": "combo",
+    "bestSeller": true,
+    "isOnSale": true,
+    "salePercentage": 38,
+    "img": "https://picsum.photos/500"
+  },
+  {
+    "productName": "Pariatur",
+    "price": 166,
+    "category": "combo",
+    "bestSeller": true,
+    "isOnSale": false,
+    "salePercentage": 38,
+    "img": "https://picsum.photos/500"
+  },
+  {
+    "productName": "Krampus",
+    "price": 121,
+    "category": "salad",
+    "bestSeller": true,
+    "isOnSale": false,
+    "salePercentage": 37,
+    "img": "https://picsum.photos/500"
+  },
+  {
+    "productName": "Lame Pizza",
+    "price": 229,
+    "category": "pizza",
+    "bestSeller": false,
+    "isOnSale": true,
+    "salePercentage": 39,
+    "img": "https://picsum.photos/500"
+  },
+  {
+    "productName": "Exercitation",
+    "price": 180,
+    "category": "pizza",
+    "bestSeller": false,
+    "isOnSale": true,
+    "salePercentage": 37,
+    "img": "https://picsum.photos/500"
+  },
+  {
+    "productName": "Cillum",
+    "price": 201,
+    "category": "spaghetti",
+    "bestSeller": false,
+    "isOnSale": false,
+    "salePercentage": 27,
+    "img": "https://picsum.photos/500"
+  },
+  {
+    "productName": "Consectetur",
+    "price": 81,
+    "category": "combo",
+    "bestSeller": false,
+    "isOnSale": false,
+    "salePercentage": 35,
+    "img": "https://picsum.photos/500"
+  },
+  {
+    "productName": "Reprehenderit",
+    "price": 124,
+    "category": "fries",
+    "bestSeller": true,
+    "isOnSale": false,
+    "salePercentage": 36,
+    "img": "https://picsum.photos/500"
+  },
+  {
+    "productName": "Velit",
+    "price": 107,
+    "category": "pizza",
+    "bestSeller": false,
+    "isOnSale": true,
+    "salePercentage": 25,
+    "img": "https://picsum.photos/500"
+  },
+  {
+    "productName": "Tempor",
+    "price": 106,
+    "category": "salad",
+    "bestSeller": true,
+    "isOnSale": true,
+    "salePercentage": 21,
+    "img": "https://picsum.photos/500"
+  },
+  {
+    "productName": "Eiusmod",
+    "price": 169,
+    "category": "sandwich",
+    "bestSeller": true,
+    "isOnSale": false,
+    "salePercentage": 39,
+    "img": "https://picsum.photos/500"
+  },
+  {
+    "productName": "Occaecat",
+    "price": 117,
+    "category": "burger",
+    "bestSeller": true,
+    "isOnSale": true,
+    "salePercentage": 29,
+    "img": "https://picsum.photos/500"
+  },
+  {
+    "productName": "Siteggeti",
+    "price": 222,
+    "category": "spaghetti",
+    "bestSeller": true,
+    "isOnSale": true,
+    "salePercentage": 37,
+    "img": "https://picsum.photos/500"
+  },
+  {
+    "productName": "Futerger",
+    "price": 37,
+    "category": "burger",
+    "bestSeller": true,
+    "isOnSale": false,
+    "salePercentage": 29,
+    "img": "https://picsum.photos/500"
+  },
+  {
+    "productName": "Witch-sand",
+    "price": 185,
+    "category": "sandwich",
+    "bestSeller": true,
+    "isOnSale": true,
+    "salePercentage": 21,
+    "img": "https://picsum.photos/500"
+  },
+  {
+    "productName": "Didunt piza",
+    "price": 40,
+    "category": "pizza",
+    "bestSeller": false,
+    "isOnSale": false,
+    "salePercentage": 24,
+    "img": "https://picsum.photos/500"
+  },
+  {
+    "productName": "Serendunt",
+    "price": 86,
+    "category": "burger",
+    "bestSeller": true,
+    "isOnSale": false,
+    "salePercentage": 24,
+    "img": "https://picsum.photos/500"
+  },
+  {
+    "productName": "Sectetur",
+    "price": 92,
+    "category": "fries",
+    "bestSeller": true,
+    "isOnSale": true,
+    "salePercentage": 33,
+    "img": "https://picsum.photos/500"
+  },
+  {
+    "productName": "Moddy-rger",
+    "price": 105,
+    "category": "burger",
+    "bestSeller": false,
+    "isOnSale": false,
+    "salePercentage": 40,
+    "img": "https://picsum.photos/500"
+  },
+  {
+    "productName": "Denmar",
+    "price": 224,
+    "category": "sandwich",
+    "bestSeller": true,
+    "isOnSale": true,
+    "salePercentage": 39,
+    "img": "https://picsum.photos/500"
+  },
+  {
+    "productName": "Labore",
+    "price": 83,
+    "category": "combo",
+    "bestSeller": true,
+    "isOnSale": false,
+    "salePercentage": 34,
+    "img": "https://picsum.photos/500"
+  },
+  {
+    "productName": "Ullamco",
+    "price": 43,
+    "category": "pizza",
+    "bestSeller": true,
+    "isOnSale": true,
+    "salePercentage": 26,
+    "img": "https://picsum.photos/500"
+  }
+]

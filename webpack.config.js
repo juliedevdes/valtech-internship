@@ -13,7 +13,7 @@ module.exports = {
     port: 3000,
   },
 
-  entry: "./src/index.js",
+  entry: "./client/index.js",
 
   module: {
     rules: [
@@ -44,17 +44,17 @@ module.exports = {
   },
 
   plugins: [
-    new HtlmlPl({
-      template: "./src/index.html",
-    }),
+    // new HtlmlPl({
+    //   template: "./src/index.html",
+    // }),
     new CopyWebpackPlugin({
       patterns: [
         {
-          from: path.resolve(__dirname, "./src/img"),
+          from: path.resolve(__dirname, "./client/img"),
           to: path.resolve(__dirname, "./dist/img"),
         },
         {
-          from: path.resolve(__dirname, "./src/js"),
+          from: path.resolve(__dirname, "./client/js"),
           to: path.resolve(__dirname, "./dist/js"),
         },
       ],

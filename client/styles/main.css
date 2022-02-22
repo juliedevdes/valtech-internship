@@ -1186,6 +1186,7 @@ img {
 
 .link {
   text-decoration: none;
+  color: unset;
 }
 
 .list {
