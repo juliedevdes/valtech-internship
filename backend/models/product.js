@@ -10,15 +10,6 @@ const productSchema = new Schema(
     price: { type: Number, required: [true, "Set price"] },
     category: {
       type: String,
-      enum: [
-        "burger",
-        "salad",
-        "fries",
-        "spaghetti",
-        "combo",
-        "pizza",
-        "sandwich",
-      ],
       required: [true, "Set category"],
     },
     categoryId: {
