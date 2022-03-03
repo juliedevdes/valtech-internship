@@ -35,6 +35,7 @@ const joiSchema = Joi.object({
   items: Joi.array().required(),
   status: Joi.string(),
   address: Joi.string().required(),
+  email: Joi.string().required(),
   phone: Joi.string().required(),
   paymentMethod: Joi.string().required(),
 });

@@ -29,8 +29,8 @@ app.use("/api/products", productsRouter);
 const categoriesRouter = require("./backend/services/categories");
 app.use("/api/categories", categoriesRouter);
 
-// const ordersRouter = require("./backend/services/orders");
-// app.use("/api/orders", ordersRouter);
+const ordersRouter = require("./backend/services/orders");
+app.use("/api/orders", ordersRouter);
 
 /* error handling */
 app.use((req, res) => {
