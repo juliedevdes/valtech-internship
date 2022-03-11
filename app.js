@@ -1,10 +1,17 @@
 const path = require("path");
 const hbs = require("hbs");
 hbs.registerPartials(__dirname + "/views/partials");
+hbs.registerHelper("priceCounter", (price, salePercentage) => {
+  const newPrice = price - price * (salePercentage / 100);
+  return Math.ceil(newPrice);
+});
 
 const { urlencoded } = require("express");
 const express = require("express");
 const app = express();
+
+const { LocalStorage } = require("node-localstorage");
+global.localStorage = new LocalStorage("./scratch");
 
 /* basic middlewars */
 app.use(express.static("dist"));

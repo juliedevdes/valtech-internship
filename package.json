@@ -43,6 +43,7 @@
     "http-errors": "^2.0.0",
     "joi": "^17.6.0",
     "mongoose": "^6.2.2",
-    "mongoose-paginate-v2": "^1.6.2"
+    "mongoose-paginate-v2": "^1.6.2",
+    "node-localstorage": "^2.2.1"
   }
 }

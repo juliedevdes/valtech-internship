@@ -3,6 +3,7 @@ const router = express.Router();
 const axios = require("axios");
 
 router.get("/", (req, res, next) => {
+  ///console.log(localStorage.getItem("filter"));
   axios
     .get("http://localhost:3000/api/products")
     .then((response) => {
