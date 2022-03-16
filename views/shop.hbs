@@ -17,6 +17,19 @@
   </head>
 {{>header}}
 {{>navigation}}
+<section class="container">
+  <input type="checkbox" id="bestSeller">
+  <label for="bestSeller">best-seller</label>
+
+  <input type="checkbox" id="sale">
+  <label for="sale">sale</label>
+
+  <select name="cat" id="cat">
+    <option value="all">All</option>
+    <option value="salad">Salad</option>
+  </select>
+
+</section>
 <section class="products container">
 <ul class="list products_list">
 {{#each products}}
@@ -40,5 +53,6 @@
 </section>
 {{>footer}}
 {{>rights}}
-    <script src="./js/shop.js"></script>
+    <script type="module" src="./js/cart.js"></script>
+    <script type="module" src="./js/filters.js"></script>
 </html>

@@ -6,14 +6,14 @@ const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   devServer: {
-    static: {
-      directory: path.join(__dirname, "src"),
-    },
+    // static: {
+    //   directory: path.join(__dirname, "src"),
+    // },
     compress: true,
     port: 3000,
   },
 
-  entry: "./client/index.js",
+  entry: "./client/index.mjs",
 
   module: {
     rules: [

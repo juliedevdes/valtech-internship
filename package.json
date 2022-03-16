@@ -2,7 +2,7 @@
   "name": "valtech-internship",
   "version": "1.0.0",
   "description": "intership project",
-  "main": "index.js",
+  "main": "index.mjs",
   "scripts": {
     "start": "npx nodemon app.js",
     "watch": "npx webpack serve --mode development",
@@ -14,7 +14,6 @@
     "url": "git+https://github.com/juliedevdes/valtech-internship.git"
   },
   "author": "Julia Okhrimenko",
-  "license": "ISC",
   "devDependencies": {
     "babel-loader": "^8.2.3",
     "clean-webpack-plugin": "^4.0.0",
@@ -43,7 +42,6 @@
     "http-errors": "^2.0.0",
     "joi": "^17.6.0",
     "mongoose": "^6.2.2",
-    "mongoose-paginate-v2": "^1.6.2",
-    "node-localstorage": "^2.2.1"
+    "mongoose-paginate-v2": "^1.6.2"
   }
 }

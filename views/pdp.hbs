@@ -11,13 +11,20 @@
       href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&family=Lobster&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="http://localhost:3000/styles.css" />
 
     <title>CraftStudio</title>
   </head>
-{{>header}}
-{{>navigation}}
-<h1>About-page content {{info}}</h1>
-{{>footer}}
-{{>rights}}
+  <body>
+    {{>header}}
+    {{>navigation}}
+    <section class="container">
+      <h1>{{product.productName}}</h1>
+       <img src={{product.img}} alt="img" width="300">
+       <p>{{product.price}}</p>
+    </section>
+    {{>footer}}
+    {{>rights}}
+        <script src="http://localhost:3000/js/cart.js"></script>
+  </body>
 </html>

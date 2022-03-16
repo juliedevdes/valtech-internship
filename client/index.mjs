@@ -16,3 +16,7 @@ $(document).ready(function () {
     autoplay: true,
   });
 });
+
+if (localStorage.getItem("cart") === undefined) {
+  localStorage.setItem("cart", "");
+}

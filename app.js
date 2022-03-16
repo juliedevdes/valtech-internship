@@ -10,9 +10,6 @@ const { urlencoded } = require("express");
 const express = require("express");
 const app = express();
 
-const { LocalStorage } = require("node-localstorage");
-global.localStorage = new LocalStorage("./scratch");
-
 /* basic middlewars */
 app.use(express.static("dist"));
 
