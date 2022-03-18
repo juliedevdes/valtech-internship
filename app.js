@@ -1,5 +1,6 @@
 const path = require("path");
 const hbs = require("hbs");
+
 hbs.registerPartials(__dirname + "/views/partials");
 hbs.registerHelper("priceCounter", (price, salePercentage) => {
   const newPrice = price - price * (salePercentage / 100);

@@ -1,0 +1,23 @@
+{{#each products}}
+  <li class="products_item">
+    <a href="shop/{{_id}}" class="link products_link">
+      <img src={{img}} alt="product image" width="250" />
+      <h3 class="products_title">{{productName}}</h3>
+      <p class="products_category">{{category}}</p>
+      {{#if isOnSale}}
+        <p class="products_sale">{{salePercentage}}% sale!</p>
+        <p
+          class="products_price products_price-old"
+          style="text-decoration:line-through;"
+        >${{price}}</p>
+        <p class="products_price">${{#priceCounter
+            price
+            salePercentage
+          }}{{/priceCounter}}</p>
+      {{else}}
+        <p class="products_price">${{price}}</p>
+      {{/if}}
+    </a>
+    <button class="products_buy-btn" dataId={{_id}}>BUY</button>
+  </li>
+{{/each}}

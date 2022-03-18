@@ -27,32 +27,23 @@
   <select name="cat" id="cat">
     <option value="all">All</option>
     <option value="salad">Salad</option>
+    <option value="fries">Fries</option>
+    <option value="burger">Burger</option>
+    <option value="spaghetti">Spaghetti</option>
+    <option value="combo">Combo</option>
+    <option value="pizza">Pizza</option>
+    <option value="sandwich">Sandwich</option>
+    <option value="drinks">Drinks</option>
   </select>
 
 </section>
 <section class="products container">
 <ul class="list products_list">
-{{#each products}}
-  <li class="products_item">
-    <a href="shop/{{_id}}" class="link products_link">
-    <img src={{img}} alt="product image" width="250" >
-    <h3 class="products_title">{{productName}}</h3>
-    <p class="products_category">{{category}}</p> 
-    {{#if isOnSale}}
-    <p class="products_sale">{{salePercentage}}% sale!</p>
-    <p class="products_price products_price-old">${{price}}</p> 
-        <p class="products_price">{{#priceCounter price salePercentage}}{{/priceCounter}}</p>
-    {{else}}
-        <p class="products_price">${{price}}</p> 
-    {{/if}}
-    </a>
-    <button class="products_buy-btn" dataId={{_id}}>BUY</button>
-    </li>
-{{/each}}
+ {{>productList products=products}}
 </ul>
 </section>
 {{>footer}}
 {{>rights}}
-    <script type="module" src="./js/cart.js"></script>
-    <script type="module" src="./js/filters.js"></script>
+    <script  src="./filters.js"></script>
+    <script src="./cart.js"></script>
 </html>
