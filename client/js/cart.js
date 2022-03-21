@@ -6,6 +6,13 @@ const cartProdList = document.querySelector(".modal_product-list");
 const cartListHbs = require("../../views/partials/cartList.hbs");
 const axios = require("axios");
 
+var Handlebars = require("hbsfy/runtime");
+const async = require("hbs/lib/async");
+Handlebars.registerHelper("priceCounter", (price, salePercentage) => {
+  const newPrice = price - price * (salePercentage / 100);
+  return Math.ceil(newPrice);
+});
+
 const buyBtnHandler = async function (e) {
   console.log(e.target);
   const productID = e.target.getAttribute("dataId");
@@ -44,13 +51,7 @@ function cartHandler() {
     cartProdList.innerHTML = "<li>Your cart is empty</li>";
   } else {
     const cartObejctsArray = JSON.parse(cart);
-    // let cartList = "";
-    // cartObejctsArray.forEach((product) => {
-    //   cartList = cartList + `<li>${product.productName}</li>`;
-    // });
     cartProdList.innerHTML = cartListHbs({ cart: cartObejctsArray });
   }
   modal.classList.toggle("is-hidden");
 }
-
-module.exports = { buyBtnHandler };

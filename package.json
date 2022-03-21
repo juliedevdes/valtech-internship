@@ -6,7 +6,7 @@
   "scripts": {
     "start": "npx nodemon app.js",
     "watch": "npx webpack serve --mode development",
-    "dev": "npx webpack --mode development && npx browserify -t hbsfy ./client/js/filters.js > ./dist/filters.js && npx browserify -t hbsfy ./client/js/cart.js > ./dist/cart.js",
+    "dev": "npx webpack --mode development && npx browserify -t hbsfy ./client/js/productList.js > ./dist/productList.js && npx browserify -t hbsfy ./client/js/cart.js > ./dist/cart.js",
     "build": "npx webpack --mode production",
     "filt": "npx browserify -t hbsfy ./client/js/filters.js > ./dist/filters.js"
   },

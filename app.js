@@ -27,6 +27,9 @@ app.use("/", homeRouter);
 const shopRouter = require("./routes/shop");
 app.use("/shop", shopRouter);
 
+const orderRouter = require("./routes/orders");
+app.use("/orders", orderRouter);
+
 /* backend services */
 const productsRouter = require("./backend/services/products");
 app.use("/api/products", productsRouter);

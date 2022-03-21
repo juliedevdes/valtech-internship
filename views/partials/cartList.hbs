@@ -1,3 +1,10 @@
 {{#each cart}}
-  <li>{{productName}}</li>
+  <li class="cart_list-item">
+    <img src={{img}} alt="product-picture" width="30" />
+    <p class="cart_product-title">{{productName}}</p>
+    <p class="cart_product-price">${{#priceCounter
+        price
+        salePercentage
+      }}{{/priceCounter}}</p>
+  </li>
 {{/each}}

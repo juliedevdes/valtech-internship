@@ -15,9 +15,12 @@
 
     <title>CraftStudio</title>
   </head>
-{{>header}}
-{{>navigation}}
-<h1>Orders content {{info}}</h1>
-{{>footer}}
-{{>rights}}
+  <body>
+    {{>header}}
+    {{>navigation}}
+    <ul class="order-list"></ul>
+    {{>footer}}
+    {{>rights}}
+    <script src="http://localhost:3000/js/orders.js" ></script>
+  </body>
 </html>
