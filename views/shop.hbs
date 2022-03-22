@@ -18,13 +18,24 @@
 {{>header}}
 {{>navigation}}
 <section class="container">
-  <input type="checkbox" id="bestSeller">
-  <label for="bestSeller">best-seller</label>
+  <h2 class="products_page-title">Our Products</h2>
+  <p>find your perfect meal</p> 
+  
+  <div style="display: flex; justify-content: space-between; align-items:center;">
+    <div style="display: flex; margin-top: 20px; text-align:center">  
+    <label for="bestSeller" class="box" style="margin-right: 20px; align-items:center;">
+      <input type="checkbox" id="bestSeller">
+      <p>best-seller</p>
+      <div class="checkmark"></div>
+    </label>
 
-  <input type="checkbox" id="sale">
-  <label for="sale">sale</label>
+   <label for="sale" class="box" style="margin-right: 20px; align-items:center;">
+    <input type="checkbox" id="sale">
+    <p>sale</p>
+    <div class="checkmark"></div>
+   </label>
 
-  <select name="cat" id="cat">
+    <select style="margin-left: 10px;" class="minimal" name="cat" id="cat">
     <option value="all">All</option>
     <option value="salad">Salad</option>
     <option value="fries">Fries</option>
@@ -35,14 +46,17 @@
     <option value="sandwich">Sandwich</option>
     <option value="drinks">Drinks</option>
   </select>
-
+</div>
+ <div>
+<button class="first-page-btn">1-st page</button>
+<button class="next-page-btn">next >></button> </div>
 </section>
+  </div>
+
 <section class="products container">
 <ul class="list products_list">
  {{>productList products=products}}
 </ul> 
-<button class="first-page-btn">first page</button>
-<button class="next-page-btn">next page</button> 
 </section>
 {{>footer}}
 {{>rights}}

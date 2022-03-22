@@ -1,0 +1,71 @@
+.pdp {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  position: relative;
+  &--down {
+    padding-top: 20px;
+    padding-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  &_title {
+    font-family: $secondary-font;
+    margin-bottom: 10px;
+    font-size: 35px;
+  }
+  &_sale {
+    padding: 10px;
+    background-color: red;
+    color: #fff;
+    font-weight: 600;
+    position: absolute;
+    top: 80px;
+    right: 10%;
+  }
+  &_desc {
+    width: 500px;
+  }
+  &_price {
+    font-weight: 500;
+    font-size: 50px;
+    margin-right: 50px;
+    &--old {
+      color: gray;
+    }
+  }
+  &_buy-btn {
+    background-color: $color-green;
+    padding: 10px;
+    width: 300px;
+    color: #fff;
+    font-weight: 800;
+    letter-spacing: 0.2em;
+    border: none;
+    transition: background-color 250ms linear;
+    &:hover,
+    &:focus {
+      background-color: #f6ae13;
+    }
+  }
+  &_bs {
+    font-family: $secondary-font;
+    color: gray;
+    display: flex;
+    margin-bottom: 10px;
+  }
+  &_star {
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+  }
+  &_cat {
+    font-family: $main-font;
+    color: $color-green;
+    font-weight: bold;
+    font-size: 25px;
+    margin-top: 10px;
+  }
+}

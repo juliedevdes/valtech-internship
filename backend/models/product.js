@@ -12,6 +12,9 @@ const productSchema = new Schema(
       type: String,
       required: [true, "Set category"],
     },
+    productName: {
+      type: String,
+    },
     categoryId: {
       type: SchemaTypes.ObjectId,
       ref: "category",
@@ -54,6 +57,7 @@ const joiSchema = Joi.object({
       "sandwich"
     )
     .required(),
+  description: Joi.string(),
   bestSeller: Joi.boolean(),
   isOnSale: Joi.boolean(),
   salePercentage: Joi.number(),

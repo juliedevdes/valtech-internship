@@ -1,49 +1,94 @@
-// .backdrop {
-//   position: fixed;
-//   top: 0;
-//   left: 0;
-//   width: 100vw;
-//   height: 100vh;
-//   background: rgba(0, 0, 0, 0.2);
-//   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-//     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
-// }
-
 .modal {
   z-index: 10;
   position: absolute;
   top: 20%;
-  left: 50%;
-  // transform: translate(-50%, -50%);
+  right: 10%;
   width: 450px;
-  height: 609px;
+  height: fit-content;
   background-color: #fff;
   border-radius: 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
+  padding: 15px;
+  &_product-list {
+    margin-top: 20px;
+  }
 }
 
 .modal__close {
-  background-color: rgb(180, 64, 64);
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 50%;
+  font-weight: 800;
+  background: none;
+  border: none;
   width: 30px;
   height: 30px;
-  // position: absolute;
-  // top: 8px;
-  // right: 8px;
   cursor: pointer;
-  // transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  position: absolute;
+  right: 15px;
 }
-
-// .modal__close-icon {
-//   display: flex;
-//   align-items: center;
-//   justify-items: center;
-// }
 
 .is-hidden {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+}
+
+.clear-cart-btn {
+  border: none;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 700;
+  background-color: $color-green;
+  padding: 10px 17px;
+  border-radius: 2%;
+  cursor: pointer;
+  font-family: $main-font;
+}
+
+.order-btn {
+  display: block;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 700;
+  background-color: $color-green;
+  padding: 10px 17px;
+  border-radius: 2%;
+  margin-top: 30px;
+  text-decoration: none;
+  text-align: center;
+}
+.cart {
+  &_cat {
+    color: $color-green;
+    font-weight: bold;
+    font-size: 17px;
+    margin-left: 10px;
+  }
+  &_list-item {
+    display: flex;
+    justify-content: space-between;
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+    &_product-title {
+      margin-right: 5px;
+    }
+  }
+  &_product-title {
+    margin-left: 10px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  &_product-btn {
+    background: none;
+    font-weight: 800;
+    border: none;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    margin-right: 10px;
+    color: red;
+  }
+}
+.product-picture {
+  margin-right: 5px;
 }

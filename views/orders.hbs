@@ -18,7 +18,43 @@
   <body>
     {{>header}}
     {{>navigation}}
-    <ul class="order-list"></ul>
+    <section class="order container">
+
+      <h2>Your order</h2>
+      <p>products</p>
+      <ul class="order-list list"></ul>
+
+      <form id="order-form" class="order-form">
+       <div style="display: flex; flex-direction:column;">
+      <label for="address">
+        <input type="text" placeholder="address" id="address">
+      </label> 
+
+      <label for="email">
+        <input 
+        type="email"
+        placeholder="email" 
+        id="email">
+      </label> 
+
+    <label for="phone">
+        <input 
+        autocomplete="off"
+        placeholder="phone"
+        type="text"
+        id="phone">
+      </label> 
+
+        
+    <select style="width: 200px; " class="minimal" name="paymentMethod" id="paymentMethod">
+    <option value="cash">cash</option>
+    <option value="card">card</option>
+    </select>
+    <button>SUBMIT</button>
+    </div>  
+    </form>
+      
+     </section>
     {{>footer}}
     {{>rights}}
     <script src="http://localhost:3000/js/orders.js" ></script>

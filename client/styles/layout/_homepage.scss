@@ -161,7 +161,6 @@
 }
 
 .hero {
-  background-color: #f5f5f5;
   margin-top: 20px;
   padding-bottom: 20px;
   &-title {
@@ -197,27 +196,6 @@
     color: #fff;
     background-size: cover;
     background-repeat: no-repeat;
-    &1 {
-      background-image: linear-gradient(
-          rgba(47, 48, 58, 0.4),
-          rgba(47, 48, 58, 0.4)
-        ),
-        url("../img/homepage/carousel/salad1.jpg");
-    }
-    &2 {
-      background-image: linear-gradient(
-          rgba(47, 48, 58, 0.4),
-          rgba(47, 48, 58, 0.4)
-        ),
-        url("../img/homepage/carousel/salad3.jpg");
-    }
-    &3 {
-      background-image: linear-gradient(
-          rgba(47, 48, 58, 0.4),
-          rgba(47, 48, 58, 0.4)
-        ),
-        url("../img/homepage/carousel/salad2.jpg");
-    }
     &_btn {
       background: #f6ae13;
       text-transform: uppercase;
@@ -229,34 +207,6 @@
       letter-spacing: 0.1em;
       margin-top: 25px;
     }
-  }
-}
-
-.pinned {
-  display: none;
-}
-
-.advantages {
-  font-size: small;
-  padding-bottom: 30px;
-  background: #f5f5f5;
-  &-list {
-    background-color: #ffffff;
-    border: 1px solid #ececec;
-  }
-  &-item {
-    padding: 30px;
-    display: flex;
-    justify-content: baseline;
-    align-items: center;
-  }
-  &-text {
-    font-weight: bold;
-    margin-left: 20px;
-  }
-  &-sub {
-    font-size: 12px;
-    line-height: 24px;
   }
 }
 
@@ -756,12 +706,6 @@
     }
   }
 
-  .advantages {
-    &-list {
-      flex-wrap: wrap;
-    }
-  }
-
   .new-dishes {
     &_card-list {
       display: flex;
@@ -794,112 +738,6 @@
 }
 
 @media screen and (min-width: 1200px) {
-  .search {
-    min-width: 500px;
-    &_icon {
-      display: block;
-      position: absolute;
-      right: 530px;
-      top: 30px;
-    }
-  }
-  .carousel {
-    max-width: 700px;
-    &-item {
-      max-width: 690px;
-    }
-  }
-
-  .pinned {
-    display: unset;
-    &-title {
-      font-family: $secondary-font;
-      margin-top: 10px;
-      margin-bottom: 10px;
-    }
-    &-btn {
-      border: none;
-      background: none;
-      text-decoration: underline;
-      text-decoration-color: #f6ae13;
-      color: #ffffff;
-      font-family: inherit;
-      font-weight: 600;
-      font-size: 15px;
-      line-height: 22px;
-    }
-    &-sub {
-      font-size: 15px;
-      line-height: 22px;
-      text-transform: uppercase;
-      font-weight: bold;
-      margin-top: 40px;
-    }
-    &-item {
-      min-width: 450px;
-      min-height: 184px;
-      padding: 20px;
-      color: #fff;
-      background-position: center;
-      background-size: cover;
-      background-repeat: no-repeat;
-      &1 {
-        background-image: linear-gradient(
-            rgba(47, 48, 58, 0.4),
-            rgba(47, 48, 58, 0.4)
-          ),
-          url("../img/homepage/ice-cream.jpg");
-        margin-bottom: 10px;
-      }
-      &2 {
-        min-height: 183px;
-        background-image: linear-gradient(
-            rgba(47, 48, 58, 0.4),
-            rgba(47, 48, 58, 0.4)
-          ),
-          url("../img/homepage/citrus.jpg");
-      }
-    }
-  }
-
-  .advantages {
-    &-list {
-      display: flex;
-      justify-content: space-between;
-    }
-  }
-
-  .new-dishes {
-    &_cart-list {
-      left: 20%;
-    }
-    &_card-list {
-      display: flex;
-    }
-    &_card-item {
-      min-width: 200px;
-    }
-    &_card-picture {
-      height: 200px;
-    }
-  }
-
-  .deals {
-    display: flex;
-    &--left {
-      &_card-img {
-        height: 250px;
-        width: 250px;
-      }
-      &_card-timer {
-        bottom: 85px;
-      }
-    }
-    &--right {
-      margin-top: unset;
-    }
-  }
-
   .categories {
     &_list {
       display: flex;
@@ -954,6 +792,53 @@
       &_logo {
         margin-bottom: unset;
       }
+    }
+  }
+
+  .search {
+    min-width: 500px;
+    &_icon {
+      display: block;
+      position: absolute;
+      right: 530px;
+      top: 30px;
+    }
+  }
+  .carousel {
+    width: 100%;
+    &-item {
+      max-width: 690px;
+    }
+  }
+
+  .new-dishes {
+    &_cart-list {
+      left: 20%;
+    }
+    &_card-list {
+      display: flex;
+    }
+    &_card-item {
+      min-width: 200px;
+    }
+    &_card-picture {
+      height: 200px;
+    }
+  }
+
+  .deals {
+    display: flex;
+    &--left {
+      &_card-img {
+        height: 250px;
+        width: 250px;
+      }
+      &_card-timer {
+        bottom: 85px;
+      }
+    }
+    &--right {
+      margin-top: unset;
     }
   }
 }
