@@ -1,0 +1,20 @@
+{{#each cart}}
+  <li class="cart_list-item">
+    <div style="display: flex;">
+      <img src={{img}} alt="product-picture" width="50" />
+      <div>
+        <p class="cart_product-title">{{productName}}</p>
+        <p class="cart_cat">{{category}}</p></div>
+    </div>
+    <div style="display: flex; align-items:center; text-align:center;">
+      {{#if isOnSale}}
+        <p class="cart_product-price">${{#priceCounter
+            price
+            salePercentage
+          }}{{/priceCounter}}
+        </p>
+      {{else}}
+        <p class="cart_product-price">${{price}}</p>
+      {{/if}}
+  </li>
+{{/each}}

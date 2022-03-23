@@ -1,0 +1,65 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+
+    <title>CraftStudio</title>
+  </head>
+{{>header}}
+{{>navigation}}
+<section class="container">
+  <h2 class="products_page-title">Our Products</h2>
+  <p>find your perfect meal</p> 
+  
+  <div style="display: flex; justify-content: space-between; align-items:center;">
+    <div style="display: flex; margin-top: 20px; text-align:center">  
+    <label for="bestSeller" class="box" style="margin-right: 20px; align-items:center;">
+      <input type="checkbox" id="bestSeller">
+      <p>best-seller</p>
+      <div class="checkmark"></div>
+    </label>
+
+   <label for="sale" class="box" style="margin-right: 20px; align-items:center;">
+    <input type="checkbox" id="sale">
+    <p>sale</p>
+    <div class="checkmark"></div>
+   </label>
+
+    <select style="margin-left: 10px;" class="minimal" name="cat" id="cat">
+    <option value="all">All</option>
+    <option value="salad">Salad</option>
+    <option value="fries">Fries</option>
+    <option value="burger">Burger</option>
+    <option value="spaghetti">Spaghetti</option>
+    <option value="combo">Combo</option>
+    <option value="pizza">Pizza</option>
+    <option value="sandwich">Sandwich</option>
+    <option value="drinks">Drinks</option>
+  </select>
+</div>
+ <div>
+<button class="first-page-btn">1-st page</button>
+<button class="next-page-btn">next >></button> </div>
+</section>
+  </div>
+
+<section class="products container">
+<ul class="list products_list">
+ {{>productList products=products}}
+</ul> 
+</section>
+{{>footer}}
+{{>rights}}
+    <script  src="./js/productList.js"></script>
+    <script src="./js/cart.js"></script>
+</html>
