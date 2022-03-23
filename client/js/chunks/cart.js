@@ -3,7 +3,7 @@ const openModalBtn = document.querySelector('[modal-open]');
 const closeModalBtn = document.querySelector('[modal-close]');
 const modal = document.querySelector('[modal]');
 const cartProdList = document.querySelector('.modal_product-list');
-const cartListHbs = require('../../views/partials/cartList.hbs');
+const cartListHbs = require('../../../views/partials/cartList.hbs');
 const axios = require('axios');
 
 var Handlebars = require('hbsfy/runtime');

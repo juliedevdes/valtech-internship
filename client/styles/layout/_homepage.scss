@@ -163,6 +163,17 @@
 .hero {
   margin-top: 20px;
   padding-bottom: 20px;
+  &_about {
+    margin-left: 30px;
+  }
+  &_about-title {
+    font-family: $secondary-font;
+    font-size: 35px;
+    margin-bottom: 20px;
+  }
+  &_about-text {
+    margin-bottom: 20px;
+  }
   &-title {
     font-family: $secondary-font;
     font-style: normal;
@@ -738,6 +749,9 @@
 }
 
 @media screen and (min-width: 1200px) {
+  .hero {
+    display: flex;
+  }
   .categories {
     &_list {
       display: flex;

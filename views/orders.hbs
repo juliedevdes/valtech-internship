@@ -18,20 +18,29 @@
   <body>
     {{>header}}
     {{>navigation}}
-    <section class="order container">
-
-      <h2>Your order</h2>
-      <p>products</p>
+    <h2 class="container order_title">Your order</h2>
+    <section style="display: flex; justify-content:space-between" class="order container">
+      <div>
+      <p class="order_products">products</p>
       <ul class="order-list list"></ul>
+      </div>
 
-      <form id="order-form" class="order-form">
+      <form id="order-form" style="justify-self: left;" class="order-form">
        <div style="display: flex; flex-direction:column;">
+       <p class="order_form-title">fill up the form</p>
       <label for="address">
-        <input type="text" placeholder="address" id="address">
+        <input
+        class="order_input" 
+        required 
+        type="text" 
+        placeholder="address" 
+        id="address">
       </label> 
 
       <label for="email">
         <input 
+        class="order_input"
+        required
         type="email"
         placeholder="email" 
         id="email">
@@ -39,24 +48,26 @@
 
     <label for="phone">
         <input 
+        class="order_input"
+        required
         autocomplete="off"
         placeholder="phone"
         type="text"
         id="phone">
       </label> 
 
-        
-    <select style="width: 200px; " class="minimal" name="paymentMethod" id="paymentMethod">
+    <p class="order_form-title">choose your type of payment</p>
+    <select style="width: 200px; margin-bottom: 20px" required class="minimal" name="paymentMethod" id="paymentMethod">
     <option value="cash">cash</option>
     <option value="card">card</option>
     </select>
-    <button>SUBMIT</button>
+    <button class="order_submit-btn">SUBMIT</button>
     </div>  
     </form>
       
      </section>
     {{>footer}}
     {{>rights}}
-    <script src="http://localhost:3000/js/orders.js" ></script>
+    <script src="./js/orders.js" ></script>
   </body>
 </html>
