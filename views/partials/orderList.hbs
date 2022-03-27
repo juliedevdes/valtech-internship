@@ -15,6 +15,8 @@
           <p class="order-list_price">${{price}}</p>
         {{/if}}
       </div>
+      <p class="cart_quantity">{{quantity}}</p>
+      <button dataId={{_id}} class="order-list_delete-btn">X</button>
     </li>
   {{/each}}
   <h3 class="order_form-title">Total price of your order</h3>

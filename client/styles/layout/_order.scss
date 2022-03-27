@@ -20,6 +20,17 @@
   &_price {
     margin-left: 5px;
   }
+  &_delete-btn {
+    background: none;
+    font-weight: 800;
+    border: none;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-left: 110px;
+    color: red;
+  }
 }
 
 .order {

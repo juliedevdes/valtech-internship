@@ -44,11 +44,13 @@ router.get("/", async (req, res, next) => {
 
 router.get("/:productId", async (req, res, next) => {
   const { productId } = req.params;
+
   try {
     const foundContact = await Product.findById(productId);
     if (!foundContact) {
       throw new NotFound();
     }
+
     res.json(foundContact);
   } catch (error) {
     next(error);
@@ -58,6 +60,7 @@ router.get("/:productId", async (req, res, next) => {
 router.post("/", async (req, res, next) => {
   try {
     const { error } = joiSchema.validate(req.body);
+
     if (error) {
       throw new BadRequest(error.message);
     }
@@ -66,6 +69,7 @@ router.post("/", async (req, res, next) => {
       ...req.body,
       categoryId: category._id,
     });
+
     res.status(201).json(newProduct);
   } catch (error) {
     next(error);
@@ -87,9 +91,11 @@ router.patch("/:productId", async (req, res, next) => {
       },
       { new: true }
     );
+
     if (!updatedProduct) {
       throw new NotFound("No product with this id");
     }
+
     res.json(updatedProduct);
   } catch (error) {
     next(error);
@@ -104,6 +110,7 @@ router.delete("/:productId", async (req, res, next) => {
     if (!deletedProduct) {
       throw new NotFound();
     }
+
     res.json({
       message: `${deletedProduct.productName} - this product was succesfully deleted`,
     });

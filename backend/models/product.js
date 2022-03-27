@@ -38,7 +38,9 @@ const productSchema = new Schema(
   },
   { versionKey: false, timestamps: true }
 );
+
 productSchema.plugin(pagination);
+
 const Product = model("product", productSchema);
 
 const Joi = require("joi");

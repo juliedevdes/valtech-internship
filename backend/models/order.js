@@ -27,6 +27,7 @@ const orderSchema = new Schema(
   },
   { versionKey: false, timestamps: true }
 );
+
 const Order = model("order", orderSchema);
 
 const Joi = require("joi");

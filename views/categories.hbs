@@ -1,0 +1,44 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="http://localhost:3000/styles.css" />
+    <title>CraftStudio</title>
+  </head>
+  <body>
+    {{>header}}
+    {{>navigation}}
+
+    <section class="container">
+    {{#if category}}
+      <img src="{{category.img}}" alt="category image" width="200">
+      <h1>{{category.name}}</h1>
+      <p>{{category.description}}</p>
+
+      <ul class="list products_list"></ul>
+      
+      <button class="first-page-btn">1-st page</button>
+      <button class="next-page-btn">next >></button> </div>
+      <script src="http://localhost:3000/js/categories-page.js"></script>
+    {{/if}}
+    {{#if categories}}
+      {{#each categories}}
+        <a href="/categories/{{name}}">{{name}}</a>
+      {{/each}}
+    {{/if}}
+  </section>
+  
+   {{>footer}}
+   {{>rights}}
+  <script src="http://localhost:3000/js/cart.js"></script>
+  </body>
+</html>

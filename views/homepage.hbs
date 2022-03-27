@@ -16,112 +16,92 @@
     <title>CraftStudio</title>
   </head>
   <body>
-    
+
     {{>header}}
     {{>navigation}}
 
     <section class="hero container">
-        <div class="owl-carousel owl-theme carousel" >
+      <div class="owl-carousel owl-theme carousel">
         {{#each products}}
-          <div class="carousel-item" style="background-image: url({{img}}); width: 600px;">
+          <div
+            class="carousel-item"
+            style="background-image: url({{img}}); width: 600px;"
+          >
             <p class="hero-sub">{{category}}</p>
             <h1 class="hero-title">{{productName}}</h1>
 
-           {{#if isOnSale}}
-           <p class="products_sale">{{salePercentage}}% sale!</p>
-           <p style="text-align: center;">
-          <span
-            class="products_price products_price-old"
-            style="text-decoration:line-through; color:grey;"
-          >${{price}}</span>
-          <span class="products_price">${{#priceCounter
-              price
-              salePercentage
-            }}{{/priceCounter}}</span></p>
-          {{else}}
-          <p class="products_price">${{price}}</p>
-         {{/if}}
+            {{#if isOnSale}}
+              <p class="products_sale">{{salePercentage}}% sale!</p>
+              <p style="text-align: center;">
+                <span
+                  class="products_price products_price-old"
+                  style="text-decoration:line-through; color:grey;"
+                >${{price}}</span>
+                <span class="products_price">${{#priceCounter
+                    price
+                    salePercentage
+                  }}{{/priceCounter}}</span></p>
+            {{else}}
+              <p class="products_price">${{price}}</p>
+            {{/if}}
             <button type="button" class="carousel-item_btn">add</button>
           </div>
-         {{/each}}
+        {{/each}}
       </div>
 
-        <div class="hero_about">
-          <p class="hero_about-title">About us</p>
-          <p class="hero_about-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
-         <ul class="list socials-list">
-      <li class="socials-item">
-        <svg width="20" height="20" class="icon">
-          <path
-            d="M 7.5 1 C 3.9160714 1 1 3.9160714 1 7.5 C 1 11.083929 3.9160714 14 7.5 14 C 11.083929 14 14 11.083929 14 7.5 C 14 3.9160714 11.083929 1 7.5 1 z M 7.5 2 C 10.543488 2 13 4.4565116 13 7.5 C 13 10.266333 10.967571 12.541024 8.3125 12.933594 L 8.3125 9.0898438 L 9.8652344 9.0898438 L 10.109375 7.5136719 L 8.3125 7.5136719 L 8.3125 6.6503906 C 8.3125 5.9953906 8.5256719 5.4140625 9.1386719 5.4140625 L 10.123047 5.4140625 L 10.123047 4.0371094 C 9.9500469 4.0141094 9.5845781 3.9628906 8.8925781 3.9628906 C 7.4485781 3.9628906 6.6015625 4.7258906 6.6015625 6.4628906 L 6.6015625 7.5117188 L 5.1171875 7.5117188 L 5.1171875 9.0898438 L 6.6035156 9.0898438 L 6.6035156 12.919922 C 3.9897868 12.492118 2 10.237066 2 7.5 C 2 4.4565116 4.4565116 2 7.5 2 z"
-          ></path>
-        </svg>
-      </li>
-      <li class="socials-item">
-        <svg width="20" height="20" class="icon">
-          <path
-            d="M 15 3.296875 C 14.476563 3.523438 13.949219 3.691406 13.367188 3.746094 C 13.949219 3.410156 14.417969 2.84375 14.648438 2.226563 C 14.066406 2.5625 13.484375 2.789063 12.84375 2.902344 C 12.257813 2.339844 11.5 2 10.683594 2 C 9.109375 2 7.824219 3.242188 7.824219 4.765625 C 7.824219 4.988281 7.824219 5.214844 7.882813 5.386719 C 4.875 5.386719 2.8125 3.691406 1.414063 2 C 1.121094 2.394531 1.003906 2.902344 1.003906 3.410156 C 1.003906 4.367188 1.53125 5.214844 2.289063 5.722656 C 1.820313 5.667969 1.355469 5.554688 1.003906 5.386719 C 1.003906 5.386719 1.003906 5.386719 1.003906 5.441406 C 1.003906 6.796875 1.996094 7.921875 3.28125 8.148438 C 3.046875 8.203125 2.8125 8.261719 2.519531 8.261719 C 2.347656 8.261719 2.171875 8.261719 1.996094 8.207031 C 2.347656 9.335938 3.976563 10.632813 5.257813 10.632813 C 4.265625 11.363281 3.34375 12 1.5 12 C 1.265625 12 1.453125 12 1 12 C 2.28125 12.789063 3.800781 13 5.375 13 C 10.683594 13 13.542969 8.769531 13.542969 5.101563 C 13.542969 4.988281 13.542969 4.878906 13.542969 4.765625 C 14.125 4.367188 14.59375 3.863281 15 3.296875"
-          ></path>
-        </svg>
-      </li>
-      <li class="socials-item">
-        <svg width="20" height="20" class="icon">
-          <path
-            d="M 4.773438 1 C 2.695313 1 1 2.695313 1 4.773438 L 1 10.230469 C 1 12.304688 2.695313 14 4.773438 14 L 10.230469 14 C 12.304688 14 14 12.304688 14 10.226563 L 14 4.773438 C 14 2.695313 12.304688 1 10.226563 1 Z M 4.773438 2 L 10.226563 2 C 11.765625 2 13 3.234375 13 4.773438 L 13 10.226563 C 13 11.765625 11.765625 13 10.230469 13 L 4.773438 13 C 3.234375 13 2 11.765625 2 10.230469 L 2 4.773438 C 2 3.234375 3.234375 2 4.773438 2 Z M 11.5 3 C 11.222656 3 11 3.222656 11 3.5 C 11 3.777344 11.222656 4 11.5 4 C 11.777344 4 12 3.777344 12 3.5 C 12 3.222656 11.777344 3 11.5 3 Z M 7.5 4 C 5.574219 4 4 5.574219 4 7.5 C 4 9.425781 5.574219 11 7.5 11 C 9.425781 11 11 9.425781 11 7.5 C 11 5.574219 9.425781 4 7.5 4 Z M 7.5 5 C 8.886719 5 10 6.113281 10 7.5 C 10 8.886719 8.886719 10 7.5 10 C 6.113281 10 5 8.886719 5 7.5 C 5 6.113281 6.113281 5 7.5 5 Z"
-          ></path>
-        </svg>
-      </li>
-      <li class="socials-item">
-        <svg width="20" height="20" class="icon">
-          <path
-            d="M 2.488281 3.011719 C 1.664063 3.011719 0.988281 3.6875 0.988281 4.511719 L 0.988281 11.511719 C 0.988281 12.335938 1.664063 13.011719 2.488281 13.011719 L 13.488281 13.011719 C 14.308594 13.011719 14.988281 12.335938 14.988281 11.511719 L 14.988281 4.511719 C 14.988281 3.6875 14.3125 3.011719 13.488281 3.011719 Z M 2.488281 4.011719 L 13.488281 4.011719 C 13.769531 4.011719 13.988281 4.230469 13.988281 4.511719 L 13.988281 11.511719 C 13.988281 11.792969 13.769531 12.011719 13.488281 12.011719 L 2.488281 12.011719 C 2.207031 12.011719 1.988281 11.792969 1.988281 11.511719 L 1.988281 4.511719 C 1.988281 4.230469 2.207031 4.011719 2.488281 4.011719 Z M 6 4.992188 L 6 11.011719 L 11 8 Z M 7 6.757813 L 9.0625 8 L 7 9.242188 Z"
-          ></path>
-        </svg>
-      </li>
-    </ul>
-        </div>
+      <div class="hero_about">
+        <p class="hero_about-title">About us</p>
+        <p class="hero_about-text">Sed ut perspiciatis unde omnis iste natus
+          error sit voluptatem accusantium doloremque laudantium, totam rem
+          aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
+          architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
+          voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
+          consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+          Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+          consectetur, adipisci velit, sed quia non numquam eius modi tempora
+          incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut
+          enim ad minima veniam, quis nostrum exercitationem ullam corporis
+          suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis
+          autem vel eum iure reprehenderit qui in ea voluptate velit esse quam
+          nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo
+          voluptas nulla pariatur?</p>
+        <ul class="list socials-list">
+          <li class="socials-item">
+            {{>facebook}}
+          </li>
+          <li class="socials-item">
+            {{>twitter}}
+          </li>
+          <li class="socials-item">
+            {{>instagram}}
+          </li>
+          <li class="socials-item">
+            {{>youtube}}
+          </li>
+        </ul>
+      </div>
     </section>
 
     <section class="new-dishes container">
       <h2 class="new-dishes_title">New Dishes</h2>
-      {{!-- <ul class="new-dishes_btn-list list">
-        <li class="new-dishes_btn-list-item">
-          <button class="new-dishes_btn">Burger</button>
-        </li>
-        <li class="new-dishes_btn-list-item">
-          <button class="new-dishes_btn">Pizza</button>
-        </li>
-        <li class="new-dishes_btn-list-item">
-          <button class="new-dishes_btn">Sandvich</button>
-        </li>
-        <li class="new-dishes_btn-list-item">
-          <button class="new-dishes_btn">Fries</button>
-        </li>
-        <li class="new-dishes_btn-list-item">
-          <button class="new-dishes_btn">Other</button>
-        </li>
-      </ul> --}}
-
       <ul class="new-dishes_card-list list">
         {{#each products}}
-        <li class="new-dishes_card-item">
-          <a href="/" class="link new-dishes_cart">
-            <div class="new-dishes_card-picture" style="background-image: url({{img}});">
-                  <button class="new-dishes_cart-btn">
-                    <svg width="15" height="15" class="search_bag">
-                      <path
-                        d="M12.7003 14.3735L11.7875 4.20851C11.7626 3.93092 11.53 3.71829 11.2513 3.71829H9.369V2.86935C9.369 1.28719 8.08188 0 6.4998 0C4.91778 0 3.63081 1.28719 3.63081 2.86935V3.71829H1.74722C1.46855 3.71829 1.23589 3.93092 1.21098 4.20851L0.294633 14.4134C0.281138 14.564 0.331531 14.7133 0.433539 14.8248C0.535546 14.9364 0.679764 14.9999 0.830873 14.9999H12.1677C12.1681 14.9999 12.1687 14.9999 12.1692 14.9999C12.4666 14.9999 12.7075 14.7589 12.7075 14.4615C12.7075 14.4316 12.705 14.4021 12.7003 14.3735ZM4.70759 2.86935C4.70759 1.88093 5.51159 1.07679 6.49987 1.07679C7.48821 1.07679 8.29229 1.88093 8.29229 2.86935V3.71829H4.70759V2.86935ZM1.4198 13.9232L2.23945 4.79508H3.63081V5.75787C3.63081 6.0552 3.87179 6.29626 4.1692 6.29626C4.46661 6.29626 4.70759 6.0552 4.70759 5.75787V4.79508H8.29229V5.75787C8.29229 6.0552 8.53327 6.29626 8.83068 6.29626C9.12809 6.29626 9.36907 6.0552 9.36907 5.75787V4.79508H10.7591L11.5788 13.9232H1.4198Z"
-                        fill="white"
-                      ></path>
-                    </svg>
-                    <span class="new-dishes_cart-btn-add">Add</span>
-                  </button>
-            </div>
+          <li class="new-dishes_card-item">
+            <a href="/shop/{{_id}}" class="link new-dishes_cart">
+              <div
+                class="new-dishes_card-picture"
+                style="background-image: url({{img}});"
+              >
+                <button style="z-index: 3;" class="new-dishes_cart-btn">
+                  {{>bag}}
+                  <span class="new-dishes_cart-btn-add ">Add</span>
+                </button>
+              </div>
 
-            <h3 class="new-dishes_card-title">{{productName}}</h3>
-            <p class="new-dishes_card-price">{{price}}$</p>
-          </a>
-        </li>
+              <h3 class="new-dishes_card-title">{{productName}}</h3>
+              <p class="new-dishes_card-price">{{price}}$</p>
+            </a>
+          </li>
         {{/each}}
       </ul>
     </section>
@@ -150,117 +130,58 @@
       <div class="deals--right">
         <div class="deals--right_header">
           <h2 class="deals-title">Feature Dishes</h2>
-
-          {{!-- <ul class="deals--right_btn-list list">
-            <li class="deals--right_btn-list-item">
-              <button class="deals--right_btn">All</button>
-            </li>
-            <li class="deals--right_btn-list-item">
-              <button class="deals--right_btn">Burgers</button>
-            </li>
-            <li class="deals--right_btn-list-item">
-              <button class="deals--right_btn">Salad</button>
-            </li>
-            <li class="deals--right_btn-list-item">
-              <button class="deals--right_btn">Sandwich</button>
-            </li>
-            <li class="deals--right_btn-list-item">
-              <button class="deals--right_btn">Fries</button>
-            </li>
-          </ul> --}}
         </div>
 
         <ul class="deals--right_card-list list">
           {{#each onSale}}
             <li class="deals--right_card-item">
-            <div class="deals--right_img" style="background-image: url({{img}});"></div>
-            <div>
-              <h3 class="deals--right-title">{{productName}}</h3>
-              <p class="deals--right-price">{{price}} $</p>
-              <p>{{isOnSale}} {{salePercentage}}% off  </p>
-            </div>
-          </li>
+              <div
+                class="deals--right_img"
+                style="background-image: url({{img}});"
+              ></div>
+              <div>
+                <h3 class="deals--right-title">{{productName}}</h3>
+                <p class="deals--right-price">{{price}} $</p>
+                <p>{{isOnSale}} {{salePercentage}}% off </p>
+              </div>
+            </li>
           {{/each}}
         </ul>
       </div>
     </section>
 
     <section class="categories container">
-      <h3 class="categories_title">Shop By Categories</h3>
+      <a class="link" href="/categories"><h3 class="categories_title">Shop By Categories</h3></a>
       <ul class="categories_list list">
+       {{#each categories}}
         <li class="categories_item">
-          <div class="categories_img">
-            <button class="categories_btn">
-              Spageti<span class="categories_btn--items">(200 items)</span>
-            </button>
+          <a href="/categories/{{name}}" class="link">
+          <div style="background-image:url({{img}});" class="categories_img">
+            <p class="categories_btn">{{name}}</p>
           </div>
+          </a>
         </li>
-        <li class="categories_item">
-          <div class="categories_img">
-            <button class="categories_btn">
-              Pizza<span class="categories_btn--items">(200 items)</span>
-            </button>
-          </div>
-        </li>
-        <li class="categories_item">
-          <div class="categories_img">
-            <button class="categories_btn">
-              Fries
-              <span class="categories_btn--items">(200 items)</span>
-            </button>
-          </div>
-        </li>
-        <li class="categories_item">
-          <div class="categories_img">
-            <button class="categories_btn">
-              Burgers
-              <span class="categories_btn--items">(200 items)</span>
-            </button>
-          </div>
-        </li>
+       {{/each}}
       </ul>
     </section>
 
     <section class="best-seller container">
-       {{!-- <div class="best-seller_header"> --}}
-        <h3 class="best-seller_title">Best Seller</h3>
-        {{!--<ul class="best-seller_btn-list list">
-          <li class="best-seller_btn-list-item">
-            <button class="best-seller_btn">All</button>
-          </li>
-          <li class="best-seller_btn-list-item">
-            <button class="best-seller_btn">Burger</button>
-          </li>
-          <li class="best-seller_btn-list-item">
-            <button class="best-seller_btn">Pizza</button>
-          </li>
-          <li class="best-seller_btn-list-item">
-            <button class="best-seller_btn">Sandwich</button>
-          </li>
-          <li class="best-seller_btn-list-item">
-            <button class="best-seller_btn">Salad</button>
-          </li>
-        </ul>
-      </div> --}}
+      <h3 class="best-seller_title">Best Seller</h3>
 
       <ul class="best-seller_card-list list">
-           {{#each bestSellers}}
+        {{#each bestSellers}}
           <li class="best-seller_card-item" style="position: relative;">
-          <img src={{img}} class="best-seller_img" alt="product-img">
-          <h3 class="best-seller_card-title">{{productName}}</h3>
-          <p class="best-seller_card-price">{{price}}$</p>
-           {{#if bestSeller}}
-        <div class="products_bs">
-          <svg class="products_star" width="20" height="20" fill="#F6AE13">
-            <path
-              d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
-            ></path>
-          </svg>
-          <p class="products_bs-title">best-seller</p>
-        </div>
-      {{/if}}
-        </li>
-          {{/each}}
+            <img src={{img}} class="best-seller_img" alt="product-img" />
+            <h3 class="best-seller_card-title">{{productName}}</h3>
+            <p class="best-seller_card-price">{{price}}$</p>
+            {{#if bestSeller}}
+              <div class="products_bs">
+                {{>star}}
+                <p class="products_bs-title">best-seller</p>
+              </div>
+            {{/if}}
+          </li>
+        {{/each}}
       </ul>
     </section>
 
@@ -293,6 +214,7 @@
           <p class="reviews_author">Sonya Sahny</p>
         </div>
       </div>
+
     </section>
 
     <section class="container news">
@@ -301,14 +223,10 @@
         <li class="news_card-item">
           <div class="news_card-img"></div>
           <p class="news_card-sub-title">VEGAN</p>
-          <h3 class="news_card-title">Heirloom Bean and Mushroom “Carnitas” Casserole</h3>
+          <h3 class="news_card-title">Heirloom Bean and Mushroom “Carnitas”
+            Casserole</h3>
           <p class="news_card-date">
-            <svg class="news_card-icon" width="16" height="16">
-              <path
-                d="M14.2085 2.02038H13.5054V0.856934H12.3336V2.02038H4.59948V0.856934H3.42764V2.02038H2.72455C1.75532 2.02038 0.966797 2.80326 0.966797 3.76554V14.0039C0.966797 14.9661 1.75532 15.749 2.72455 15.749H14.2085C15.1777 15.749 15.9662 14.9661 15.9662 14.0039V3.76554C15.9662 2.80326 15.1777 2.02038 14.2085 2.02038ZM14.7944 14.0039C14.7944 14.3246 14.5316 14.5856 14.2085 14.5856H2.72455C2.40147 14.5856 2.13863 14.3246 2.13863 14.0039V6.32512H14.7944V14.0039ZM14.7944 5.16168H2.13863V3.76554C2.13863 3.44478 2.40147 3.18382 2.72455 3.18382H3.42764V4.34727H4.59948V3.18382H12.3336V4.34727H13.5054V3.18382H14.2085C14.5316 3.18382 14.7944 3.44478 14.7944 3.76554V5.16168Z"
-                fill="#888888"
-              ></path>
-            </svg>
+            {{>calendar}}
             jan 23
           </p>
         </li>
@@ -319,12 +237,7 @@
             Heirloom Bean and Mushroom “Carnitas” Casserole
           </h3>
           <p class="news_card-date">
-            <svg class="news_card-icon" width="16" height="16">
-              <path
-                d="M14.2085 2.02038H13.5054V0.856934H12.3336V2.02038H4.59948V0.856934H3.42764V2.02038H2.72455C1.75532 2.02038 0.966797 2.80326 0.966797 3.76554V14.0039C0.966797 14.9661 1.75532 15.749 2.72455 15.749H14.2085C15.1777 15.749 15.9662 14.9661 15.9662 14.0039V3.76554C15.9662 2.80326 15.1777 2.02038 14.2085 2.02038ZM14.7944 14.0039C14.7944 14.3246 14.5316 14.5856 14.2085 14.5856H2.72455C2.40147 14.5856 2.13863 14.3246 2.13863 14.0039V6.32512H14.7944V14.0039ZM14.7944 5.16168H2.13863V3.76554C2.13863 3.44478 2.40147 3.18382 2.72455 3.18382H3.42764V4.34727H4.59948V3.18382H12.3336V4.34727H13.5054V3.18382H14.2085C14.5316 3.18382 14.7944 3.44478 14.7944 3.76554V5.16168Z"
-                fill="#888888"
-              ></path>
-            </svg>
+            {{>calendar}}
             jan 23
           </p>
         </li>
@@ -335,12 +248,7 @@
             Heirloom Bean and Mushroom “Carnitas” Casserole
           </h3>
           <p class="news_card-date">
-            <svg class="news_card-icon" width="16" height="16">
-              <path
-                d="M14.2085 2.02038H13.5054V0.856934H12.3336V2.02038H4.59948V0.856934H3.42764V2.02038H2.72455C1.75532 2.02038 0.966797 2.80326 0.966797 3.76554V14.0039C0.966797 14.9661 1.75532 15.749 2.72455 15.749H14.2085C15.1777 15.749 15.9662 14.9661 15.9662 14.0039V3.76554C15.9662 2.80326 15.1777 2.02038 14.2085 2.02038ZM14.7944 14.0039C14.7944 14.3246 14.5316 14.5856 14.2085 14.5856H2.72455C2.40147 14.5856 2.13863 14.3246 2.13863 14.0039V6.32512H14.7944V14.0039ZM14.7944 5.16168H2.13863V3.76554C2.13863 3.44478 2.40147 3.18382 2.72455 3.18382H3.42764V4.34727H4.59948V3.18382H12.3336V4.34727H13.5054V3.18382H14.2085C14.5316 3.18382 14.7944 3.44478 14.7944 3.76554V5.16168Z"
-                fill="#888888"
-              ></path>
-            </svg>
+            {{>calendar}}
             jan 23
           </p>
         </li>
@@ -351,21 +259,16 @@
             Heirloom Bean and Mushroom “Carnitas” Casserole
           </h3>
           <p class="news_card-date">
-            <svg class="news_card-icon" width="16" height="16">
-              <path
-                d="M14.2085 2.02038H13.5054V0.856934H12.3336V2.02038H4.59948V0.856934H3.42764V2.02038H2.72455C1.75532 2.02038 0.966797 2.80326 0.966797 3.76554V14.0039C0.966797 14.9661 1.75532 15.749 2.72455 15.749H14.2085C15.1777 15.749 15.9662 14.9661 15.9662 14.0039V3.76554C15.9662 2.80326 15.1777 2.02038 14.2085 2.02038ZM14.7944 14.0039C14.7944 14.3246 14.5316 14.5856 14.2085 14.5856H2.72455C2.40147 14.5856 2.13863 14.3246 2.13863 14.0039V6.32512H14.7944V14.0039ZM14.7944 5.16168H2.13863V3.76554C2.13863 3.44478 2.40147 3.18382 2.72455 3.18382H3.42764V4.34727H4.59948V3.18382H12.3336V4.34727H13.5054V3.18382H14.2085C14.5316 3.18382 14.7944 3.44478 14.7944 3.76554V5.16168Z"
-                fill="#888888"
-              ></path>
-            </svg>
+            {{>calendar}}
             jan 23
           </p>
         </li>
       </ul>
     </section>
 
-{{>footer}}
+    {{>footer}}
+    {{>rights}}       
 
-{{>rights}}       
     <script src="./js/jquery.min.js"></script>
     <script src="./js/owl.carousel.min.js"></script>
     <script src="./bundle.js"></script>
