@@ -53,8 +53,6 @@ const renderOrderList = function () {
   });
 };
 
-renderOrderList();
-
 const resetForm = (e) => {
   e.target.elements.address.value = "";
   e.target.elements.phone.value = "";
@@ -62,6 +60,8 @@ const resetForm = (e) => {
 
   localStorage.setItem("cart", null);
 };
+
+renderOrderList();
 
 //event listeners
 form.addEventListener("submit", async (e) => {

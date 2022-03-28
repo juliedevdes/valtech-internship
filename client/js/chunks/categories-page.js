@@ -20,7 +20,7 @@ Handlebars.registerHelper("priceCounter", (price, salePercentage) => {
 //set default
 localStorage.setItem("page", "1");
 
-//get category from url
+//getting current category
 const currentCategory = window.location.pathname.slice(12);
 
 const renderProductList = async function (page = 1, category) {

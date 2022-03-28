@@ -7,6 +7,7 @@ const { joiSchema } = require("../models/order");
 
 router.get("/", async (req, res, next) => {
   const { status, paymentMethod } = req.query;
+
   try {
     if (status || paymentMethod) {
       res.json(
@@ -44,6 +45,7 @@ router.get("/:orderId", async (req, res, next) => {
 router.post("/", async (req, res, next) => {
   try {
     const { error } = joiSchema.validate(req.body);
+
     if (error) {
       throw new BadRequest(error.message);
     }
@@ -78,6 +80,7 @@ router.patch("/:orderId", async (req, res, next) => {
     if (!updatedOrder) {
       throw new NotFound("No product with this id");
     }
+    
     res.json(updatedOrder);
   } catch (error) {
     next(error);

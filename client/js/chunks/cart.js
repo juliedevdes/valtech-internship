@@ -21,14 +21,8 @@ Handlebars.registerHelper("priceCounter", (price, salePercentage) => {
 });
 
 function cartHandler() {
-  const cart = localStorage.getItem("cart");
-
-  if (cart === null || cart === "null") {
-    cartProductsList.innerHTML = cartListHbs({ cart: null });
-  } else {
-    const cartObejctsArray = JSON.parse(cart);
-    cartProductsList.innerHTML = cartListHbs({ cart: cartObejctsArray });
-  }
+  const cart = JSON.parse(localStorage.getItem("cart"));
+  cartProductsList.innerHTML = cartListHbs({ cart });
 
   modal.classList.toggle("is-hidden");
 }

@@ -21,6 +21,7 @@ router.get("/", async (req, res, next) => {
 router.post("/", async (req, res, next) => {
   try {
     const { error } = joiSchema.validate(req.body);
+
     if (error) {
       throw new BadRequest(error.message);
     }

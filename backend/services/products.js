@@ -64,6 +64,7 @@ router.post("/", async (req, res, next) => {
     if (error) {
       throw new BadRequest(error.message);
     }
+
     const category = await Category.findOne({ name: req.body.category });
     const newProduct = await Product.create({
       ...req.body,
@@ -107,6 +108,7 @@ router.delete("/:productId", async (req, res, next) => {
 
   try {
     const deletedProduct = await Product.findByIdAndRemove(productId);
+
     if (!deletedProduct) {
       throw new NotFound();
     }

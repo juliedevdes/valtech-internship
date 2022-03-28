@@ -1,5 +1,6 @@
 const { Schema, model, SchemaTypes } = require("mongoose");
 const pagination = require("mongoose-paginate-v2");
+const Joi = require("joi");
 
 const productSchema = new Schema(
   {
@@ -43,22 +44,10 @@ productSchema.plugin(pagination);
 
 const Product = model("product", productSchema);
 
-const Joi = require("joi");
-
 const joiSchema = Joi.object({
   productName: Joi.string().required(),
   price: Joi.number().required(),
-  category: Joi.any()
-    .allow(
-      "burger",
-      "salad",
-      "fries",
-      "spaghetti",
-      "combo",
-      "pizza",
-      "sandwich"
-    )
-    .required(),
+  category: Joi.string().required(),
   description: Joi.string(),
   bestSeller: Joi.boolean(),
   isOnSale: Joi.boolean(),

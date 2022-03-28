@@ -73,25 +73,15 @@ const renderProductList = async function (page = 1) {
 
 //event listeners
 bestSellFilter.addEventListener("click", (e) => {
-  const bestSeller = localStorage.getItem("bestSeller");
-
-  if (bestSeller === "false") {
-    localStorage.setItem("bestSeller", "true");
-  } else {
-    localStorage.setItem("bestSeller", "false");
-  }
+  const bestSeller = JSON.parse(localStorage.getItem("bestSeller"));
+  localStorage.setItem("bestSeller", JSON.stringify(!bestSeller));
 
   renderProductList();
 });
 
 saleFilter.addEventListener("click", (e) => {
-  const sale = localStorage.getItem("sale");
-
-  if (sale === "false") {
-    localStorage.setItem("sale", "true");
-  } else {
-    localStorage.setItem("sale", "false");
-  }
+  const sale = JSON.parse(localStorage.getItem("sale"));
+  localStorage.setItem("sale", JSON.stringify(!sale));
 
   renderProductList();
 });
