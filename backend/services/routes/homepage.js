@@ -38,9 +38,15 @@ router.get("/", (req, res, next) => {
         bestSellers,
         onSale,
         categories,
+        bestDeals: onSale.filter(
+          (product) =>
+            product.bestSeller === true && product.salePercentage > 38
+        ),
       });
     })
-    .catch((error) => next);
+    .catch((error) => {
+      next(error);
+    });
 });
 
 module.exports = router;

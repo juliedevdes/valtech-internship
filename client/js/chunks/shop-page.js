@@ -97,7 +97,7 @@ saleFilter.addEventListener("click", (e) => {
 });
 
 categoryFilter.addEventListener("change", (e) => {
-  const cat = catFil.value;
+  const cat = categoryFilter.value;
   localStorage.setItem("category", cat);
 
   renderProductList();
