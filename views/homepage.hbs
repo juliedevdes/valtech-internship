@@ -19,7 +19,7 @@
 
     {{>header}}
     {{>navigation}}
-
+    
     <section class="hero container">
       <div class="owl-carousel owl-theme carousel">
         {{#each products}}
@@ -67,16 +67,16 @@
           voluptas nulla pariatur?</p>
         <ul class="list socials-list">
           <li class="socials-item">
-            {{>facebook}}
+            {{!-- {{>facebook}} --}}
           </li>
           <li class="socials-item">
-            {{>twitter}}
+            {{!-- {{>twitter}} --}}
           </li>
           <li class="socials-item">
-            {{>instagram}}
+            {{!-- {{>instagram}} --}}
           </li>
           <li class="socials-item">
-            {{>youtube}}
+            {{!-- {{>youtube}} --}}
           </li>
         </ul>
       </div>
@@ -92,10 +92,10 @@
                 class="new-dishes_card-picture"
                 style="background-image: url({{img}});"
               >
-                <button style="z-index: 3;" class="new-dishes_cart-btn">
+                {{!-- <button style="z-index: 3;" class="new-dishes_cart-btn">
                   {{>bag}}
                   <span class="new-dishes_cart-btn-add ">Add</span>
-                </button>
+                </button> --}}
               </div>
 
               <h3 class="new-dishes_card-title">{{productName}}</h3>
@@ -104,69 +104,67 @@
           </li>
         {{/each}}
       </ul>
-    </section>
+    </section> -
 
     <section class="container deals">
-      <div class="deals--left">
-        <h2 class="deals-title">Deals of the week</h2>
-        <div class="/">
-        {{#each bestDeals}}
-        <div class="deals--left_card">
+    <div class="deals--left">
+    <h2 class="deals-title">Deal of the week</h2>
+    {{#with bestDeal}}
+      <a href="/shop/{{_id}}" class="deals--left_card link">
 
-        <div>
-          <div style="background-image: url({{img}});" class="deals--left_card-img"></div>
+        <div
+          style="background-image: url({{img}});"
+          class="deals--left_card-img"
+        ></div>
 
-          <div class="deals--left_card--down">
-            <div>
-              <h3 class="deals--left_card-title">{{productName}}</h3>
-                <div class="products_bs">
-         {{>star}}
-          <p class="products_bs-title">best-seller</p>
-        </div>
-              <p class="products_sale">{{salePercentage}}% sale!</p>
-        <p style="text-align: center;">
-          <span
-            class="products_price products_price-old"
-            style="text-decoration:line-through; color:grey;"
-          >${{price}}</span>
-          <span class="products_price">${{#priceCounter
-              price
-              salePercentage
-            }}{{/priceCounter}}</span></p>
-      {{else}}
-        <p class="products_price">${{price}}</p>
+        <div class="deals--left_card--down">
+          <div>
+            <h3 class="deals--left_card-title">{{productName}}</h3>
+            <div class="products_bs">
+              {{!-- {{>star}} --}}
+              <p class="products_bs-title">best-seller</p>
             </div>
-            {{>bag}}
+            <p class="products_sale">{{salePercentage}}% sale!</p>
+            <p style="text-align: center;">
+              <span
+                class="products_price products_price-old"
+                style="text-decoration:line-through; color:grey;"
+              >${{price}}</span>
+              <span class="products_price">${{#priceCounter
+                  price
+                  salePercentage
+                }}{{/priceCounter}}</span></p>
           </div>
-
         </div>
-        
-        </div>
-        {{/each}}
+      </a>
+    {{/with}}
 
-     </div>
+  </div>
 
-      <div class="deals--right">
-        <div class="deals--right_header">
-          <h2 class="deals-title">Feature Dishes</h2>
-        </div>
+  <div class="deals--right">
+    <div class="deals--right_header">
+      <h2 class="deals-title">Feature Dishes</h2>
+    </div>
 
-        <ul class="deals--right_card-list list">
-          {{#each onSale}}
-            <li class="deals--right_card-item">
-              <div
-                class="deals--right_img"
-                style="background-image: url({{img}});"
-              ></div>
-              <div>
-                <h3 class="deals--right-title">{{productName}}</h3>
-                <p class="deals--right-price">{{price}} $</p>
-                <p>{{isOnSale}} {{salePercentage}}% off </p>
-              </div>
-            </li>
-          {{/each}}
-        </ul>
-      </div>
+    <ul class="deals--right_card-list list">
+      {{#each onSale}}
+        <li class="deals--right_card-item">
+          <a href="/shop/{{_id}}" class="link">
+          <div
+            class="deals--right_img"
+            style="background-image: url({{img}});"
+          ></div>
+          <div>
+            <h3 class="deals--right-title">{{productName}}</h3>
+            <p class="deals--right-price">{{price}} $</p>
+            <p>{{isOnSale}} {{salePercentage}}% off </p>
+          </div>
+          </a>
+        </li>
+      {{/each}}
+    </ul>
+
+  </div>
     </section>
 
     <section class="categories container">

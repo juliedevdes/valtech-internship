@@ -1,35 +1,35 @@
 const express = require("express");
 const router = express.Router();
 
-const axios = require("axios");
-axios.defaults.baseURL = "http://localhost:3000";
+const { Product } = require("../../models/product");
 
-router.get("/", (req, res, next) => {
-  axios
-    .get("/api/products")
-    .then((response) => {
-      res.render("shop", {
-        products: response.data.docs,
-      });
-    })
-    .catch((error) => {
-      next(error);
+router.get("/", async (req, res, next) => {
+  try {
+    const products = await Product.paginate(
+      {},
+      { sort: { createdAt: -1 }, page: 1, limit: 16 }
+    );
+
+    res.render("shop", {
+      products: products.docs,
     });
+  } catch (error) {
+    next(error);
+  }
 });
 
-router.get("/:productId", (req, res, next) => {
-  const { productId } = req.params;
+router.get("/:productId", async (req, res, next) => {
+  try {
+    const { productId } = req.params;
 
-  axios
-    .get(`/api/products/${productId}`)
-    .then((response) => {
-      res.render("pdp", {
-        product: response.data,
-      });
-    })
-    .catch((error) => {
-      next(error);
+    const product = await Product.findById(productId);
+
+    res.render("pdp", {
+      product,
     });
+  } catch (error) {
+    next(error);
+  }
 });
 
 module.exports = router;

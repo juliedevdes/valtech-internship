@@ -1,52 +1,30 @@
 const express = require("express");
 const router = express.Router();
 
-const axios = require("axios");
-axios.defaults.baseURL = "http://localhost:3000";
+const { Product } = require("../../models/product");
+const { Category } = require("../../models/category");
 
-function getProducts() {
-  return axios.get("/api/products");
-}
+router.get("/", async (req, res, next) => {
+  const products = await Product.find().sort({ createdAt: -1 });
+  const categories = await Category.find();
+  const bestSellers = await Product.find({ bestSeller: true }).sort({
+    createdAt: -1,
+  });
+  const onSale = await Product.find({ isOnSale: true }).sort({
+    salePercentage: -1,
+  });
+  const bestDeal = await Product.findOne({
+    isOnSale: true,
+    salePercentage: 40,
+  });
 
-function getCategories() {
-  return axios.get("/api/categories");
-}
-
-function getProductsOnSale() {
-  return axios.get("/api/products?sale=true");
-}
-
-function getBestSellers() {
-  return axios.get("/api/products?bestSeller=true");
-}
-
-router.get("/", (req, res, next) => {
-  Promise.all([
-    getProducts(),
-    getCategories(),
-    getBestSellers(),
-    getProductsOnSale(),
-  ])
-    .then(function (results) {
-      const products = results[0].data.docs.slice(0, 5);
-      const categories = results[1].data;
-      const bestSellers = results[2].data.docs.slice(0, 5);
-      const onSale = results[3].data.docs.slice(0, 5);
-
-      res.render("homepage", {
-        products,
-        bestSellers,
-        onSale,
-        categories,
-        bestDeals: onSale.filter(
-          (product) =>
-            product.bestSeller === true && product.salePercentage > 38
-        ),
-      });
-    })
-    .catch((error) => {
-      next(error);
-    });
+  res.render("homepage", {
+    products: products.slice(0, 5),
+    bestSellers: bestSellers.slice(0, 5),
+    onSale: onSale.slice(1, 5),
+    categories,
+    bestDeal,
+  });
 });
 
 module.exports = router;

@@ -6,8 +6,7 @@ const orderListHbs = require("../../../views/partials/orderList.hbs");
 const axios = require("axios");
 axios.defaults.baseURL = "http://localhost:3000";
 
-var Handlebars = require("hbsfy/runtime");
-const async = require("hbs/lib/async");
+const Handlebars = require("hbsfy/runtime");
 
 Handlebars.registerHelper("priceCounter", (price, salePercentage) => {
   const newPrice = price - price * (salePercentage / 100);

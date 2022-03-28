@@ -12,8 +12,7 @@ const { buyBtnHandler } = require("../buyBtnHandler.js");
 const axios = require("axios");
 axios.defaults.baseURL = "http://localhost:3000";
 
-var Handlebars = require("hbsfy/runtime");
-const async = require("hbs/lib/async");
+const Handlebars = require("hbsfy/runtime");
 
 Handlebars.registerHelper("priceCounter", (price, salePercentage) => {
   const newPrice = price - price * (salePercentage / 100);
@@ -28,12 +27,13 @@ localStorage.setItem("category", "all");
 localStorage.setItem("page", "1");
 
 function formParam(property) {
-  let value = localStorage.getItem(`${property}`);
-  if (value === "false") {
-    value = "";
-  } else {
+  let value = JSON.parse(localStorage.getItem(`${property}`));
+
+  if (value) {
     value = `${property}=true`;
+    return value;
   }
+  value = "";
 
   return value;
 }

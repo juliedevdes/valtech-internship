@@ -6,7 +6,7 @@ const buyBtnHandler = async function (e) {
 
   const cart = JSON.parse(localStorage.getItem("cart"));
 
-  if (cart === null || cart === "null") {
+  if (cart === null) {
     localStorage.setItem(
       "cart",
       JSON.stringify([{ ...product.data, quantity: 1 }])
