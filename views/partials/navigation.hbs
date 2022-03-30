@@ -4,46 +4,13 @@
       {{>menu}}
       <a href="/categories" class="link"><span class="navigation_menu-span"> All categories </span></a>
       <ul class="navigation_menu list">
+        {{#each categories}}
         <li class="navigation_menu-item">
-          <a href="/categories/burger" class="navigation_link link">
-            {{>burger}}
-            Burger</a>
+          <a href="/categories/{{name}}" class="navigation_link link">
+            {{>menuIcon}}  
+            {{name}}</a>
         </li>
-        <li class="navigation_menu-item">
-          <a href="/categories/pizza" class="link navigation_link">
-            {{>pizza}}
-            Pizza</a>
-        </li>
-        <li class="navigation_menu-item">
-          <a href="/categories/sandwich" class="link navigation_link">
-            {{>sandwich}}
-            Sandwich</a>
-        </li>
-        <li class="navigation_menu-item">
-          <a href="/categories/spaghetti" class="link navigation_link">
-            {{>spaghetti}}
-            Spaghetti</a>
-        </li>
-        <li class="navigation_menu-item">
-          <a href="/categories/salad" class="link navigation_link">
-            {{>salad}}
-            Salad</a>
-        </li>
-        <li class="navigation_menu-item">
-          <a href="/categories/fries" class="link navigation_link">
-            {{>fries}}
-            Fries</a>
-        </li>
-        <li class="navigation_menu-item">
-          <a href="/categories/drinks" class="link navigation_link">
-            {{>drinks}}
-            Drinks</a>
-        </li>
-        <li class="navigation_menu-item">
-          <a href="/categories/combo" class="link navigation_link">
-            {{>combo}}
-            Combo</a>
-        </li>
+        {{/each}}
       </ul>
     </li>
     <li class="navigation-item"><a href="/" class="link">Home</a></li>

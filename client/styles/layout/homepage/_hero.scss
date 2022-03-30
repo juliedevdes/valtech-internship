@@ -1,0 +1,45 @@
+.hero {
+  margin-top: 20px;
+  padding-bottom: 20px;
+  &_about {
+    margin-left: 30px;
+  }
+  &_about-title {
+    font-family: $secondary-font;
+    font-size: 35px;
+    margin-bottom: 20px;
+  }
+  &_about-text {
+    margin-bottom: 20px;
+  }
+  &-title {
+    font-family: $secondary-font;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 25px;
+  }
+  display: flex;
+  justify-content: space-around;
+  &-title {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  &-sub {
+    color: $color-green;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 45px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  &_price {
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero {
+    display: flex;
+  }
+}

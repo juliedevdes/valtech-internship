@@ -1,0 +1,30 @@
+.reviews {
+  background: #f5f5f5;
+  &_item {
+    background-color: #ffffff;
+    border: 1px solid #e1e1e1;
+    margin-bottom: 50px;
+  }
+  &_title {
+    font-family: $secondary-font;
+    padding-top: 30px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 42px;
+    line-height: 50px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  &_text {
+    display: block;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 450px;
+  }
+  &_author {
+    text-align: center;
+    font-family: $secondary-font;
+    font-size: 22px;
+    padding-bottom: 20px;
+  }
+}

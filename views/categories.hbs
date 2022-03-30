@@ -16,27 +16,48 @@
   </head>
   <body>
     {{>header}}
-    {{>navigation}}
+    {{>navigation categories=categories}}
 
-    <section class="container">
     {{#if category}}
+    <section class=" container">
+    <div style="display: flex; margin-top: 30px; margin-bottom: 30px;">
       <img src="{{category.img}}" alt="category image" width="200">
-      <h1>{{category.name}}</h1>
+      <div style="margin-left: 20px; ">
+      <h1 class="cat_section-title">{{category.name}}</h1>
       <p>{{category.description}}</p>
-
-      <ul class="list products_list"></ul>
+      </div>
+    </div>
       
+      <div class="cat_divider"></div>
+
+
       <button class="first-page-btn">1-st page</button>
       <button class="next-page-btn">next >></button> </div>
+      
+      <ul class="list products_list"></ul>
+      
       <script src="/js/categories-page.js"></script>
+      </section>
     {{/if}}
+
     {{#if categories}}
-      {{#each categories}}
-        <a href="/categories/{{name}}">{{name}}</a>
-      {{/each}}
-    {{/if}}
-  </section>
-  
+
+    <section class="categories container">
+      <a class="link" href="/categories"><h3 class="categories_title">Shop By Categories</h3></a>
+      <ul class="categories_list list">
+       {{#each categories}}
+        <li class="categories_item">
+          <a href="/categories/{{name}}" class="link categories_link">
+          <div style="background-image:url({{img}});" class="categories_img">
+            <p class="categories_btn">{{name}}</p>
+          </div>
+          </a>
+        </li>
+       {{/each}}
+      </ul>
+    </section>
+  {{/if}}
+
    {{>footer}}
    {{>rights}}
   <script src="/js/cart.js"></script>

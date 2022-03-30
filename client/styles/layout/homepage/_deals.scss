@@ -1,0 +1,131 @@
+.deals {
+  margin-bottom: 50px;
+  &-title {
+    font-family: $secondary-font;
+    margin-bottom: 10px;
+  }
+  &--left {
+    height: fit-content;
+    padding: 10px;
+    border: 2px solid #fda72f;
+    position: relative;
+    &_sale {
+      position: absolute;
+      top: 5px;
+      right: 0;
+      color: red;
+      padding: 10px;
+      font-weight: bold;
+    }
+    &_card--down {
+      display: flex;
+      justify-content: space-between;
+    }
+    &_card-icon {
+      margin-top: 15px;
+      background-color: #f2f2f2;
+      border-radius: 50%;
+      padding: 15px;
+      overflow: unset;
+    }
+    &_card-img {
+      width: 100%;
+      height: 300px;
+      background-color: #f6ae13;
+    }
+    &_card-title {
+      align-items: center;
+      align-content: center;
+      font-weight: normal;
+      margin-top: 15px;
+    }
+    &_card-price {
+      margin-left: 5px;
+      margin-top: 5px;
+      font-weight: bold;
+    }
+  }
+  &--right {
+    margin-top: 30px;
+    margin-left: 20px;
+    &_card-list {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    &_card-link:hover &-title {
+      color: #f6ae13;
+    }
+    &_card-item {
+      max-width: 130px;
+      height: fit-content;
+      margin-top: 20px;
+      background: #ffffff;
+      border: 1px solid #ececec;
+      :not(:last-child) {
+        margin-bottom: 10px;
+        margin-right: 10px;
+      }
+    }
+    &_img {
+      width: 100%;
+      height: 100px;
+    }
+    &-title {
+      max-width: 130px;
+      font-size: 15px;
+      margin: 10px;
+      transition: color linear 250ms;
+    }
+    &-price {
+      margin: 10px;
+    }
+    &-sale {
+      padding: 5px;
+      background-color: red;
+      color: #fff;
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      margin-left: 10px;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .deals {
+    &--right {
+      &_header {
+        display: flex;
+        justify-content: space-between;
+      }
+      &_card-list {
+        display: flex;
+        justify-content: space-between;
+      }
+      &_img {
+        height: 100%;
+      }
+    }
+  }
+}
+
+.deals {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  align-items: center;
+  &--left {
+    &_card-img {
+      height: 250px;
+      width: 250px;
+    }
+    &_card-timer {
+      bottom: 85px;
+    }
+  }
+  &--right {
+    width: 700px;
+    margin-top: unset;
+  }
+}

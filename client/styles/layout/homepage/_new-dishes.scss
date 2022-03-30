@@ -1,0 +1,127 @@
+.new-dishes {
+  padding-top: 30px;
+  padding-bottom: 50px;
+  background-color: #ffffff;
+  &_cart-list {
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 80%;
+    left: 5%;
+    transition: all 250ms linear;
+  }
+  &_cart-btn {
+    background-color: $color-green;
+    font-size: 13px;
+    color: #ffffff;
+    font-weight: bold;
+    fill: #fff;
+    border: none;
+    padding: 10px;
+    display: flex;
+    align-content: center;
+    transition: all 250ms linear;
+    &:hover {
+      cursor: pointer;
+    }
+    &-add {
+      margin-left: 5px;
+    }
+  }
+  &_cart-item {
+    &:not(:last-child) {
+      margin-right: 5px;
+    }
+  }
+  &_title {
+    text-align: center;
+    font-family: $secondary-font;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 42px;
+    line-height: 50px;
+  }
+  &_btn {
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 22px;
+    color: #111111;
+    padding: 3px 10px;
+    background: #ffffff;
+    border: 1px solid #dddddd;
+    &-list {
+      &-item:not(:last-child) {
+        margin-right: 10px;
+      }
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+  }
+
+  &_card {
+    &-title {
+      margin: 10px;
+      align-content: center;
+      text-align: center;
+    }
+    &-price {
+      text-align: center;
+    }
+    &-item {
+      box-shadow: 0px 5px 25px rgba(138, 159, 168, 0.2);
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
+    }
+    &-list {
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+    &-picture {
+      position: relative;
+      width: 100%;
+      height: 400px;
+      background-color: lightcoral;
+    }
+  }
+  &_cart {
+    color: unset;
+    transition: all 250ms linear;
+    &:hover {
+      color: #88b13e;
+    }
+    &:hover &-list,
+    &:focus &-list {
+      opacity: unset;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .new-dishes {
+    &_card-list {
+      display: flex;
+      justify-content: space-between;
+    }
+    &_card-picture {
+      height: 180px;
+    }
+    &_card-item {
+      min-width: 200px;
+    }
+    &_card-picture {
+      height: 200px;
+    }
+  }
+}
+
+@media screen and (min-width: 1700px) {
+  .new-dishes {
+    &_card-item {
+      min-width: 250px;
+    }
+  }
+}

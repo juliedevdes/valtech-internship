@@ -1,40 +1,38 @@
-.order-list {
-  &_item {
-    display: flex;
-    &:not(:last-child) {
-      margin-bottom: 10px;
-    }
-  }
-  &_title {
-    margin-left: 5px;
-    font-size: 20px;
-    font-weight: bold;
-  }
-  &_cat {
-    margin-left: 5px;
-    color: $color-green;
-    font-weight: bold;
-    font-size: 17px;
-    margin-left: 10px;
-  }
-  &_price {
-    margin-left: 5px;
-  }
-  &_delete-btn {
-    background: none;
-    font-weight: 800;
-    border: none;
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
-    margin-right: 10px;
-    margin-left: 110px;
-    color: red;
-  }
-}
-
 .order {
   margin-bottom: 20px;
+  &-list {
+    &_item {
+      display: flex;
+    }
+    &_title {
+      margin-left: 5px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    &_cat {
+      margin-left: 5px;
+      color: $color-green;
+      font-weight: bold;
+      font-size: 17px;
+      margin-left: 10px;
+    }
+    &_price {
+      margin-left: 5px;
+    }
+    &_delete-btn {
+      background: none;
+      font-weight: 800;
+      border: none;
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+      margin-left: 10px;
+      color: red;
+    }
+    &_quantity {
+      font-weight: bold;
+    }
+  }
   &_input {
     width: 600px;
     padding: 12px 20px;

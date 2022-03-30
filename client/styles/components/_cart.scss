@@ -78,6 +78,12 @@
     font-size: 20px;
     font-weight: bold;
   }
+  &_quantity {
+    &-wrap {
+      margin-left: 10px;
+    }
+    font-weight: bold;
+  }
 }
 .product-picture {
   margin-right: 5px;

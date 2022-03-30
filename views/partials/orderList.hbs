@@ -1,22 +1,25 @@
 {{#if products}}
   {{#each products}}
-    <li class="order-list_item">
-      <img class="order-list_img" src={{img}} width="90" height="90" />
-      <div>
-        <p class="order-list_title">{{productName}}</p>
-        <p class="order-list_cat">{{category}}</p>
-        {{#if isOnSale}}
-          <p class="order-list_price">${{#priceCounter
-              price
-              salePercentage
-            }}{{/priceCounter}}
-          </p>
-        {{else}}
-          <p class="order-list_price">${{price}}</p>
-        {{/if}}
+    <li style="margin-bottom: 20px;">
+      <div class="order-list_item">
+        <img class="order-list_img" src={{img}} width="90" height="90" />
+        <div>
+          <p class="order-list_title">{{productName}}</p>
+          <p class="order-list_cat">{{category}}</p>
+          {{#if isOnSale}}
+            <p class="order-list_price">${{#priceCounter
+                price
+                salePercentage
+              }}{{/priceCounter}}
+            </p>
+          {{else}}
+            <p class="order-list_price">${{price}}</p>
+          {{/if}}
+        </div>
+        <button dataId={{_id}} class="order-list_delete-btn">X</button>
       </div>
-      <p class="cart_quantity">{{quantity}}</p>
-      <button dataId={{_id}} class="order-list_delete-btn">X</button>
+      <p>quantity:
+        <span class="order-list_quantity">{{quantity}}</span></p>
     </li>
   {{/each}}
   <h3 class="order_form-title">Total price of your order</h3>

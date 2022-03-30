@@ -1,13 +1,16 @@
-@import "./utils/_variables.scss";
-@import "./utils/_visually-hidden.scss";
+@import "./base/_variables";
+@import "./base/_common.scss";
+@import "./base/_container.scss";
 
-@import "./components/modal";
+@import "./components/_product-list";
+@import "./components/_cart";
+@import "./components/_footer";
+@import "./components/_header";
+@import "./components/_navigation";
+@import "./components/_rights";
 
 @import "./layout/_homepage.scss";
 @import "./layout/_shop.scss";
 @import "./layout/_product-details.scss";
 @import "./layout/_order.scss";
 @import "./layout/_categories";
-
-@import "./base/_common.scss";
-@import "./base/_container.scss";

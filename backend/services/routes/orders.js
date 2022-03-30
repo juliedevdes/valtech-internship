@@ -1,8 +1,13 @@
 const express = require("express");
+const async = require("hbs/lib/async");
 const router = express.Router();
 
-router.get("/", (req, res, next) => {
-  res.render("orders", {});
+const { Category } = require("../../models/category");
+
+router.get("/", async (req, res, next) => {
+  const categories = await Category.find();
+
+  res.render("orders", { categories });
 });
 
 module.exports = router;

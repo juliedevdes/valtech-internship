@@ -2,8 +2,11 @@ const express = require("express");
 const router = express.Router();
 
 const { Product } = require("../../models/product");
+const { Category } = require("../../models/category");
 
 router.get("/", async (req, res, next) => {
+  const categories = await Category.find();
+
   try {
     const products = await Product.paginate(
       {},
@@ -12,6 +15,7 @@ router.get("/", async (req, res, next) => {
 
     res.render("shop", {
       products: products.docs,
+      categories,
     });
   } catch (error) {
     next(error);
@@ -19,6 +23,8 @@ router.get("/", async (req, res, next) => {
 });
 
 router.get("/:productId", async (req, res, next) => {
+  const categories = await Category.find();
+
   try {
     const { productId } = req.params;
 
@@ -26,6 +32,7 @@ router.get("/:productId", async (req, res, next) => {
 
     res.render("pdp", {
       product,
+      categories,
     });
   } catch (error) {
     next(error);

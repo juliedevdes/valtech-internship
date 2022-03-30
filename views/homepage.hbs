@@ -18,72 +18,75 @@
   <body>
 
     {{>header}}
-    {{>navigation}}
+    {{>navigation categories=categories}}
     
     <section class="hero container">
       <div class="owl-carousel owl-theme carousel">
         {{#each products}}
           <div
             class="carousel-item"
-            style="background-image: url({{img}}); width: 600px;"
+            style="background-image: linear-gradient(rgba(47,48,58,0.4), rgba(47,48,58,0.4)) ,url({{img}}); width: 600px;"
           >
+          <a href="/shop/{{_id}}" class="link">
             <p class="hero-sub">{{category}}</p>
-            <h1 class="hero-title">{{productName}}</h1>
+            <h1 class="hero-title">{{productName}}
+               {{#if bestSeller}}
+                {{>star}}
+              {{/if}}
+            </h1>
 
             {{#if isOnSale}}
               <p class="products_sale">{{salePercentage}}% sale!</p>
-              <p style="text-align: center;">
                 <span
-                  class="products_price products_price-old"
-                  style="text-decoration:line-through; color:grey;"
+                  class="hero_price"
+                  style="text-decoration:line-through; color: rgb(224, 224, 224);"
                 >${{price}}</span>
-                <span class="products_price">${{#priceCounter
+                <span class="hero_price">${{#priceCounter
                     price
                     salePercentage
-                  }}{{/priceCounter}}</span></p>
+                  }}{{/priceCounter}}</span>
             {{else}}
-              <p class="products_price">${{price}}</p>
+              <span class="hero_price">${{price}}</span>
             {{/if}}
-            <button type="button" class="carousel-item_btn">add</button>
+            </a>
           </div>
         {{/each}}
       </div>
 
       <div class="hero_about">
         <p class="hero_about-title">About us</p>
-        <p class="hero_about-text">Sed ut perspiciatis unde omnis iste natus
+        <p class="hero_about-text">🍔 Sed ut perspiciatis unde omnis iste natus
           error sit voluptatem accusantium doloremque laudantium, totam rem
           aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
-          architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
+          architecto beatae vitae dicta sunt explicabo.</p>
+        <p class="hero_about-text">🌮 Nemo enim ipsam
           voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
-          consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
-          Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
-          consectetur, adipisci velit, sed quia non numquam eius modi tempora
-          incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut
-          enim ad minima veniam, quis nostrum exercitationem ullam corporis
-          suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis
-          autem vel eum iure reprehenderit qui in ea voluptate velit esse quam
-          nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo
+          consequuntur magni dolores voluptatem sequi nesciunt.
+          Sed quia non numquam eius modi tempora
+          incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+        <p class="hero_about-text">🥗 Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis
+          suscipit laboriosam. Quis eum iure reprehenderit qui in ea voluptate velit esse quam
+          nihil molestiae consequatur, vel  qui dolorem eum fugiat quo
           voluptas nulla pariatur?</p>
         <ul class="list socials-list">
           <li class="socials-item">
-            {{!-- {{>facebook}} --}}
+          {{>facebook}}
           </li>
           <li class="socials-item">
-            {{!-- {{>twitter}} --}}
+            {{>twitter}}
           </li>
           <li class="socials-item">
-            {{!-- {{>instagram}} --}}
+            {{>instagram}}
           </li>
           <li class="socials-item">
-            {{!-- {{>youtube}} --}}
+            {{>youtube}}
           </li>
         </ul>
       </div>
     </section>
 
     <section class="new-dishes container">
-      <h2 class="new-dishes_title">New Dishes</h2>
+      <h2 class="new-dishes_title">Newest Dishes</h2>
       <ul class="new-dishes_card-list list">
         {{#each products}}
           <li class="new-dishes_card-item">
@@ -92,19 +95,30 @@
                 class="new-dishes_card-picture"
                 style="background-image: url({{img}});"
               >
-                {{!-- <button style="z-index: 3;" class="new-dishes_cart-btn">
-                  {{>bag}}
-                  <span class="new-dishes_cart-btn-add ">Add</span>
-                </button> --}}
               </div>
 
-              <h3 class="new-dishes_card-title">{{productName}}</h3>
-              <p class="new-dishes_card-price">{{price}}$</p>
+              <h3 class="new-dishes_card-title">{{productName}} {{#if bestSeller}}
+                {{>star}}
+                {{/if}}</h3>
+              {{#if isOnSale}}
+              <p style="text-align: center; margin-bottom:10px">
+                  <span
+                  class="new-dishes_card-price"
+                  style="text-decoration:line-through; color: grey"
+                >${{price}}</span>
+                <span class="new-dishes_card-price">${{#priceCounter
+                    price
+                    salePercentage
+                  }}{{/priceCounter}}</span>
+              </p>
+            {{else}}
+              <p style="text-align: center; margin-bottom:10px"><span class="new-dishes_card-price">${{price}}</span></p>
+            {{/if}}
             </a>
           </li>
         {{/each}}
       </ul>
-    </section> -
+    </section>
 
     <section class="container deals">
     <div class="deals--left">
@@ -119,13 +133,14 @@
 
         <div class="deals--left_card--down">
           <div>
-            <h3 class="deals--left_card-title">{{productName}}</h3>
-            <div class="products_bs">
-              {{!-- {{>star}} --}}
-              <p class="products_bs-title">best-seller</p>
-            </div>
-            <p class="products_sale">{{salePercentage}}% sale!</p>
-            <p style="text-align: center;">
+            <h3 class="deals--left_card-title">
+              {{#if bestSeller}}
+              {{>star}}
+              {{/if}}
+              <span>{{productName}}</span>
+              </h3>
+            <p class="deals--left_sale">{{salePercentage}}% sale!</p>
+            <p style="text-align: center; margin-left:5px">
               <span
                 class="products_price products_price-old"
                 style="text-decoration:line-through; color:grey;"
@@ -139,25 +154,32 @@
       </a>
     {{/with}}
 
-  </div>
+     </div>
 
   <div class="deals--right">
     <div class="deals--right_header">
-      <h2 class="deals-title">Feature Dishes</h2>
+      <h2 class="deals-title" style="font-size: 37px;">Sales!</h2>
     </div>
 
     <ul class="deals--right_card-list list">
       {{#each onSale}}
-        <li class="deals--right_card-item">
-          <a href="/shop/{{_id}}" class="link">
-          <div
+        <li class="deals--right_card-item" style="position: relative;">
+          <a href="/shop/{{_id}}" class="link deals--right_card-link">
+          <img
             class="deals--right_img"
-            style="background-image: url({{img}});"
-          ></div>
-          <div>
+            src={{img}}
+          ></img>
+          <div >
             <h3 class="deals--right-title">{{productName}}</h3>
-            <p class="deals--right-price">{{price}} $</p>
-            <p>{{isOnSale}} {{salePercentage}}% off </p>
+            <p class="deals--right-price"><span
+                class="products_price products_price-old"
+                style="text-decoration:line-through; color:grey;"
+              >${{price}}</span>
+              <span class="products_price">${{#priceCounter
+                  price
+                  salePercentage
+                }}{{/priceCounter}}</span></p>
+            <p class="deals--right-sale" style="font-weight: bold; text-align:center">{{salePercentage}}% off </p>
           </div>
           </a>
         </li>
@@ -172,7 +194,7 @@
       <ul class="categories_list list">
        {{#each categories}}
         <li class="categories_item">
-          <a href="/categories/{{name}}" class="link">
+          <a href="/categories/{{name}}" class="link categories_link">
           <div style="background-image:url({{img}});" class="categories_img">
             <p class="categories_btn">{{name}}</p>
           </div>
@@ -188,14 +210,23 @@
       <ul class="best-seller_card-list list">
         {{#each bestSellers}}
           <li class="best-seller_card-item" style="position: relative;">
-            <a href="/shop/{{_id}}" class="link">
+            <a href="/shop/{{_id}}" class="link best-seller_card-link">
              <img src={{img}} class="best-seller_img" alt="product-img" />
              <h3 class="best-seller_card-title">{{productName}}</h3>
-             <p class="best-seller_card-price">{{price}}$</p>
-             <div class="products_bs">
-             {{>star}}
-             <p class="products_bs-title">best-seller</p>
-             </div>
+             {{#if isOnSale}}
+        <p class=" products_sale">{{salePercentage}}% sale!</p>
+        <p class="best-seller_card-price" style="text-align: center;">
+          <span
+            class="best-seller_card-price products_price products_price-old"
+            style="text-decoration:line-through; color:grey;"
+          >${{price}}</span>
+          <span class="best-seller_card-price products_price">${{#priceCounter
+              price
+              salePercentage
+            }}{{/priceCounter}}</span></p>
+      {{else}}
+        <p class="best-seller_card-price products_price">${{price}}</p>
+      {{/if}}
             </a>
           </li>
         {{/each}}
