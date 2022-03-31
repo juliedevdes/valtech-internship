@@ -66,6 +66,11 @@ router.post("/", async (req, res, next) => {
     }
 
     const category = await Category.findOne({ name: req.body.category });
+
+    if (!category) {
+      throw new BadRequest("Category doesn't exist");
+    }
+
     const newProduct = await Product.create({
       ...req.body,
       categoryId: category._id,

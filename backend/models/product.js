@@ -36,6 +36,10 @@ const productSchema = new Schema(
       type: String,
       default: "https://picsum.photos/500",
     },
+    description: {
+      type: String,
+      default: "Description of this meal is on it's way",
+    },
   },
   { versionKey: false, timestamps: true }
 );
