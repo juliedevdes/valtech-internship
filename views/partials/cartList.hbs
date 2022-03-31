@@ -1,10 +1,13 @@
+{{#if cart}}
 {{#each cart}}
   <li class="cart_list-item">
     <div style="display: flex;">
-      <img src={{img}} alt="product-picture" width="50" />
+      <img src={{img}} alt="cart-picture" class="cart_picture" width="60"/>
       <div>
         <p class="cart_product-title">{{productName}}</p>
-        <p class="cart_cat">{{category}}</p></div>
+        <p class="cart_cat">{{category}}</p>
+        <p class="cart_quantity-wrap">quantity: <span class="cart_quantity">{{quantity}}</span></p>
+        </div>
     </div>
     <div style="display: flex; align-items:center; text-align:center;">
       {{#if isOnSale}}
@@ -18,3 +21,7 @@
       {{/if}}
   </li>
 {{/each}}
+
+{{else}}
+  <li>Your cart is empty</li>
+{{/if}}

@@ -1,0 +1,32 @@
+.carousel {
+  max-width: 400px;
+  margin-right: 5px;
+  margin: 0 auto;
+  &-item {
+    max-width: 390px;
+    padding-left: 30px;
+    padding-top: 120px;
+    padding-bottom: 120px;
+    color: #fff;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .carousel {
+    margin: unset;
+    max-width: 600px;
+    &-item {
+      max-width: 590px;
+    }
+  }
+}
+@media screen and (min-width: 1200px) {
+  .carousel {
+    width: 100%;
+    &-item {
+      max-width: 690px;
+    }
+  }
+}

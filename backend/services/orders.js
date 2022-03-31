@@ -7,6 +7,7 @@ const { joiSchema } = require("../models/order");
 
 router.get("/", async (req, res, next) => {
   const { status, paymentMethod } = req.query;
+
   try {
     if (status || paymentMethod) {
       res.json(
@@ -27,11 +28,14 @@ router.get("/", async (req, res, next) => {
 
 router.get("/:orderId", async (req, res, next) => {
   const { orderId } = req.params;
+
   try {
-    const foundOrder = await Order.findById(productId);
+    const foundOrder = await Order.findById(orderId);
+
     if (!foundOrder) {
       throw new NotFound();
     }
+
     res.json(foundOrder);
   } catch (error) {
     next(error);
@@ -41,12 +45,15 @@ router.get("/:orderId", async (req, res, next) => {
 router.post("/", async (req, res, next) => {
   try {
     const { error } = joiSchema.validate(req.body);
+
     if (error) {
       throw new BadRequest(error.message);
     }
+
     const newOrder = await Order.create({
       ...req.body,
     });
+
     res.status(201).json(newOrder);
   } catch (error) {
     next(error);
@@ -61,6 +68,7 @@ router.patch("/:orderId", async (req, res, next) => {
     if (!property || !newValue) {
       throw new BadRequest("Unset property or newValue query");
     }
+
     const updatedOrder = await Order.findByIdAndUpdate(
       orderId,
       {
@@ -68,9 +76,11 @@ router.patch("/:orderId", async (req, res, next) => {
       },
       { new: true }
     );
+
     if (!updatedOrder) {
       throw new NotFound("No product with this id");
     }
+    
     res.json(updatedOrder);
   } catch (error) {
     next(error);
@@ -82,9 +92,11 @@ router.delete("/:orderId", async (req, res, next) => {
 
   try {
     const deletedOrder = await Order.findByIdAndRemove(orderId);
+
     if (!deletedOrder) {
       throw new NotFound();
     }
+
     res.json({
       message: "This order was succesfully deleted",
       ...deletedOrder._doc,

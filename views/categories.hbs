@@ -1,0 +1,71 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+    <title>CraftStudio</title>
+  </head>
+  <body>
+    {{>header}}
+    {{>navigation categories=categories}}
+
+    {{#if category}}
+      <section class="container">
+        <div class="cat_about">
+          <img
+            class="cat_about-img"
+            src="{{category.img}}"
+            alt="category image"
+          />
+          <div style="margin-left: 20px; ">
+            <h1 class="cat_section-title">{{category.name}}</h1>
+            <p>{{category.description}}</p>
+          </div>
+        </div>
+
+        <div class="cat_divider"></div>
+
+        <button class="first-page-btn">1-st page</button>
+        <button class="next-page-btn">next </button>
+        <ul class="list products_list"></ul>
+
+        <script src="/js/categories-page.js"></script>
+      </section>
+    {{/if}}
+
+    {{#if categories}}
+
+      <section class="categories container">
+        <a class="link" href="/categories"><h3 class="categories_title">Shop By
+            Categories</h3></a>
+        <ul class="categories_list list">
+          {{#each categories}}
+            <li class="categories_item">
+              <a href="/categories/{{name}}" class="link categories_link">
+                <div
+                  style="background-image:url({{img}});"
+                  class="categories_img"
+                >
+                  <p class="categories_btn">{{name}}</p>
+                </div>
+              </a>
+            </li>
+          {{/each}}
+        </ul>
+      </section>
+    {{/if}}
+
+    {{>footer}}
+    {{>rights}}
+    <script src="/js/cart.js"></script>
+  </body>
+</html>

@@ -1,0 +1,111 @@
+.footer {
+  background-color: #f5f5f5;
+  padding-bottom: 50px;
+  &--up {
+    padding: 10px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border-bottom: 0.2px #11111156 solid;
+    &_form-btn {
+      font-family: inherit;
+      color: #fff;
+      font-weight: bold;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      background: #88b13e;
+      border: none;
+      margin-top: 20px;
+      padding: 10px 20px;
+      transition: all 250ms linear;
+      &:hover {
+        background: #f6ae13;
+      }
+    }
+    &_form-input {
+      margin-top: 30px;
+      border: 1px solid #ffffff;
+      fill: #fff;
+      padding: 10px 20px;
+      margin-right: 20px;
+    }
+    &_title {
+      font-family: $secondary-font;
+    }
+    &_subs {
+      margin-right: 10px;
+      display: flex;
+      &-icon {
+        padding: 20px;
+        margin-right: 20px;
+        background-color: #fff;
+        border-radius: 50%;
+        overflow: unset;
+      }
+    }
+    &_call-us {
+      margin-right: 10px;
+      display: flex;
+      &-icon {
+        padding: 20px;
+        margin-right: 20px;
+        margin-bottom: 20px;
+
+        background-color: #fff;
+        border-radius: 50%;
+        overflow: unset;
+      }
+    }
+  }
+  &--down {
+    margin-top: 30px;
+    padding: 10px;
+    &_title {
+      font-weight: 600;
+      font-size: 18px;
+      margin-bottom: 25px;
+    }
+    &_item {
+      font-size: 15px;
+      line-height: 32px;
+      color: #888888;
+    }
+    &_list-container {
+      &:not(:last-child) {
+        margin-right: 70px;
+      }
+    }
+    &_logo {
+      margin-right: 50px;
+      margin-bottom: 30px;
+      & img {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer {
+    &--up {
+      display: flex;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer {
+    &--up {
+      display: flex;
+      justify-content: space-between;
+      &_form-input {
+        margin-top: unset;
+      }
+    }
+    &--down {
+      display: flex;
+      &_logo {
+        margin-bottom: unset;
+      }
+    }
+  }
+}

@@ -2,6 +2,9 @@ const path = require("path");
 const hbs = require("hbs");
 
 hbs.registerPartials(__dirname + "/views/partials");
+hbs.registerPartials(__dirname + "/views/partials/svg");
+hbs.registerPartials(__dirname + "/views/partials/svg/socials");
+
 hbs.registerHelper("priceCounter", (price, salePercentage) => {
   const newPrice = price - price * (salePercentage / 100);
   return Math.ceil(newPrice);
@@ -21,14 +24,17 @@ app.set("view engine", "hbs");
 app.set("views", path.join(__dirname, "views"));
 
 /* client routes/pages */
-const homeRouter = require("./routes/homepage");
+const homeRouter = require("./backend/services/routes/homepage");
 app.use("/", homeRouter);
 
-const shopRouter = require("./routes/shop");
+const shopRouter = require("./backend/services/routes/shop");
 app.use("/shop", shopRouter);
 
-const orderRouter = require("./routes/orders");
+const orderRouter = require("./backend/services/routes/orders");
 app.use("/orders", orderRouter);
+
+const categoriesPageRouter = require("./backend/services/routes/categories");
+app.use("/categories", categoriesPageRouter);
 
 /* backend services */
 const productsRouter = require("./backend/services/products");

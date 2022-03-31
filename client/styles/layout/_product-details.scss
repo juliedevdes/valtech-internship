@@ -1,6 +1,4 @@
 .pdp {
-  display: flex;
-  justify-content: space-between;
   padding-top: 20px;
   padding-bottom: 20px;
   position: relative;
@@ -25,9 +23,7 @@
     top: 80px;
     right: 10%;
   }
-  &_desc {
-    width: 500px;
-  }
+
   &_price {
     font-weight: 500;
     font-size: 50px;
@@ -67,5 +63,47 @@
     font-weight: bold;
     font-size: 25px;
     margin-top: 10px;
+  }
+  &_img {
+    width: 100%;
+    object-fit: contain;
+    margin: 0 auto;
+    padding-top: 20px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .pdp {
+    display: flex;
+    justify-content: space-between;
+    &_img {
+      width: 350px;
+      margin: unset;
+      padding-top: unset;
+    }
+    &_desc {
+      max-width: 300px;
+      padding-right: 20px;
+    }
+  }
+}
+@media screen and (min-width: 900px) {
+  .pdp {
+    &_desc {
+      max-width: unset;
+      width: 400px;
+    }
+    &_img {
+      width: 400px;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .pdp {
+    &_desc {
+      width: 500px;
+      padding-right: unset;
+    }
   }
 }

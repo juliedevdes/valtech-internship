@@ -2,10 +2,10 @@
   "name": "valtech-internship",
   "version": "1.0.0",
   "description": "intership project",
-  "main": "index.mjs",
+  "main": "index.js",
   "scripts": {
     "start": "npx nodemon app.js",
-    "dev": "npx webpack --mode development && npx browserify -t hbsfy ./client/js/chunks/productList.js > ./dist/js/productList.js && npx browserify -t hbsfy ./client/js/chunks/cart.js > ./dist/js/cart.js && npx browserify -t hbsfy ./client/js/chunks/orders.js > ./dist/js/orders.js",
+    "dev": "npx webpack --mode development && npx browserify -t hbsfy ./client/js/chunks/shop-page.js > ./dist/js/shop-page.js --fast && npx browserify -t hbsfy ./client/js/chunks/cart.js --fast > ./dist/js/cart.js && npx browserify -t hbsfy ./client/js/chunks/orders.js > ./dist/js/orders.js --fast && npx browserify -t hbsfy ./client/js/chunks/categories-page.js > ./dist/js/categories-page.js --fast",
     "build": "npx webpack --mode production && npx browserify -t hbsfy ./client/js/chunks/productList.js > ./dist/js/productList.js && npx browserify -t hbsfy ./client/js/chunks/cart.js > ./dist/js/cart.js && npx browserify -t hbsfy ./client/js/chunks/orders.js > ./dist/js/orders.js"
   },
   "repository": {

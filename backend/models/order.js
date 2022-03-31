@@ -1,4 +1,6 @@
 const { Schema, model, SchemaTypes } = require("mongoose");
+const Joi = require("joi");
+
 const emailRegexp = /^\w+([.-]?\w+)+@\w+([.:]?\w+)+(\.[a-zA-Z0-9]{2,3})+$/;
 
 const orderSchema = new Schema(
@@ -27,9 +29,8 @@ const orderSchema = new Schema(
   },
   { versionKey: false, timestamps: true }
 );
-const Order = model("order", orderSchema);
 
-const Joi = require("joi");
+const Order = model("order", orderSchema);
 
 const joiSchema = Joi.object({
   items: Joi.array().required(),
