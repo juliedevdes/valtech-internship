@@ -1,9 +1,9 @@
 .modal {
   z-index: 10;
   position: absolute;
-  top: 20%;
-  right: 10%;
-  width: 450px;
+  top: 10%;
+  right: 0;
+  width: 260px;
   height: fit-content;
   background-color: #fff;
   border-radius: 4px;
@@ -57,6 +57,9 @@
   text-align: center;
 }
 .cart {
+  &_picture {
+    object-fit: cover;
+  }
   &_cat {
     color: $color-green;
     font-weight: bold;
@@ -85,6 +88,11 @@
     font-weight: bold;
   }
 }
-.product-picture {
-  margin-right: 5px;
+
+@media screen and (min-width: 768px) {
+  .modal {
+    top: 20%;
+    right: 10%;
+    width: 450px;
+  }
 }

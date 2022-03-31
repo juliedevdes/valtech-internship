@@ -6,6 +6,7 @@ const bestSellFilter = document.querySelector("#bestSeller");
 const saleFilter = document.querySelector("#sale");
 
 const productListHbs = require("../../../views/partials/productList.hbs");
+const starHbs = require("../../../views/partials/svg/star.hbs");
 
 const { buyBtnHandler } = require("../buyBtnHandler.js");
 
@@ -18,6 +19,8 @@ Handlebars.registerHelper("priceCounter", (price, salePercentage) => {
 
   return Math.ceil(newPrice);
 });
+
+Handlebars.registerPartial("star", starHbs);
 
 //set default storage code
 localStorage.setItem("sale", false);

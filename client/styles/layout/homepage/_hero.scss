@@ -2,7 +2,7 @@
   margin-top: 20px;
   padding-bottom: 20px;
   &_about {
-    margin-left: 30px;
+    margin-top: 20px;
   }
   &_about-title {
     font-family: $secondary-font;
@@ -19,15 +19,13 @@
     font-size: 36px;
     line-height: 25px;
   }
-  display: flex;
-  justify-content: space-around;
   &-title {
     margin-top: 30px;
     margin-bottom: 30px;
   }
   &-sub {
-    color: $color-green;
-    font-weight: 600;
+    color: rgb(134, 201, 137);
+    font-weight: 700;
     font-size: 15px;
     line-height: 45px;
     letter-spacing: 0.1em;
@@ -40,6 +38,19 @@
 
 @media screen and (min-width: 1200px) {
   .hero {
+    &_about {
+      font-size: 13px;
+      margin-top: unset;
+      margin-left: 30px;
+    }
     display: flex;
+    justify-content: space-around;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .hero {
+    &_about {
+      font-size: 16px;
+    }
   }
 }

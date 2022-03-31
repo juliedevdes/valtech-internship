@@ -2,6 +2,7 @@ const productsList = document.querySelector(".products_list");
 const nextPageBtn = document.querySelector(".next-page-btn");
 const firstPageBtn = document.querySelector(".first-page-btn");
 const productListHbs = require("../../../views/partials/productList.hbs");
+const starHbs = require("../../../views/partials/svg/star.hbs");
 
 const axios = require("axios");
 
@@ -14,6 +15,8 @@ Handlebars.registerHelper("priceCounter", (price, salePercentage) => {
 
   return Math.ceil(newPrice);
 });
+
+Handlebars.registerPartial("star", starHbs);
 
 //set default
 localStorage.setItem("page", "1");

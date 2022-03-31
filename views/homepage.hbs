@@ -19,7 +19,7 @@
 
     {{>header}}
     {{>navigation categories=categories}}
-    
+
     <section class="hero container">
       <div class="owl-carousel owl-theme carousel">
         {{#each products}}
@@ -27,16 +27,16 @@
             class="carousel-item"
             style="background-image: linear-gradient(rgba(47,48,58,0.4), rgba(47,48,58,0.4)) ,url({{img}}); width: 600px;"
           >
-          <a href="/shop/{{_id}}" class="link">
-            <p class="hero-sub">{{category}}</p>
-            <h1 class="hero-title">{{productName}}
-               {{#if bestSeller}}
-                {{>star}}
-              {{/if}}
-            </h1>
+            <a href="/shop/{{_id}}" class="link">
+              <p class="hero-sub">{{category}}</p>
+              <h1 class="hero-title">{{productName}}
+                {{#if bestSeller}}
+                  {{>star}}
+                {{/if}}
+              </h1>
 
-            {{#if isOnSale}}
-              <p class="products_sale">{{salePercentage}}% sale!</p>
+              {{#if isOnSale}}
+                <p class="products_sale">{{salePercentage}}% sale!</p>
                 <span
                   class="hero_price"
                   style="text-decoration:line-through; color: rgb(224, 224, 224);"
@@ -45,9 +45,9 @@
                     price
                     salePercentage
                   }}{{/priceCounter}}</span>
-            {{else}}
-              <span class="hero_price">${{price}}</span>
-            {{/if}}
+              {{else}}
+                <span class="hero_price">${{price}}</span>
+              {{/if}}
             </a>
           </div>
         {{/each}}
@@ -59,18 +59,17 @@
           error sit voluptatem accusantium doloremque laudantium, totam rem
           aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
           architecto beatae vitae dicta sunt explicabo.</p>
-        <p class="hero_about-text">🌮 Nemo enim ipsam
-          voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
-          consequuntur magni dolores voluptatem sequi nesciunt.
-          Sed quia non numquam eius modi tempora
+        <p class="hero_about-text">🌮 Nemo enim ipsam voluptatem quia voluptas
+          sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
+          voluptatem sequi nesciunt. Sed quia non numquam eius modi tempora
           incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
-        <p class="hero_about-text">🥗 Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis
-          suscipit laboriosam. Quis eum iure reprehenderit qui in ea voluptate velit esse quam
-          nihil molestiae consequatur, vel  qui dolorem eum fugiat quo
-          voluptas nulla pariatur?</p>
+        <p class="hero_about-text">🥗 Ut enim ad minima veniam, quis nostrum
+          exercitationem ullam corporis suscipit laboriosam. Quis eum iure
+          reprehenderit qui in ea voluptate velit esse quam nihil molestiae
+          consequatur, vel qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
         <ul class="list socials-list">
           <li class="socials-item">
-          {{>facebook}}
+            {{>facebook}}
           </li>
           <li class="socials-item">
             {{>twitter}}
@@ -90,30 +89,33 @@
       <ul class="new-dishes_card-list list">
         {{#each products}}
           <li class="new-dishes_card-item">
-            <a href="/shop/{{_id}}" class="link new-dishes_cart">
+            <a href="/shop/{{_id}}" class="link new-dishes_link">
               <div
                 class="new-dishes_card-picture"
                 style="background-image: url({{img}});"
               >
               </div>
 
-              <h3 class="new-dishes_card-title">{{productName}} {{#if bestSeller}}
-                {{>star}}
+              <h3 class="new-dishes_card-title">{{productName}}
+                {{#if bestSeller}}
+                  {{>star}}
                 {{/if}}</h3>
               {{#if isOnSale}}
-              <p style="text-align: center; margin-bottom:10px">
+                <p style="text-align: center; margin-bottom:10px">
                   <span
-                  class="new-dishes_card-price"
-                  style="text-decoration:line-through; color: grey"
-                >${{price}}</span>
-                <span class="new-dishes_card-price">${{#priceCounter
-                    price
-                    salePercentage
-                  }}{{/priceCounter}}</span>
-              </p>
-            {{else}}
-              <p style="text-align: center; margin-bottom:10px"><span class="new-dishes_card-price">${{price}}</span></p>
-            {{/if}}
+                    class="new-dishes_card-price"
+                    style="text-decoration:line-through; color: grey"
+                  >${{price}}</span>
+                  <span class="new-dishes_card-price">${{#priceCounter
+                      price
+                      salePercentage
+                    }}{{/priceCounter}}</span>
+                </p>
+              {{else}}
+                <p style="text-align: center; margin-bottom:10px"><span
+                    class="new-dishes_card-price"
+                  >${{price}}</span></p>
+              {{/if}}
             </a>
           </li>
         {{/each}}
@@ -121,86 +123,97 @@
     </section>
 
     <section class="container deals">
-    <div class="deals--left">
-    <h2 class="deals-title">Deal of the week</h2>
-    {{#with bestDeal}}
-      <a href="/shop/{{_id}}" class="deals--left_card link">
+      <div class="deals--left">
+        <h2 class="deals-title">Deal of the week</h2>
+        {{#with bestDeal}}
+          <a href="/shop/{{_id}}" class="deals--left_card link">
 
-        <div
-          style="background-image: url({{img}});"
-          class="deals--left_card-img"
-        ></div>
+            <div
+              style="background-image: url({{img}});"
+              class="deals--left_card-img"
+            ></div>
 
-        <div class="deals--left_card--down">
-          <div>
-            <h3 class="deals--left_card-title">
-              {{#if bestSeller}}
-              {{>star}}
-              {{/if}}
-              <span>{{productName}}</span>
-              </h3>
-            <p class="deals--left_sale">{{salePercentage}}% sale!</p>
-            <p style="text-align: center; margin-left:5px">
-              <span
-                class="products_price products_price-old"
-                style="text-decoration:line-through; color:grey;"
-              >${{price}}</span>
-              <span class="products_price">${{#priceCounter
-                  price
-                  salePercentage
-                }}{{/priceCounter}}</span></p>
-          </div>
-        </div>
-      </a>
-    {{/with}}
-
-     </div>
-
-  <div class="deals--right">
-    <div class="deals--right_header">
-      <h2 class="deals-title" style="font-size: 37px;">Sales!</h2>
-    </div>
-
-    <ul class="deals--right_card-list list">
-      {{#each onSale}}
-        <li class="deals--right_card-item" style="position: relative;">
-          <a href="/shop/{{_id}}" class="link deals--right_card-link">
-          <img
-            class="deals--right_img"
-            src={{img}}
-          ></img>
-          <div >
-            <h3 class="deals--right-title">{{productName}}</h3>
-            <p class="deals--right-price"><span
-                class="products_price products_price-old"
-                style="text-decoration:line-through; color:grey;"
-              >${{price}}</span>
-              <span class="products_price">${{#priceCounter
-                  price
-                  salePercentage
-                }}{{/priceCounter}}</span></p>
-            <p class="deals--right-sale" style="font-weight: bold; text-align:center">{{salePercentage}}% off </p>
-          </div>
+            <div class="deals--left_card--down">
+              <div>
+                <h3 class="deals--left_card-title">
+                  {{#if bestSeller}}
+                    {{>star}}
+                  {{/if}}
+                  <span>{{productName}}</span>
+                </h3>
+                <p class="deals--left_sale">{{salePercentage}}% sale!</p>
+                <p style="text-align: center; margin-left:5px">
+                  <span
+                    class="products_price products_price-old"
+                    style="text-decoration:line-through; color:grey;"
+                  >${{price}}</span>
+                  <span class="products_price">${{#priceCounter
+                      price
+                      salePercentage
+                    }}{{/priceCounter}}</span></p>
+              </div>
+            </div>
           </a>
-        </li>
-      {{/each}}
-    </ul>
+        {{/with}}
 
-  </div>
+      </div>
+
+      <div class="deals--right">
+        <h2 class="deals-title" style="font-size: 37px;">Sales!</h2>
+
+        <ul class="deals--right_card-list list">
+          {{#each onSale}}
+            <li class="deals--right_card-item" style="position: relative;">
+              <a href="/shop/{{_id}}" class="link deals--right_card-link">
+
+                <div
+                  class="deals--right_img"
+                  style="background-image: url({{img}});"
+                >
+                </div>
+
+                <div>
+                  <h3 class="deals--right-title">{{productName}}</h3>
+                  <p class="deals--right-price">
+                    <span
+                      class="products_price products_price-old"
+                      style="text-decoration:line-through; color:grey;"
+                    >${{price}}
+                    </span>
+                    <span class="products_price">${{#priceCounter
+                        price
+                        salePercentage
+                      }}{{/priceCounter}}
+                    </span>
+                  </p>
+                  <p
+                    class="deals--right-sale"
+                    style="font-weight: bold; text-align:center"
+                  >{{salePercentage}}% off</p>
+                </div>
+              </a>
+            </li>
+          {{/each}}
+        </ul>
+      </div>
     </section>
 
     <section class="categories container">
-      <a class="link" href="/categories"><h3 class="categories_title">Shop By Categories</h3></a>
+      <a class="link" href="/categories"><h3 class="categories_title">Shop By
+          Categories</h3></a>
       <ul class="categories_list list">
-       {{#each categories}}
-        <li class="categories_item">
-          <a href="/categories/{{name}}" class="link categories_link">
-          <div style="background-image:url({{img}});" class="categories_img">
-            <p class="categories_btn">{{name}}</p>
-          </div>
-          </a>
-        </li>
-       {{/each}}
+        {{#each categories}}
+          <li class="categories_item">
+            <a href="/categories/{{name}}" class="link categories_link">
+              <div
+                style="background-image:url({{img}});"
+                class="categories_img"
+              >
+                <p class="categories_btn">{{name}}</p>
+              </div>
+            </a>
+          </li>
+        {{/each}}
       </ul>
     </section>
 
@@ -211,22 +224,24 @@
         {{#each bestSellers}}
           <li class="best-seller_card-item" style="position: relative;">
             <a href="/shop/{{_id}}" class="link best-seller_card-link">
-             <img src={{img}} class="best-seller_img" alt="product-img" />
-             <h3 class="best-seller_card-title">{{productName}}</h3>
-             {{#if isOnSale}}
-        <p class=" products_sale">{{salePercentage}}% sale!</p>
-        <p class="best-seller_card-price" style="text-align: center;">
-          <span
-            class="best-seller_card-price products_price products_price-old"
-            style="text-decoration:line-through; color:grey;"
-          >${{price}}</span>
-          <span class="best-seller_card-price products_price">${{#priceCounter
-              price
-              salePercentage
-            }}{{/priceCounter}}</span></p>
-      {{else}}
-        <p class="best-seller_card-price products_price">${{price}}</p>
-      {{/if}}
+              <img src={{img}} class="best-seller_img" alt="product-img" />
+              <h3 class="best-seller_card-title">{{productName}}</h3>
+              {{#if isOnSale}}
+                <p class="products_sale">{{salePercentage}}% sale!</p>
+                <p class="best-seller_card-price" style="text-align: center;">
+                  <span
+                    class="best-seller_card-price products_price products_price-old"
+                    style="text-decoration:line-through; color:grey;"
+                  >${{price}}</span>
+                  <span
+                    class="best-seller_card-price products_price"
+                  >${{#priceCounter
+                      price
+                      salePercentage
+                    }}{{/priceCounter}}</span></p>
+              {{else}}
+                <p class="best-seller_card-price products_price">${{price}}</p>
+              {{/if}}
             </a>
           </li>
         {{/each}}

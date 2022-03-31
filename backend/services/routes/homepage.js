@@ -19,7 +19,7 @@ router.get("/", async (req, res, next) => {
   });
 
   res.render("homepage", {
-    products: products.slice(0, 5),
+    products: products.slice(0, 6),
     bestSellers: bestSellers.slice(0, 5),
     onSale: onSale.slice(1, 11),
     categories,

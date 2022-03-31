@@ -24,9 +24,10 @@
     }
   }
   &_img {
+    background-size: cover;
+    object-fit: cover;
     height: 180px;
     width: 100%;
-    background-color: lemonchiffon;
   }
   &_card-title {
     padding-top: 15px;

@@ -18,48 +18,67 @@
   <body>
     {{>header}}
     {{>navigation categories=categories}}
+
     <section class="container pdp">
-      <div>  
-      <h1 class="pdp_title">{{product.productName}}<p class="pdp_cat">{{product.category}}</p></h1>
-       {{#if product.bestSeller}}
-        <div class="pdp_bs">
-        {{>star}}
-        <p class="pdp_bs-title">best-seller</p>
-        </div> 
+      <div>
+        <h1 class="pdp_title">{{product.productName}}<p
+            class="pdp_cat"
+          >{{product.category}}</p></h1>
+        {{#if product.bestSeller}}
+          <div class="pdp_bs">
+            {{>star}}
+            <p class="pdp_bs-title">best-seller</p>
+          </div>
         {{/if}}
-       {{#if product.description}}
-       <pclass="pdp_desc">{{product.description}}</p>
-       {{else}}
-       <p class="pdp_desc">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."</p>
-       {{/if}}</div>
-       <img class="pdp_img" src={{product.img}} alt="img" width="300">
-       {{#if product.isOnSale}}
+        {{#if product.description}}
+          <p class="pdp_desc">{{product.description}}</p>
+        {{else}}
+          <p class="pdp_desc">At vero eos et accusamus et iusto odio dignissimos
+            ducimus qui blanditiis praesentium voluptatum deleniti atque
+            corrupti quos dolores et quas molestias excepturi sint occaecati
+            cupiditate non provident, similique sunt in culpa qui officia
+            deserunt mollitia animi, id est laborum et dolorum fuga. Et harum
+            quidem rerum facilis est et expedita distinctio. Nam libero tempore,
+            cum soluta nobis est eligendi optio cumque nihil impedit quo minus
+            id quod maxime placeat facere possimus, omnis voluptas assumenda
+            est, omnis dolor repellendus. Temporibus autem quibusdam et aut
+            officiis debitis aut rerum necessitatibus saepe eveniet ut et
+            voluptates repudiandae sint et molestiae non recusandae. Itaque
+            earum rerum hic tenetur a sapiente delectus, ut aut reiciendis
+            voluptatibus maiores alias consequatur aut perferendis doloribus
+            asperiores repellat."</p>
+        {{/if}}</div>
+      <img class="pdp_img" src={{product.img}} alt="img" />
+      {{#if product.isOnSale}}
         <p class="pdp_sale">
           {{product.salePercentage}}% sale!
         </p>
-        {{/if}}
-    </section>
-      <div class="pdp--down container">
-      <div style="display: flex;"> 
-        {{#if product.isOnSale}}
-        <p
-          class="pdp_price pdp_price--old"
-          style="text-decoration:line-through;"
-        >${{product.price}}
-        </p>
-        <p class="pdp_price">${{#priceCounter
-            product.price
-            product.salePercentage
-          }}{{/priceCounter}}
-        </p>
-      {{else}}
-       <p class="pdp_price">${{product.price}}</p>
       {{/if}}
+    </section>
+    <div class="pdp--down container">
+      <div style="display: flex;">
+        {{#if product.isOnSale}}
+          <p
+            class="pdp_price pdp_price--old"
+            style="text-decoration:line-through;"
+          >${{product.price}}
+          </p>
+          <p class="pdp_price">${{#priceCounter
+              product.price
+              product.salePercentage
+            }}{{/priceCounter}}
+          </p>
+        {{else}}
+          <p class="pdp_price">${{product.price}}</p>
+        {{/if}}
       </div>
-       <button class="products_buy-btn pdp_buy-btn" dataId={{product._id}}>BUY</button>
-       </div>
+      <button
+        class="products_buy-btn pdp_buy-btn"
+        dataId={{product._id}}
+      >BUY</button>
+    </div>
     {{>footer}}
     {{>rights}}
-        <script src="/js/cart.js"></script>
+    <script src="/js/cart.js"></script>
   </body>
 </html>

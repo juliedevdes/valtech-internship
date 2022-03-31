@@ -15,53 +15,73 @@
 
     <title>CraftStudio</title>
   </head>
-{{>header}}
-{{>navigation categories=categories}}
-<section class="container">
-  <h2 class="products_page-title">Our Products</h2>
-  <p>find your perfect meal</p> 
-  
-  <div style="display: flex; justify-content: space-between; align-items:center;">
-    <div style="display: flex; margin-top: 20px; text-align:center">  
-    <label for="bestSeller" class="box" style="margin-right: 20px; align-items:center;">
-      <input type="checkbox" id="bestSeller">
-      <p>best-seller</p>
-      <div class="checkmark"></div>
-    </label>
+  {{>header}}
+  {{>navigation categories=categories}}
 
-   <label for="sale" class="box" style="margin-right: 20px; align-items:center;">
-    <input type="checkbox" id="sale">
-    <p>sale</p>
-    <div class="checkmark"></div>
-   </label>
+  <section class="container">
+    <h2 class="products_page-title">Our Products</h2>
+    <p>find your perfect meal</p>
 
-    <select style="margin-left: 10px;" class="minimal" name="cat" id="cat">
-    <option value="all">All</option>
-    <option value="salad">Salad</option>
-    <option value="fries">Fries</option>
-    <option value="burger">Burger</option>
-    <option value="spaghetti">Spaghetti</option>
-    <option value="combo">Combo</option>
-    <option value="pizza">Pizza</option>
-    <option value="sandwich">Sandwich</option>
-    <option value="drinks">Drinks</option>
-  </select>
-</div>
- <div>
-<button class="first-page-btn">1-st page</button>
-<button class="next-page-btn">next >></button> </div>
-</section>
-  </div>
+    <div class="shop_wrapper-inputs">
+      <div class="shop_inputs">
 
-<section class="products container">
-<ul class="list products_list">
- {{>productList products=products}}
-</ul> 
-</section>
+        <div class="shop_wrap-filters" style="display: flex;">
+          <label
+            for="bestSeller"
+            class="shop_input box"
+            style="margin-right: 20px; align-items:center; margin-bottom:unset;"
+          >
+            <input type="checkbox" id="bestSeller" />
+            <p>best-seller</p>
+            <div class="checkmark"></div>
+          </label>
 
-{{>footer}}
-{{>rights}}
+          <label
+            for="sale"
+            class="shop_input box"
+            style="margin-right: 20px; align-items: center;"
+          >
+            <input type="checkbox" id="sale" />
+            <p>sale</p>
+            <div class="checkmark"></div>
+          </label>
+        </div>
 
-    <script  src="./js/shop-page.js"></script>
-    <script src="./js/cart.js"></script>
+        <select
+          style="margin-left: 10px;"
+          class="shop_input minimal"
+          name="cat"
+          id="cat"
+        >
+          <option value="all">All</option>
+          <option value="salad">Salad</option>
+          <option value="fries">Fries</option>
+          <option value="burger">Burger</option>
+          <option value="spaghetti">Spaghetti</option>
+          <option value="combo">Combo</option>
+          <option value="pizza">Pizza</option>
+          <option value="sandwich">Sandwich</option>
+          <option value="drinks">Drinks</option>
+        </select>
+      </div>
+       
+      <div>
+        <button class="first-page-btn">1-st page</button>
+        <button class="next-page-btn">next </button>
+      </div>
+      
+    </div>
+  </section>
+
+  <section class="products container">
+    <ul class="list products_list">
+      {{>productList products=products}}
+    </ul>
+  </section>
+
+  {{>footer}}
+  {{>rights}}
+
+  <script src="./js/shop-page.js"></script>
+  <script src="./js/cart.js"></script>
 </html>

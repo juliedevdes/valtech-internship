@@ -32,6 +32,8 @@
       width: 100%;
       height: 300px;
       background-color: #f6ae13;
+      background-repeat: no-repeat;
+      background-size: cover;
     }
     &_card-title {
       align-items: center;
@@ -45,30 +47,27 @@
       font-weight: bold;
     }
   }
+
   &--right {
     margin-top: 30px;
-    margin-left: 20px;
     &_card-list {
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-auto-rows: auto;
+      grid-gap: 1rem;
+      margin-bottom: 50px;
     }
     &_card-link:hover &-title {
+      display: block;
       color: #f6ae13;
     }
     &_card-item {
-      max-width: 130px;
-      height: fit-content;
-      margin-top: 20px;
+      display: block;
       background: #ffffff;
       border: 1px solid #ececec;
-      :not(:last-child) {
-        margin-bottom: 10px;
-        margin-right: 10px;
-      }
     }
     &_img {
-      width: 100%;
+      object-fit: contain;
       height: 100px;
     }
     &-title {
@@ -95,37 +94,35 @@
 @media screen and (min-width: 768px) {
   .deals {
     &--right {
-      &_header {
-        display: flex;
-        justify-content: space-between;
-      }
       &_card-list {
-        display: flex;
-        justify-content: space-between;
-      }
-      &_img {
-        height: 100%;
+        grid-template-columns: repeat(3, 1fr);
       }
     }
   }
 }
 
-.deals {
-  display: flex;
-  justify-content: space-around;
-  align-content: center;
-  align-items: center;
-  &--left {
-    &_card-img {
-      height: 250px;
-      width: 250px;
+@media screen and (min-width: 1200px) {
+  .deals {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+    &--left {
+      &_card-img {
+        min-width: 300px;
+      }
     }
-    &_card-timer {
-      bottom: 85px;
+    &--right {
+      margin-left: 20px;
+
+      &_card-list {
+        grid-template-columns: repeat(5, 1fr);
+      }
+      &_card-item {
+        max-width: 130px;
+        height: fit-content;
+        box-sizing: border-box;
+      }
     }
-  }
-  &--right {
-    width: 700px;
-    margin-top: unset;
   }
 }

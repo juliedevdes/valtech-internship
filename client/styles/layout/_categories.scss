@@ -2,10 +2,12 @@
   &_section-title {
     font-family: $secondary-font;
     font-size: 35px;
-    margin-top: 50px;
+    margin-top: 20px;
     margin-bottom: 20px;
   }
   &_item {
+    margin: 0 auto;
+
     &:not(:last-child) {
       margin-right: 10px;
     }
@@ -22,6 +24,15 @@
   }
   &_title {
     text-align: center;
+  }
+  &_about {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    &-img {
+      margin: 0 auto;
+      width: 100%;
+      object-fit: cover;
+    }
   }
 }
 
@@ -46,5 +57,32 @@
   100% {
     background-position: -5000px 20%, -800px 95%, 500px 50%, 1000px 100%,
       400px 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .cat {
+    &-item {
+      margin: unset;
+    }
+    &_section-title {
+      margin-top: 50px;
+    }
+    &_about {
+      display: flex;
+      &-img {
+        margin: unset;
+        max-width: 400px;
+      }
+    }
+  }
+}
+@media screen and (min-width: 1200px) {
+  .cat {
+    &_about {
+      &-img {
+        max-width: 200px;
+      }
+    }
   }
 }

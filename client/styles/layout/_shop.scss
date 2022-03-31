@@ -1,7 +1,25 @@
+.shop {
+  &_wrapper-inputs {
+    align-items: center;
+    font-size: 15px;
+  }
+  &_input {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+  &_wrap-filters {
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  &_inputs {
+    display: block;
+    margin-top: 20px;
+  }
+}
 
 //select
 select {
-  /* styling */
   background-color: white;
   display: inline-block;
   font: inherit;
@@ -9,13 +27,13 @@ select {
   padding: 0.5em 3.5em 0.5em 1em;
 
   /* reset */
-
   margin: 0;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   -webkit-appearance: none;
   -moz-appearance: none;
+  align-items: unset;
 }
 
 select.minimal {
@@ -81,7 +99,7 @@ select:-moz-focusring {
 }
 
 .checkmark:after {
-  content: '';
+  content: "";
   position: absolute;
   display: none;
 }
@@ -102,6 +120,7 @@ select:-moz-focusring {
 
 .first-page-btn,
 .next-page-btn {
+  margin-top: 10px;
   background-color: #f6ae13;
   padding: 10px;
   color: #fff;
@@ -111,5 +130,27 @@ select:-moz-focusring {
   &:hover,
   &:focus {
     background-color: $color-green;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .shop {
+    &_wrap-filters {
+      margin-bottom: unset;
+    }
+    &_inputs {
+      display: flex;
+      text-align: center;
+    }
+    &_wrapper-inputs {
+      font-size: unset;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+  .first-page-btn,
+  .next-page-btn {
+    margin-top: unset;
   }
 }
