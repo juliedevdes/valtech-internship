@@ -3,7 +3,6 @@ const hbs = require("hbs");
 
 hbs.registerPartials(__dirname + "/views/partials");
 hbs.registerPartials(__dirname + "/views/partials/svg");
-hbs.registerPartials(__dirname + "/views/partials/svg/categories");
 hbs.registerPartials(__dirname + "/views/partials/svg/socials");
 
 hbs.registerHelper("priceCounter", (price, salePercentage) => {
