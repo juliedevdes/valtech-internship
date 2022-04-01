@@ -1,7 +1,6 @@
 const express = require("express");
 const router = express.Router();
 const { NotFound, BadRequest } = require("http-errors");
-
 const { Order } = require("../models/order");
 const { joiSchema } = require("../models/order");
 
@@ -80,7 +79,7 @@ router.patch("/:orderId", async (req, res, next) => {
     if (!updatedOrder) {
       throw new NotFound("No product with this id");
     }
-    
+
     res.json(updatedOrder);
   } catch (error) {
     next(error);
