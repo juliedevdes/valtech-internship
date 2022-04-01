@@ -67,7 +67,7 @@
       border: 1px solid #ececec;
     }
     &_img {
-      object-fit: contain;
+      background-size: cover;
       height: 100px;
     }
     &-title {

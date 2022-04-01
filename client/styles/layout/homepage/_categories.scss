@@ -51,18 +51,25 @@
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .categories {
     &_list {
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-between;
+      justify-content: space-around;
     }
     &_img {
       width: 230px;
     }
     &_item {
       margin-right: 30px;
+    }
+  }
+}
+@media screen and (min-width: 1200px) {
+  .categories {
+    &_list {
+      justify-content: space-between;
     }
   }
 }

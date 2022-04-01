@@ -55,6 +55,9 @@
 
 @media screen and (min-width: 768px) {
   .new-dishes {
+    &_card-list {
+      grid-template-columns: repeat(2, 1fr);
+    }
     &_card-picture {
       height: 180px;
     }
